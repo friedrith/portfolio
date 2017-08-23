@@ -334,7 +334,7 @@ class Presentation extends Component {
                   <td />
                 </tr>
                 <tr>
-                  <td className={style.skillName}>Js (React, AngularJs, Node)</td>
+                  <td className={style.skillName}>Js (React, AngularJs, Node, Meteor) / v. ECMA 2015</td>
                   <td className={style.skillValue}>
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
@@ -345,7 +345,7 @@ class Presentation extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td className={style.skillName}>Css (Less, Sass)</td>
+                  <td className={style.skillName}>Css (Less, Sass) / v. 3 </td>
                   <td className={style.skillValue}>
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
@@ -356,7 +356,7 @@ class Presentation extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td className={style.skillName}>C++ (Qt)</td>
+                  <td className={style.skillName}>C++ (Qt) / v. 2011</td>
                   <td className={style.skillValue}>
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
@@ -437,6 +437,58 @@ class Presentation extends Component {
                   </td>
                 </tr>
                 <tr>
+                  <td className={style.skillTitle}>Development flow</td>
+                  <td />
+                </tr>
+                <tr>
+                  <td className={style.skillName}>Scrum methods (with Jira)</td>
+                  <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                  </td>
+                </tr>
+                <tr>
+                  <td className={style.skillName}>
+                    Js preprocessing (grunt, gulp, webpack, linter, ...)
+                  </td>
+                  <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
+                  </td>
+                </tr>
+                <tr>
+                  <td className={style.skillName}>Git & branch flow</td>
+                  <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                  </td>
+                </tr>
+                <tr>
+                  <td className={style.skillName}>
+                    Acceptance tests (unit, functional, integration)
+                  </td>
+                  <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
+                  </td>
+                </tr>
+                <tr>
                   <td className={style.skillTitle}>SysAdmin</td>
                   <td />
                 </tr>
@@ -484,19 +536,6 @@ class Presentation extends Component {
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
-                    <div className={style.skillTab} />
-                    <div className={style.skillTab} />
-                  </td>
-                </tr>
-                <tr>
-                  <td className={style.skillName}>
-                    Acceptance tests (unit, functional, integration)
-                  </td>
-                  <td className={style.skillValue}>
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
                     <div className={style.skillTab} />
                   </td>
