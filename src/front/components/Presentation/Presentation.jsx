@@ -14,7 +14,6 @@ import EyeCatcher from '../EyeCatcher'
 
 /* global window */
 const openEmail = () => {
-  console.log('ok')
   const part1 = 'thibault.friedrich'
   const part2 = 'gmail.com'
   window.location.href = `mailto:${part1}@${part2}`
@@ -34,7 +33,6 @@ class Presentation extends Component {
 
     this.goToRight = this.goToRight.bind(this)
     this.goToLeft = this.goToLeft.bind(this)
-    this.openNewTab = this.openNewTab.bind(this)
   }
 
   componentDidMount() {
@@ -52,13 +50,6 @@ class Presentation extends Component {
     // const bigCircle = this.svg.circle(150, 150, 100)
     // this.svg.text(300, 300, 'fdsfds')
   }
-
-
-  openNewTab(event) {
-    console.log('link', event.target.attr('href'))
-  }
-
-
 
   goToRight() {
     if (this.state.currentSlide < this.slideCount - 1) {
@@ -115,7 +106,8 @@ class Presentation extends Component {
               I am Thibault Friedrich, a 26 years old French engineer specialized in R&D and Ux.
             </p>
             <p className={style.description}>
-              I love coding, prototyping new stuffs, talk to users, improving user interfaces, learning new things and so much more.
+              I love coding, prototyping new stuffs, talk to users,
+              improving user interfaces, learning new things and so much more.
             </p>
             <p className={style.description}>
               Very polyvalent, I am good to find technological
@@ -128,7 +120,7 @@ class Presentation extends Component {
             this.state.currentSlide > 0 ?
               <div className={`${style.nav} ${style.navLeft}`} >
                 <div className={style.button} onClick={this.goToLeft}>
-                  <div className={`${style.arrow} ${this.state.activeLeft ? style.active : ''}`}  />
+                  <div className={`${style.arrow} ${this.state.activeLeft ? style.active : ''}`} />
                 </div>
               </div> : null
           }
@@ -136,7 +128,7 @@ class Presentation extends Component {
             this.state.currentSlide < this.slideCount - 1 ?
               <div className={`${style.nav} ${style.navRight}`} >
                 <div className={style.button} onClick={this.goToRight}>
-                  <div className={`${style.arrow} ${this.state.activeRight ? style.active : ''}`}  />
+                  <div className={`${style.arrow} ${this.state.activeRight ? style.active : ''}`} />
                 </div>
               </div> : null
           }
@@ -194,9 +186,12 @@ class Presentation extends Component {
                   passphrase and type.
                 </p>
                 <p className={style.slideDescription}>
-                  Vault is a React.js project using AES-256bit encryption in the browser to save encrypted data in the
-                  Google Drive account of each user. So it is illimited in space (only Google limit), free and protected
-                  even against Google. It is fully operationnal and totally secured from our side (severless).
+                  Vault is a React.js project using AES-256bit encryption in the browser
+                  to save encrypted data in the
+                  Google Drive account of each user. So it is illimited in space
+                  (only Google limit), free and protected
+                  even against Google. It is fully operationnal and totally secured
+                  from our side (severless).
                 </p>
                 <div className={style.buttons}>
                   <a className={style.animatedButton} href="https://github.com/getvault/getvault.github.io" target="_blank" rel="noopener noreferrer">
@@ -218,7 +213,8 @@ class Presentation extends Component {
                   Windows, Linux or MacOS.
                 </p>
                 <p className={style.slideDescription}>
-                  At the beginning, it was a library implemented in my startup but I maintained it on my own.
+                  At the beginning, it was a library implemented in my startup
+                  but I maintained it on my own.
                   It is now available on npm and meets a little success.
                 </p>
                 <div className={style.buttons}>
@@ -234,8 +230,10 @@ class Presentation extends Component {
                 <img className={style.logo} alt="logo" src={require('./img/pm2.png')} />
                 <p className={style.slideSubtitle}>
                   I needed a system to automatically redeploy my web applications hosted on my
-                  dedicated servers when the reposity changes like on heroku for example. So I built my own on the top of
-                  pm2. It is very easy to use and works perfectly on several production environments.
+                  dedicated servers when the reposity changes like on heroku
+                  for example. So I built my own on the top of
+                  pm2. It is very easy to use and works perfectly on several
+                  production environments.
                 </p>
                 <p className={style.slideDescription}>
                   It uses pm2 config file with a little upgrade and catch git webhooks
@@ -255,7 +253,8 @@ class Presentation extends Component {
                 <h2 className={style.title}>Canvas</h2>
                 <img className={style.logo} alt="logo" src={require('./img/macbook3.png')} />
                 <p className={style.slideSubtitle}>
-                  This is a website to write your business canvas online, share it and export it as Pdf.
+                  This is a website to write your business canvas online,
+                  share it and export it as Pdf.
                 </p>
                 <p className={style.slideDescription}>
                   For now, it manages business modal canvas and value proposition canvas
@@ -337,12 +336,12 @@ class Presentation extends Component {
                 <tr>
                   <td className={style.skillName}>Js (React, AngularJs, Node)</td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
@@ -359,34 +358,45 @@ class Presentation extends Component {
                 <tr>
                   <td className={style.skillName}>C++ (Qt)</td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
                   <td className={style.skillName}>Php (Symfony)</td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
                   <td className={style.skillName}>Java (Eclipse, Android)</td>
                   <td className={style.skillValue}>
-                    <div className={style.skillTab} />
-                    <div className={style.skillTab} />
-                    <div className={style.skillTab} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
+                  </td>
+                </tr>
+                <tr>
+                  <td className={style.skillName}>Arduino</td>
+                  <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
                   </td>
                 </tr>
                 <tr>
@@ -396,34 +406,34 @@ class Presentation extends Component {
                 <tr>
                   <td className={style.skillName}>User Experience Modelization</td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
                   <td className={style.skillName}>Analyze of user needs</td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
                   <td className={style.skillName}>Prototyping</td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
@@ -433,36 +443,36 @@ class Presentation extends Component {
                 <tr>
                   <td className={style.skillName}>Bash</td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
                   <td className={style.skillName}>Python</td>
                   <td className={style.skillValue}>
-                    <div className={style.skillTab} />
-                    <div className={style.skillTab} />
-                    <div className={style.skillTab} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
                   </td>
                 </tr>
                 <tr>
                   <td className={style.skillName}>
-                    Linux (Debian, Ubuntu, ArchLinux, Fedora, CentOS)
+                    Linux (Debian, Ubuntu, ArchLinux, Fedora, CentOS, Raspberry pi)
                   </td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
                 <tr>
@@ -470,12 +480,12 @@ class Presentation extends Component {
                     Continuous Integration (Jenkins)
                   </td>
                   <td className={style.skillValue}>
-                    <div className={style.skillTab} />
-                    <div className={style.skillTab} />
-                    <div className={style.skillTab} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
+                    <div className={style.skillTab} />
                   </td>
                 </tr>
                 <tr>
@@ -483,12 +493,12 @@ class Presentation extends Component {
                     Acceptance tests (unit, functional, integration)
                   </td>
                   <td className={style.skillValue}>
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={`${style.skillTab} ${style.check}`} />
                     <div className={style.skillTab} />
                     <div className={style.skillTab} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
                   </td>
                 </tr>
               </tbody>
