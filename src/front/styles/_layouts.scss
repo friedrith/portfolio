@@ -1,0 +1,41 @@
+
+$mq-smartphone-portrait: 320px !default
+$mq-smartphone-landscape: 480px !default
+$mq-tablet-portrait: 768px !default
+$mq-tablet-landscape: 1024px !default
+$mq-desktop: 1224px !default
+$mq-large-screens: 1824px !default
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// @see http://adrianca.com/blog/better-media-queries-with-sass/
+// @about sass media queries
+$breakpoints: (
+  "small" : (320px, 480px),
+  "medium": (768px, 1024px),
+  "large" : (1224px, 1824px)
+);
+
+@mixin viewport($size, $base: up) {
+  $range: map-get($breakpoints, $size);
+  @if $range != null {
+    @if $base == up {
+      @media only screen and (min-width: nth($range, 1)) {
+        @content;
+      }
+    }
+    @else if $base == only {
+      @media only screen and (min-width: nth($range, 1)) and (max-width: nth($range, 2)) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @warn "No suitable media query value for '#{$size}'.";
+  }
+}
