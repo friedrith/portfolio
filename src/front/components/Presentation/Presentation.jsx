@@ -103,14 +103,14 @@ class Presentation extends Component {
               About me
             </h2>
             <p className={style.description}>
-              I am Thibault Friedrich, a 26 years old French engineer specialized in R&D and Ux.
+              I am Thibault Friedrich, a 26 year old French engineer specialized in R&D and UX.
             </p>
             <p className={style.description}>
-              I love coding, prototyping new stuffs, talk to users,
-              improving user interfaces, learning new things and so much more.
+              I love coding, prototyping, exchanging with users,
+              improving user experience, learning new things and so much more.
             </p>
             <p className={style.description}>
-              Very polyvalent, I am good to find technological
+              Very polyvalent, I am good at finding technological
               solutions to challenging situations.
             </p>
           </div>
@@ -140,12 +140,12 @@ class Presentation extends Component {
                 <div className={style.description}>
                   <p>
                     Discover me through my projects.
-                    They represent what matters for me: Simplicity, Security, Innovation.
+                    They represent what matters to me: Simplicity, Security, Innovation.
                   </p>
                   <p>
                   The following list is a selection of my favorites projects.
                   </p>
-                  <p>Good visit ;)</p>
+                  <p>Enjoy ;)</p>
                 </div>
               </div>
             </div>
@@ -154,17 +154,17 @@ class Presentation extends Component {
                 <h2 className={style.title}>Natural-Script</h2>
                 <img className={style.logo} alt="logo" src={require('./img/waves-color.png')} />
                 <p className={style.slideSubtitle}>
-                  Natural-script is a script language to describe
-                  english expressions without taking account of spelling mistakes,
-                  case sensitity, punctuations or other human language aleas.
-                  It is very useful to build chat bots.
+                  Natural-script is a scripting language to describe
+                  english expressions without taking into account spelling mistakes,
+                  case sensitity, punctuation or other human language aleas.
+                  It is especially useful for building chat bots.
                 </p>
                 <p className={style.slideDescription}>
                   Natural-script is a node library distributed on npm that can
                   detect complex structures
-                  like dates, occurrences, locations in natural English language.
-                  The challenge was to plug it
-                  to several existing parsers in order to detect the complex patterns.
+                  like dates, occurrences, locations in the natural english language.
+                  The challenge was to combine it with several existing parsers in
+                  order to detect the complex patterns.
                 </p>
                 <div className={style.buttons}>
                   <a className={style.animatedButton} href="https://github.com/friedrith/natural-script" target="_blank" rel="noopener noreferrer">
@@ -181,16 +181,17 @@ class Presentation extends Component {
                 <h2 className={style.title}>Vault</h2>
                 <img className={style.logo} alt="logo" src={require('./img/react_drive.png')} />
                 <p className={style.slideSubtitle}>
-                  Vault is a secure storage online using Google Drive.
-                  Users just need to connect their Google account, choose their
-                  passphrase and type.
+                  Vault is a secure online storage using Google drive.
+                  Users smply need to connect with their Google account, choose a passphrase and
+                  start typing.
                 </p>
                 <p className={style.slideDescription}>
                   Vault is a React.js project using AES-256bit encryption in the browser
                   to save encrypted data in the
-                  Google Drive account of each user. So it is illimited in space
-                  (only Google limit), free and protected
-                  even against Google. It is fully operationnal and totally secured
+                  Google Drive account of each user. So it is unlimited in terms of storage space
+                  to the extent tha Google drive lets users store information using their service.
+                   free and protected
+                  even against Google. It is fully operationnal and totally secure
                   from our side (severless).
                 </p>
                 <div className={style.buttons}>
@@ -209,13 +210,13 @@ class Presentation extends Component {
                 <img className={style.logo} alt="logo" src={require('./img/node-wifi-yellow.png')} />
                 <p className={style.slideSubtitle}>
                   Node-wifi is a node library to help managing wifi
-                  (connection, disconnection, scan) in node.js whatever the platform is:
+                  (connection, disconnection, scan) in node.js independently from the OS:
                   Windows, Linux or MacOS.
                 </p>
                 <p className={style.slideDescription}>
-                  At the beginning, it was a library implemented in my startup
-                  but I maintained it on my own.
-                  It is now available on npm and meets a little success.
+                  At the beginning, it was developed in my startup
+                  but I currently maintains it on my own.
+                  It is available on npm and has had over 2k downloads.
                 </p>
                 <div className={style.buttons}>
                   <a className={style.animatedButton} href="https://github.com/elqui-app/node-wifi" target="_blank" rel="noopener noreferrer">
@@ -230,16 +231,16 @@ class Presentation extends Component {
                 <img className={style.logo} alt="logo" src={require('./img/pm2.png')} />
                 <p className={style.slideSubtitle}>
                   I needed a system to automatically redeploy my web applications hosted on my
-                  dedicated servers when the reposity changes like on heroku
-                  for example. So I built my own on the top of
-                  pm2. It is very easy to use and works perfectly on several
-                  production environments.
+                  dedicated servers when the reposity received changes like on heroku
+                  for example. PM2-deployer is a result of this need and is built on top of pm2 as
+                  the name suggests. Easy to use, it works perfectly on saveral production
+                  environments.
                 </p>
                 <p className={style.slideDescription}>
-                  It uses pm2 config file with a little upgrade and catch git webhooks
+                  It uses a pm2 config file with few modifications and catches git webhooks
                   (github, bitbucket for now)
                   to automatically checkout, build and restart a web application after a push.
-                  At the end, it even pushes a notification on slack.
+                  It even pushes notifications on slack once this process is complete.
                 </p>
                 <div className={style.buttons}>
                   <a className={style.animatedButton} href="https://github.com/friedrith/pm2-deployer" target="_blank" rel="noopener noreferrer">
@@ -254,11 +255,11 @@ class Presentation extends Component {
                 <img className={style.logo} alt="logo" src={require('./img/macbook3.png')} />
                 <p className={style.slideSubtitle}>
                   This is a website to write your business canvas online,
-                  share it and export it as Pdf.
+                  share it and export it as a PDF.
                 </p>
                 <p className={style.slideDescription}>
-                  For now, it manages business modal canvas and value proposition canvas
-                  but it is very easy to add new one.
+                  It currently manages business model canvas and value proposition canvas
+                  but it is easily extensible.
                   It is implemented with Angular.js
                 </p>
                 <div className={style.buttons}>
@@ -280,10 +281,10 @@ class Presentation extends Component {
                 </p>
                 <p className={style.slideDescription}>
                   Agile Touch can detect movement on the backlog, scan postits and
-                  project virtual post-it on the backlog.
-                  We develop this project in C++/Qt/OpenCV from scratch without
-                  any help and succeeded to implement a prototype of digital scrum
-                  backlog in 3 weeks in a team of 4 students.
+                  project virtual post-its on the backlog.
+                  We developed this project in C++/Qt/OpenCV from scratch and succeed
+                  in implementing a prototype of a digital scrum
+                  backlog in 3 weeks time with a team of 4 students.
                 </p>
                 <div className={style.buttons}>
                   <Link className={style.animatedButton} to="/project/agile-touch">
@@ -296,17 +297,16 @@ class Presentation extends Component {
               <div className={style.content}>
                 <h2 className={style.title}>Plasticity of Human Machine Interfaces</h2>
                 <p className={style.slideSubtitle}>
-                  During my 2nd year engineer school,
-                  I began working as researcher in laboratory in the Computer
-                  Laboratory of Grenoble (called LIG), 7 hours per week.
+                  During my second year engineer school,
+                  I began working as a part-time researcher in the computer science
+                  laboratory (LIG).
                 </p>
                 <p className={style.slideDescription}>
-                  I worked on the adaptation of interfaces to users and I have been
+                  I worked on the adaptation of interfaces to users and I was
                   able to propose a new way to classify interface adaptations
                   based on space and time factors.
-                  I followed researcher methodology with studying the state of
-                  the art, gathering, extract and filter information from different
-                  scientific publications.
+                  I followed research methodology with including going over relevean research papers
+                  and extracting information of use to my project.
                 </p>
                 <div className={style.buttons}>
                   <a className={style.animatedButton} href={require('./pdf/interfaces.pdf')} target="_blank" rel="noopener noreferrer">
