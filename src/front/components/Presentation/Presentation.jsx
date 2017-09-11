@@ -498,7 +498,7 @@ class Presentation extends Component {
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
                     <div className={`${style.skillTab} ${style.check}`} />
-                    <div className={`${style.skillTab} ${style.check}`} />
+                    <div className={style.skillTab} />
                     <div className={style.skillTab} />
                     <div className={style.skillTab} />
                   </td>
@@ -565,6 +565,7 @@ class Presentation extends Component {
                 <p>
                   I am looking for an opportunity as a R&D engineer to build innovative user
                   interactions (visual, vocal, touch, ...) in disruptive areas like robotics,
+                  virtual assistant,
                   home automation, human augmentations, space...
                 </p>
                 <p>
