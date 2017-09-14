@@ -16,6 +16,7 @@ const app = express()
 const listener =
 app
   .use('/', express.static(path.join(__dirname, '../../dist/front')))
+  .use('/', express.static(path.join(__dirname, '../../src/front')))
   .get('/', (req, res) => {
     res.send('ok')
   })
