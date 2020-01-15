@@ -44,3 +44,7 @@ particles:
 ## Roadmap
 
 - change icons contact
+
+## Deployment
+
+- https://docs.travis-ci.com/user/deployment/pages/
