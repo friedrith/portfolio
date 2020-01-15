@@ -24,7 +24,6 @@
   max-width: $maxWidth;
   text-align: center;
 
-  bold,
   strong {
     font-weight: 500;
     color: $foreground;
@@ -39,9 +38,6 @@
 
 .full {
   width: 100%;
-}
-
-.three {
 }
 
 .icon {

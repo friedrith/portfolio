@@ -1,12 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Particles from 'react-particles-js'
 
 import Layout from '~organisms/layout'
-import Image from '~atoms/image'
 import SEO from '~atoms/seo'
 import Section from '~organisms/section'
-import Projects from '~organisms/projects'
 import Footer from '~molecules/footer'
 
 import canada from '~assets/canada.png'
@@ -83,7 +80,7 @@ const Freelance = () => (
           <h3>Performance</h3>
           <p>
             I never settle with current state and always do my best to
-            anticipate my client's needs.
+            anticipate my client&apos;s needs.
           </p>
         </li>
       </ul>

@@ -1,5 +1,7 @@
 # Portfolio
 
+[![Build Status](https://travis-ci.com/friedrith/portfolio.svg?branch=master)](https://travis-ci.com/friedrith/portfolio)
+
 ## Getting started
 
 ```bash
@@ -47,4 +49,4 @@ particles:
 
 ## Deployment
 
-- https://docs.travis-ci.com/user/deployment/pages/
+- [on github pages using travis](https://docs.travis-ci.com/user/deployment/pages/)
