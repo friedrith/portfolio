@@ -1,0 +1,63 @@
+@import '~styles/layout';
+
+.Welcome {
+  // background: url('~assets/space-planet.jpg');
+  // background-size: cover;
+  // background-position: center center;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.author {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+
+  .avatar {
+    border-radius: 999em;
+    $width: 70px;
+    width: $width;
+    height: $width;
+    margin-left: 1rem;
+  }
+
+  .name {
+    text-align: left;
+  }
+}
+
+.list {
+  // max-width: $maxWidth;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  list-style-type: none;
+  text-align: center;
+  padding: 0 3rem;
+}
+
+.item {
+  font-size: 1.3rem;
+  font-weight: 200;
+  flex: 0 0 30%;
+  padding: 0 1rem;
+}
+
+.about {
+  background: url('~assets/montreal.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

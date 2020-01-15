@@ -1,20 +1,21 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
 import Layout from '~organisms/layout'
-import Image from '~atoms/image'
 import SEO from '~atoms/seo'
+import Section from '~organisms/section'
+import Citation from '~atoms/citation'
+
+import style from './index.style'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Section className={style.Welcome} center>
+      <Citation
+        className={style.citation}
+        text="The best way to predict the future is to create it"
+        author="Peter Drucker"
+      />
+    </Section>
   </Layout>
 )
 

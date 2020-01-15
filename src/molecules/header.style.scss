@@ -1,4 +1,80 @@
+@import '~styles/layout';
+
+.Header {
+  @include breakpoint(sm) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  z-index: 100;
+
+  &:after {
+    content: ' ';
+    display: block;
+    height: 2 * $marginVertical;
+
+    // background-image: linear-gradient(black, transparent);
+
+    @include breakpoint(xs) {
+      height: $marginVertical;
+    }
+  }
+}
+
+.layout {
+  padding: $marginVertical $marginHorizontal 0 $marginHorizontal;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: black;
+
+  @include breakpoint(xs) {
+    flex-direction: column;
+  }
+}
+
 .name {
   text-decoration: none;
   font-weight: normal;
+
+  font-size: 1.55rem;
+
+  text-align: left;
+  flex: 1 1 auto;
+
+  @include breakpoint(xs) {
+    text-align: center;
+  }
+}
+
+.socialList {
+  font-size: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.social {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-end;
+  color: $foreground;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding-bottom: 1px;
+  border-bottom: 2px solid transparent;
+  transition: 0.4s linear border-color;
+
+  &:hover,
+  &.active {
+    border-bottom: 2px solid $foreground;
+    // text-decoration: underline;
+  }
+}
+
+.socialIcon {
+  font-size: 1.3rem;
 }

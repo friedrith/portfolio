@@ -1,0 +1,21 @@
+@import '~styles/grid';
+
+.social {
+  $width: 2.5rem;
+  width: $width;
+  height: $width;
+  margin: 0 1rem;
+}
+
+.socials {
+  padding: 2rem;
+}
+
+.address {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.Contact {
+  @include grid;
+}

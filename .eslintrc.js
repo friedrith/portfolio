@@ -18,6 +18,7 @@ module.exports = {
   ],
   rules: {
     'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-props-no-spreading': 'off',
     /*semi: [2, 'never'],
     'arrow-body-style': 0,
     'no-const-assign': 'error',
@@ -55,7 +56,7 @@ module.exports = {
           ['~pages', './src/pages'],
           ['~styles', './src/styles'],
         ],
-        extensions: ['.ts', '.js', '.jsx', '.json', '.scss'],
+        extensions: ['.ts', '.js', '.jsx', '.json', '.scss', '.svg'],
       },
     },
   },

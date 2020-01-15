@@ -1,0 +1,60 @@
+@import '~styles/layout';
+
+.Section {
+  min-height: 100vh;
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: $marginVertical 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  &.withTitle {
+    color: $foreground_hue1;
+  }
+}
+
+.center {
+  padding: 0 $marginHorizontal;
+  max-width: $maxWidth;
+  text-align: center;
+
+  bold,
+  strong {
+    font-weight: 500;
+    color: $foreground;
+  }
+
+  p,
+  q {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.full {
+  width: 100%;
+}
+
+.three {
+}
+
+.icon {
+  height: 10rem;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $foreground;
+}
