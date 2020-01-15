@@ -60,9 +60,9 @@ const Freelance = () => (
         />
       </div>
     </Section> */}
-    {/*<Section title="My projects">
+    {/* <Section title="My projects">
       <Projects />
-</Section>*/}
+</Section> */}
     <Section title="My key strenghs" three>
       <ul className={style.list}>
         <li className={style.item}>
@@ -88,7 +88,7 @@ const Freelance = () => (
         </li>
       </ul>
     </Section>
-    {/*<Section title="My strong values" three>
+    {/* <Section title="My strong values" three>
       <ul className={style.list}>
         <li className={style.item}>
           <h3>Trust</h3>
@@ -117,13 +117,13 @@ const Freelance = () => (
     </Section>
     <Section title="My key methods">
       <Projects />
-    </Section>*/}
-    <Section title="Contact" center>
+    </Section> */}
+    {/* <Section title="Mission" center>
       <p>
         After more than ten years of programming, I am now freelance living in
         Montreal and working part time and in full remote for my clients.
       </p>
-    </Section>
+    </Section> */}
     <Footer />
   </Layout>
 )
