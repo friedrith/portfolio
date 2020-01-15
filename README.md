@@ -50,3 +50,4 @@ particles:
 ## Deployment
 
 - [on github pages using travis](https://docs.travis-ci.com/user/deployment/pages/)
+- [setup custom domain name on github](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site)
