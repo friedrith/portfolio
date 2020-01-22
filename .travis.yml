@@ -18,3 +18,6 @@ deploy:
   verbose: true
   on:
     branch: master
+notifications:
+  slack: assistant-os:3yVlgvbuFRgReh6kRav2Ff3b
+    if: branch = master
