@@ -68,5 +68,12 @@ module.exports = {
         cookieDomain: 'thibaultfriedrich.io',
       },
     },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 624448,
+        sv: 6,
+      },
+    },
   ],
 }
