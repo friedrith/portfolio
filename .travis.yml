@@ -12,12 +12,11 @@ script:
 deploy:
   # https://docs.travis-ci.com/user/deployment/pages/
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+  cleanup: true
+  token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
   local_dir: public
   verbose: true
   on:
     branch: master
 notifications:
   slack: assistant-os:3yVlgvbuFRgReh6kRav2Ff3b
-    if: branch = master
