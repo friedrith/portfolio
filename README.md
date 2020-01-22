@@ -1,6 +1,22 @@
-# Portfolio
+<h1 align="center">
+  Portfolio
+</h1>
+<div align="center">
+<a href="https://www.gatsbyjs.org/">
+  <img src="https://img.shields.io/badge/maintained%20with-gatsby-cc00ff.svg" alt="Build status" />
+</a>
+<a href="https://travis-ci.com/friedrith/portfolio">
+  <img src="https://travis-ci.com/friedrith/portfolio.svg?branch=master" alt="Build status" />
+</a>
+<a href="https://thibaultfriedrich.io">
+  <img src="https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fthibaultfriedrich.io" alt="Online" />
+</a>
+<a href="./LICENSE">
+  <img src="https://img.shields.io/github/license/friedrith/portfolio.svg" alt="MIT License" />
+</a>
+</div>
 
-[![Build Status](https://travis-ci.com/friedrith/portfolio.svg?branch=master)](https://travis-ci.com/friedrith/portfolio)
+This is the code containing my portfolio.
 
 ## Getting started
 
@@ -15,39 +31,12 @@ yarn start
 yarn build
 ```
 
-## Links
+## License
 
-themes:
-
-- https://videohive.net/item/scifi-opener/20633225
-- https://templatemag.com/blog/futuristic-sci-fi-templates/
-
-colors:
-
-- https://colorhunt.co/palette/153796
-
-fonts:
-
-- https://fonts.google.com/specimen/Allerta+Stencil
-
-backgrounds:
-
-- [css animations](https://freefrontend.com/css-animated-backgrounds/)
-- [css animations](https://1stwebdesigner.com/15-css-background-effects/) not so good
-- [triangle patterns](https://onaircode.com/background-pattern-animation-code-snippets/)
-- https://www.vantajs.com/
-
-particles:
-
-- https://tympanus.net/codrops/2019/01/17/interactive-particles-with-three-js/
-- [particles.js](https://github.com/VincentGarreau/particles.js/)
-- [https://codepen.io/kevinsturf/pen/AJtmF]
+Licensed under the [MIT License](./LICENSE).
 
 ## Roadmap
 
-- change icons contact
-
-## Deployment
-
-- [on github pages using travis](https://docs.travis-ci.com/user/deployment/pages/)
-- [setup custom domain name on github](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site)
+- icons contact
+- favicon
+- background first page

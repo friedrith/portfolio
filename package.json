@@ -74,8 +74,5 @@
   },
   "license": "MIT",
   "repository": "https://github.com/friedrith/portfolio.git",
-  "bugs": {
-    "url": "https://github.com/friedrith/template-gatsby/issues"
-  },
   "main": "index.js"
 }
