@@ -45,6 +45,10 @@
   list-style-type: none;
   text-align: center;
   padding: 0 3rem;
+
+  @include breakpoint(xs) {
+    flex-direction: column;
+  }
 }
 
 .item {
