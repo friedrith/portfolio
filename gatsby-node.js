@@ -16,6 +16,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '~molecules': path.resolve(__dirname, 'src/molecules'),
         '~organisms': path.resolve(__dirname, 'src/organisms'),
         '~pages': path.resolve(__dirname, 'src/pages'),
+        '~styles': path.resolve(__dirname, 'src/styles'),
+        '~utils': path.resolve(__dirname, 'src/utils'),
       },
       extensions: ['.js', '.jsx', '.json', '.scss', '.svg'],
     },

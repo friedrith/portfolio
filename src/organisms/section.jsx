@@ -1,40 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import buildClassNames from 'classnames'
-
+import styledClassNames from '~utils/styledClassNames'
 import style from './section.style'
 
-const classNames = (...args) =>
-  buildClassNames(
-    args.map(arg => {
-      if (typeof arg !== 'object') {
-        return arg
-      }
-      return Object.keys(arg).reduce(
-        (acc, key) => ({
-          ...acc,
-          [style[key]]: arg[key],
-        }),
-        {}
-      )
-    })
-  )
+const classNames = styledClassNames(style)
 
-const Section = ({ className, center, three, icon, title, children }) => (
-  <div className={`${style.Section} ${className}`}>
-    <div
-      className={`${style.container} ${classNames({
-        full: !three && !center,
-        center,
-        three,
-        withTitle: title,
-      })}`}
-    >
-      {icon ? <img src={icon} alt={title} className={style.icon} /> : null}
-      {title ? <h2 className={style.title}>{title}</h2> : null}
-      {children}
+// https://fr.reactjs.org/docs/forwarding-refs.html
+
+const Section = React.forwardRef(
+  ({ className, center, three, icon, title, children }, ref) => (
+    <div className={`${style.Section} ${className}`} ref={ref}>
+      <div
+        className={`${style.container} ${classNames({
+          full: !three && !center,
+          center,
+          three,
+          withTitle: title,
+        })}`}
+      >
+        {icon ? <img src={icon} alt={title} className={style.icon} /> : null}
+        {title ? <h2 className={style.title}>{title}</h2> : null}
+        {children}
+      </div>
     </div>
-  </div>
+  )
 )
 
 Section.defaultProps = {

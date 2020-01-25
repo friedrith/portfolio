@@ -55,6 +55,7 @@ module.exports = {
           ['~organisms', './src/organisms'],
           ['~pages', './src/pages'],
           ['~styles', './src/styles'],
+          ['~utils', './src/utils'],
         ],
         extensions: ['.ts', '.js', '.jsx', '.json', '.scss', '.svg'],
       },

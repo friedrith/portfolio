@@ -19,6 +19,7 @@
 - [css animations](https://1stwebdesigner.com/15-css-background-effects/) not so good
 - [triangle patterns](https://onaircode.com/background-pattern-animation-code-snippets/)
 - https://www.vantajs.com/
+- [Vantajs](https://github.com/tengbao/vanta)
 
 ## particles
 
@@ -31,3 +32,10 @@
 - [on github pages using travis](https://docs.travis-ci.com/user/deployment/pages/)
 - [setup custom domain name on github](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site)
 - [travis notifications](https://docs.travis-ci.com/user/notifications/)
+
+## SVG animations
+
+- [example](https://codepen.io/chriscoyier/pen/NRwANp)
+- [SVG morphing with Greenshock](https://greensock.com/morphSVG)
+- https://css-tricks.com/svg-shape-morphing-works/
+- [SVG.js](https://svgjs.com/docs/2.7/animating/#animate)

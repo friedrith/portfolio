@@ -36,7 +36,9 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-particles-js": "^2.7.0"
+    "react-particles-js": "^2.7.0",
+    "three": "^0.112.1",
+    "vanta": "^0.5.10"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
