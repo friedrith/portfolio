@@ -15,7 +15,7 @@ const IndexPage = () => {
     minWidth: 200.0,
     scale: 1.0,
     scaleMobile: 1.0,
-    color: 0xf7f7f7,
+    color: 0x868686,
     backgroundColor: 0x0,
     size: 3.5,
     spacing: 51.0,
