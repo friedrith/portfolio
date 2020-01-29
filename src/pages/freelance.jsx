@@ -1,29 +1,22 @@
 import React from 'react'
-import Particles from 'react-particles-js'
 
 import Layout from '~organisms/layout'
 import SEO from '~atoms/seo'
 import Section from '~organisms/section'
 import Footer from '~molecules/footer'
+import GeometricShapes from '~atoms/geometric-shapes'
 
 import canada from '~assets/canada.png'
 
 import style from './freelance.style'
-import particles from './particles' // https://codepen.io/pen/?&editable=true
 
 const Freelance = () => (
   <Layout>
     <SEO title="Freelance" />
     <Section className={style.Welcome} center>
-      <Particles
-        className={style.background}
-        width="100%"
-        height="100%"
-        params={particles}
-      />
-      I build highly <strong>customized</strong> user experiences to make your
-      product efficient, <strong>user-friendly</strong> and{' '}
-      <strong>unique</strong>.
+      <GeometricShapes className={style.shapes} />I build highly{' '}
+      <strong>customized</strong> user experiences to make your product
+      efficient, <strong>user-friendly</strong> and <strong>unique</strong>.
     </Section>
     <Section title="About Me" center icon={canada} className={style.about}>
       <p>

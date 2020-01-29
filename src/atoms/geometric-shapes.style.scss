@@ -1,0 +1,30 @@
+@import '~styles/layout';
+
+.GeometricShapes {
+  stroke: white;
+  $width: 80px;
+  width: $width;
+  height: $width;
+
+  @include breakpoint(xs) {
+    $xswidth: 50px;
+    width: $xswidth;
+    height: $xswidth;
+  }
+
+  &.circle {
+    stroke-width: 10;
+  }
+
+  &.square {
+    stroke-width: 10;
+  }
+
+  &.triangle {
+    stroke-width: 10;
+  }
+
+  & + & {
+    margin-left: 3rem;
+  }
+}

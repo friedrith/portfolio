@@ -25,7 +25,7 @@
 
 - https://tympanus.net/codrops/2019/01/17/interactive-particles-with-three-js/
 - [particles.js](https://github.com/VincentGarreau/particles.js/)
-- [https://codepen.io/kevinsturf/pen/AJtmF]
+- https://codepen.io/kevinsturf/pen/AJtmF
 
 ## Deployment
 
