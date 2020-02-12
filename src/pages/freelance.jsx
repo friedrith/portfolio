@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '~organisms/layout'
 import SEO from '~atoms/seo'
@@ -17,6 +18,11 @@ const Freelance = () => (
       <GeometricShapes className={style.shapes} />I build highly{' '}
       <strong>customized</strong> user experiences to make your product
       efficient, <strong>user-friendly</strong> and <strong>unique</strong>.
+      <div className={style.callToActions}>
+        <Link className={style.button} to="/contact">
+          Choose a unique user experience
+        </Link>
+      </div>
     </Section>
     <Section title="About Me" center icon={canada} className={style.about}>
       <p>
@@ -84,6 +90,11 @@ const Freelance = () => (
         user experience is one of <strong>the key benefit</strong> to overtake
         competition. I am here to understand your needs, design then implement a
         robust user experience for your customers.
+        <div className={style.callToActions}>
+          <Link className={style.button} to="/contact">
+            Overtake the competition
+          </Link>
+        </div>
       </p>
     </Section>
     {/* <Section title="My strong values" three>

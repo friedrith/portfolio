@@ -69,3 +69,28 @@
 .shapes {
   margin-bottom: 1rem;
 }
+
+.callToActions {
+  padding-top: 1.5rem;
+}
+
+.button {
+  $background: #ff0000;
+  $backgroundHue1: #c60202;
+  $backgroundHue2: #aa0202;
+
+  background: $background;
+  padding: 0.2rem 1.2rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  border-radius: 0.2rem;
+  transition: background-color linear 0.2s;
+
+  &:hover {
+    background: $backgroundHue1;
+  }
+
+  &:active {
+    background: $backgroundHue2;
+  }
+}
