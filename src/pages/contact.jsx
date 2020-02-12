@@ -23,30 +23,32 @@ const IndexPage = () => (
         height="100%"
         params={particles}
       />
-      <p>Some needs ? Contact me using one of these media:</p>
-      <div className={style.socials}>
-        <Social
-          icon={githubIcon}
-          className={style.social}
-          url="https://github.com/friedrith/"
-        />
+      <div className={style.center}>
+        <p>Some needs ? Contact me using one of these media:</p>
+        <div className={style.socials}>
+          <Social
+            icon={githubIcon}
+            className={style.social}
+            url="https://github.com/friedrith/"
+          />
 
-        <Social
-          icon={linkedInIcon}
-          className={style.social}
-          url="https://www.linkedin.com/in/thibault-friedrich/"
-        />
+          <Social
+            icon={linkedInIcon}
+            className={style.social}
+            url="https://www.linkedin.com/in/thibault-friedrich/"
+          />
 
-        <Social
-          icon={emailIcon}
-          className={style.social}
-          url="mailto:thibault.friedrich@gmail.com"
-        />
-      </div>
-      <div className={style.address}>
-        Thibault FRIEDRICH
-        <br /> 11 rue de Lourmel
-        <br /> 75015 Paris
+          <Social
+            icon={emailIcon}
+            className={style.social}
+            url="mailto:thibault.friedrich@gmail.com"
+          />
+        </div>
+        <div className={style.address}>
+          Thibault FRIEDRICH
+          <br /> 11 rue de Lourmel
+          <br /> 75015 Paris
+        </div>
       </div>
     </Section>
   </Layout>

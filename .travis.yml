@@ -21,4 +21,4 @@ deploy:
   on:
     branch: master
 notifications:
-  slack: assistant-os:3yVlgvbuFRgReh6kRav2Ff3b
+  slack: assistant-os:$SLACK_TOKEN
