@@ -78,6 +78,14 @@ const Freelance = () => (
         </li>
       </ul>
     </Section>
+    <Section title="Why me?" center className={style.about}>
+      <p>
+        With the various digital solutions, <strong>a unique and smooth</strong>
+        user experience one of <strong>THE</strong> key element to overtake
+        competition. I am here to understand your needs, design then implement a
+        robust user experience for your customers.
+      </p>
+    </Section>
     {/* <Section title="My strong values" three>
       <ul className={style.list}>
         <li className={style.item}>
