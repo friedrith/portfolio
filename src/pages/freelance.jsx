@@ -78,10 +78,10 @@ const Freelance = () => (
         </li>
       </ul>
     </Section>
-    <Section title="Why me?" center className={style.about}>
+    <Section title="Why me?" center>
       <p>
-        With the various digital solutions, <strong>a unique and smooth</strong>
-        user experience one of <strong>THE</strong> key element to overtake
+        With the various digital solutions, <strong>a unique and smooth</strong>{' '}
+        user experience is one of <strong>the key benefit</strong> to overtake
         competition. I am here to understand your needs, design then implement a
         robust user experience for your customers.
       </p>
