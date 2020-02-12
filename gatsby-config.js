@@ -3,6 +3,7 @@ module.exports = {
     title: 'Thibault Friedrich',
     description: 'My portfolio to show you my projects, my missions.',
     author: 'Thibault Friedrich <thibault.friedrich@gmail.com>',
+    siteUrl: `https://thibaultfriedrich.io`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -75,5 +76,6 @@ module.exports = {
         sv: 6,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
