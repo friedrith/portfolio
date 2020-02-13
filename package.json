@@ -15,7 +15,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "release": "standard-version",
-    "commitlint": "commitlint --from dd6621dc0fb25d18d0a1e23390cffbda9a49d7ef"
+    "commitlint": "commitlint --from 957563f598da1f62efb76fa3a310349854099fb5"
   },
   "dependencies": {
     "classnames": "^2.2.6",
