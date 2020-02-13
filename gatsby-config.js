@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Thibault Friedrich',
-    description: 'My portfolio to show you my projects, my missions.',
+    description:
+      '🚀 Ux Designer and Frontend developer specialized in clean and smooth user experiences 👌. I am also very interested 🔎 in futuristic technologies and sociology.',
     author: 'Thibault Friedrich <thibault.friedrich@gmail.com>',
     siteUrl: `https://thibaultfriedrich.io`,
   },
