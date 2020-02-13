@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-filename-extension': 'off',
     /*semi: [2, 'never'],
     'arrow-body-style': 0,
     'no-const-assign': 'error',
