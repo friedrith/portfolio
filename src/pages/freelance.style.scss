@@ -83,7 +83,7 @@
   padding: 0.2rem 1.2rem;
   font-size: 1.5rem;
   display: inline-block;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   transition: background-color linear 0.2s;
 
   &:hover {
@@ -93,4 +93,101 @@
   &:active {
     background: $backgroundHue2;
   }
+}
+
+.missions {
+  padding: 0;
+}
+
+.missionList {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  @include breakpoint(xs) {
+    flex-direction: column;
+  }
+}
+
+.mission {
+  flex: 1 1;
+  opacity: 0.6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  $duration: 0.5s;
+  $delay: 0.3s;
+
+  transition: $duration ease-in-out all;
+  overflow: hidden;
+
+  transition-delay: $delay;
+
+  @include breakpoint(xs) {
+    min-height: 50vh;
+  }
+
+  .content {
+    padding: 1rem;
+    text-align: center;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .name {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+    color: white;
+  }
+
+  .description {
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: 30vw;
+    opacity: 0;
+    transition: $duration ease-in-out all;
+    transition-delay: $delay;
+    @include breakpoint(xs) {
+      opacity: 1;
+      width: 90vw;
+    }
+  }
+
+  &:hover {
+    flex-grow: 2;
+    opacity: 1;
+
+    .description {
+      opacity: 1;
+    }
+  }
+}
+
+.mission1 {
+  background: url('~assets/mockups.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.mission2 {
+  background: url('~assets/macbook.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.mission3 {
+  background: url('~assets/bulb.jpg');
+  background-position: center;
+  background-size: cover;
 }

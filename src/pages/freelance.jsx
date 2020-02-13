@@ -20,18 +20,40 @@ const Freelance = () => (
       efficient, <strong>user-friendly</strong> and <strong>unique</strong>.
       <div className={style.callToActions}>
         <Link className={style.button} to="/contact">
-          Choose a unique user experience
+          Get a user-friendly product
         </Link>
       </div>
     </Section>
-    <Section title="About Me" center icon={canada} className={style.about}>
-      <p>
-        After more than 5 years of programming as{' '}
-        <strong>Frontend Engineer</strong>, <strong>Ux Designer</strong> or{' '}
-        <strong>Product Owner</strong>, I am now fullstack freelance in{' '}
-        <strong>Montreal</strong>.
-      </p>
+    <Section className={style.missions}>
+      <div className={style.missionList}>
+        <div className={`${style.mission} ${style.mission1}`}>
+          <div className={style.content}>
+            <h3 className={style.name}>Design</h3>
+            <p className={style.description}>
+              You have developers but you want to a user-friendly product ?
+            </p>
+          </div>
+        </div>
+        <div className={`${style.mission} ${style.mission2}`}>
+          <div className={style.content}>
+            <h3 className={style.name}>Development</h3>
+            <p className={style.description}>
+              You need a frontend developer to speed up your release ?
+            </p>
+          </div>
+        </div>
+        <div className={`${style.mission} ${style.mission3}`}>
+          <div className={style.content}>
+            <h3 className={style.name}>All-in-One</h3>
+            <p className={style.description}>
+              You have an idea and you want a user-friendly and finished product
+              ?
+            </p>
+          </div>
+        </div>
+      </div>
     </Section>
+
     {/* <Section title="Make the difference" center>
       <p>
         I build highly customized user experiences to make your product
@@ -84,18 +106,27 @@ const Freelance = () => (
         </li>
       </ul>
     </Section>
+    <Section title="About Me" center icon={canada} className={style.about}>
+      <p>
+        After more than 5 years of programming as{' '}
+        <strong>Frontend Engineer</strong>, <strong>Ux Designer</strong> or{' '}
+        <strong>Product Owner</strong>, I am now fullstack freelance in{' '}
+        <strong>Montreal</strong> working in remote.
+      </p>
+    </Section>
     <Section title="Why me?" center>
       <p>
-        With the various digital solutions, <strong>a unique and smooth</strong>{' '}
-        user experience is one of <strong>the key benefit</strong> to overtake
-        competition. I am here to understand your needs, design then implement a
-        robust user experience for your customers.
-        <div className={style.callToActions}>
-          <Link className={style.button} to="/contact">
-            Overtake the competition
-          </Link>
-        </div>
+        With the various digital solutions available in 2020,{' '}
+        <strong>a unique and smooth</strong> user experience is one of{' '}
+        <strong>the key benefit</strong> to overtake competition. I am here to
+        understand your needs, design then implement a robust user experience
+        for your customers.
       </p>
+      <div className={style.callToActions}>
+        <Link className={style.button} to="/contact">
+          Overtake the competition
+        </Link>
+      </div>
     </Section>
     {/* <Section title="My strong values" three>
       <ul className={style.list}>
