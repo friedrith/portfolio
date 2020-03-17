@@ -5,7 +5,7 @@
   position: relative;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  padding: 3*$marginVertical 0;
+  padding: 3 * $marginVertical 0;
   box-sizing: border-box;
 
   display: flex;
@@ -53,4 +53,6 @@
   text-align: center;
   text-transform: uppercase;
   color: $foreground;
+  position: relative;
+  z-index: 20;
 }

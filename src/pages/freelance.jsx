@@ -29,26 +29,47 @@ const Freelance = () => (
         <div className={`${style.mission} ${style.mission1}`}>
           <div className={style.content}>
             <h3 className={style.name}>Design</h3>
-            <p className={style.description}>
-              You have developers but you want to a user-friendly product ?
-            </p>
+            <div className={style.description}>
+              You need some help to design a product usable by your customers ?
+              <div>
+                <Link
+                  className={`${style.button} ${style.more}`}
+                  to="/freelance/design"
+                >
+                  More about design
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <div className={`${style.mission} ${style.mission2}`}>
           <div className={style.content}>
             <h3 className={style.name}>Development</h3>
-            <p className={style.description}>
+            <div className={style.description}>
               You need a frontend developer to speed up your release ?
-            </p>
+              <div>
+                <Link
+                  className={`${style.button} ${style.more}`}
+                  to="/freelance/frontend"
+                >
+                  More about frontend
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <div className={`${style.mission} ${style.mission3}`}>
           <div className={style.content}>
             <h3 className={style.name}>All-in-One</h3>
-            <p className={style.description}>
+            <div className={style.description}>
               You have an idea and you want a user-friendly and finished product
               ?
-            </p>
+              <div>
+                <Link className={`${style.button} ${style.more}`} to="/contact">
+                  Contact me
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

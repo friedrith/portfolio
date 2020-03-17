@@ -24,7 +24,6 @@ const IndexPage = () => (
         params={particles}
       />
       <div className={style.center}>
-        <p>Choose your favorite media</p>
         <div className={style.socials}>
           <Social
             icon={githubIcon}

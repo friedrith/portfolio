@@ -120,7 +120,7 @@
   justify-content: center;
 
   $duration: 0.5s;
-  $delay: 0.3s;
+  $delay: 0.2s;
 
   transition: $duration ease-in-out all;
   overflow: hidden;
@@ -162,6 +162,12 @@
       opacity: 1;
       width: 90vw;
     }
+  }
+
+  .more {
+    font-size: 1rem;
+    padding: 0.1rem 1rem;
+    margin-top: 1rem;
   }
 
   &:hover {

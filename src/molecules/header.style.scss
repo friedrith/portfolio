@@ -63,20 +63,47 @@
   color: $foreground;
   cursor: pointer;
   text-transform: capitalize;
-  padding-bottom: 1px;
-  border-bottom: 2px solid transparent;
-  transition: 0.4s linear border-color;
+  padding-bottom: 3px;
 
-  & + & {
-    margin-left: 1.5rem;
+  position: relative;
 
+  // border-bottom: 2px solid transparent;
+
+  &::after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    transition: 0.3s ease-in-out width;
+    background: $foreground;
   }
 
   &:hover,
   &.active {
-    border-bottom: 2px solid $foreground;
-    // text-decoration: underline;
+    &::after {
+      width: 100%;
+    }
   }
+
+  // &.active::after {
+  //   width: 100%;
+  // }
+
+  transition: 0.4s linear border-color;
+
+  & + & {
+    margin-left: 1.5rem;
+  }
+
+  // &:hover,
+  // &.active {
+  //   border-bottom: 2px solid $foreground;
+  //   // text-decoration: underline;
+  // }
 }
 
 .socialIcon {

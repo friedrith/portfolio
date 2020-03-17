@@ -1,5 +1,9 @@
 # Bibliography
 
+## Gatsby
+
+- https://www.gatsbyjs.org/docs/layout-components/
+
 ## themes
 
 - https://videohive.net/item/scifi-opener/20633225

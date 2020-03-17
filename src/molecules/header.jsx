@@ -17,6 +17,7 @@ const Header = ({ siteTitle, className }) => (
           className={style.social}
           to="/freelance"
           activeClassName={style.active}
+          partiallyActive
         >
           Freelance
         </Link>
@@ -24,6 +25,7 @@ const Header = ({ siteTitle, className }) => (
           className={style.social}
           to="/contact"
           activeClassName={style.active}
+          partiallyActive
         >
           Contact
         </Link>
