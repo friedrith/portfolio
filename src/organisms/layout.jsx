@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Header from '~molecules/header'
 import style from './layout.style'
 
-const Layout = ({ children }) => {
+const Layout = ({ className, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,15 +26,20 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={style.Layout}>
+      <div className={`${style.Layout} ${className}`}>
         <main>{children}</main>
       </div>
     </>
   )
 }
 
+Layout.defaultProps = {
+  className: '',
+}
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 }
 
 export default Layout

@@ -4,12 +4,14 @@ import React from 'react'
 
 import style from './header.style'
 
-const Header = ({ siteTitle, className }) => (
+const Header = ({ className }) => (
   <header className={`${style.Header} ${className}`}>
     <div className={style.layout}>
       <h1 className={style.name}>
-        <Link className={style.link} to="/">
-          {siteTitle}
+        <Link className={style.home} to="/">
+          Thibault
+          <br />
+          Friedrich
         </Link>
       </h1>
       <div className={style.socialList}>
@@ -44,12 +46,10 @@ const Header = ({ siteTitle, className }) => (
 
 Header.propTypes = {
   className: PropTypes.string,
-  siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
   className: '',
-  siteTitle: '',
 }
 
 export default Header
