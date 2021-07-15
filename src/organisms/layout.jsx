@@ -24,12 +24,9 @@ const Layout = ({ className, children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={`${styles.Layout} ${className}`}>
-        <main>{children}</main>
-      </div>
-    </>
+    <div className="min-h-screen">
+      <main>{children}</main>
+    </div>
   )
 }
 

@@ -8,7 +8,16 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <p>fdsfds</p>
+      <div className="min-h-screen dark:bg-gray-500">
+        <header className="flex">
+          <div className="flex-1 p-8 text-2xl text-black dark:text-white tracking-widest">
+            Thibault
+            <br />
+            FRIEDRICH
+          </div>
+          <div className="flex-none p-8">Foo</div>
+        </header>
+      </div>
     </Layout>
   )
 }
