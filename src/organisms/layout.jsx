@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from '~molecules/header'
-import style from './layout.style'
+import * as styles from './layout.style'
 
 const Layout = ({ className, children }) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +26,7 @@ const Layout = ({ className, children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={`${style.Layout} ${className}`}>
+      <div className={`${styles.Layout} ${className}`}>
         <main>{children}</main>
       </div>
     </>
