@@ -7,36 +7,13 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from '~molecules/header'
-import * as styles from './layout.style'
-
-const Layout = ({ className, children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <div className="min-h-screen dark:bg-indigo-1000 bg-white-500 ">
-      {children}
-    </div>
-  )
-}
-
-Layout.defaultProps = {
-  className: '',
-}
+const Layout = ({ children }) => (
+  <div className="min-h-screen bg-black-500 font-normal	">{children}</div>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 }
 
 export default Layout
