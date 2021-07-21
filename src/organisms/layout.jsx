@@ -24,8 +24,8 @@ const Layout = ({ className, children }) => {
   `)
 
   return (
-    <div className="min-h-screen">
-      <main>{children}</main>
+    <div className="min-h-screen dark:bg-indigo-1000 bg-white-500 ">
+      {children}
     </div>
   )
 }
