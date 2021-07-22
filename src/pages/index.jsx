@@ -1,4 +1,5 @@
 import React from 'react'
+import AOS from 'aos'
 import Layout from '~organisms/layout'
 import SEO from '~atoms/seo'
 
@@ -21,13 +22,18 @@ import chatMessageHeart from '~assets/chat-message-heart-outline-edited.json'
 import glassesSearching from '~assets/glasses-searching-outline-edited.json'
 import todoList from '~assets/to-do-list-outline-edited.json'
 
+import scrollDown from '~assets/scroll-down-6-auto-edited.json'
+
 import StatCard from '~atoms/stat-card'
 import Section from '~organisms/section'
 import Footer from '~molecules/footer'
 import LottieIcon from '~atoms/lottie-icon'
+import 'aos/dist/aos.css' // You can also use <link> for styles
 
-const Method = ({ title, children }) => (
-  <div className="flex flex-col justify-center items-center">
+AOS.init()
+
+const Method = ({ title, children, ...props }) => (
+  <div className="flex flex-col justify-center items-center" {...props}>
     <div className="w-24 h-24">{children}</div>
     <div className="text-2xl text-center text-blue-500 pt-2 font-light">
       {title}
@@ -45,8 +51,10 @@ const SkillCard = ({ title, children }) => (
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <section className="min-h-screen flex flex-col">
-      {/* <header className="flex flex-none">
+    <div className="relative">
+      <div className="bg-montreal bg-cover bg-center opacity-20 absolute inset-0 bg-no-repeat" />
+      <section className="min-h-screen flex flex-col relative">
+        {/* <header className="flex flex-none">
         <div className="flex-1 p-12 text-2xl text-black dark:text-white tracking-widest font-medium">
           Thibault
           <br />
@@ -54,39 +62,57 @@ const IndexPage = () => (
         </div>
         <div className="flex-none p-8">Foo</div>
       </header> */}
-      <div className="flex-1 flex flex-col justify-center items-start px-32">
-        <h1 className="text-white-500 text-8xl tracking-wide font-light">
-          Thibault FRIEDRICH
-        </h1>
-        <h2 className="text-purple-500 font-normal text-3xl tracking-wide pl-4 pt-5">
-          Frontend Developer / Ux Designer
-        </h2>
-      </div>
-    </section>
-    <section className="">
-      <div className="grid grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
-        <StatCard title="12+" unit="years" description="of coding" />
-        <StatCard
-          title="242k+"
-          unit="changes"
-          description="for my last customer"
-        />
-        <StatCard
-          title="266"
-          unit="stars"
-          description="for my best github project"
-        />
-      </div>
-    </section>
+        <div className="flex-1 flex flex-col justify-center items-start px-32">
+          <h1
+            className="text-white-500 text-8xl tracking-wide font-light"
+            data-aos="fade-left"
+          >
+            Thibault FRIEDRICH
+          </h1>
+          <h2
+            className="text-purple-500 font-normal text-3xl tracking-wide pl-4 pt-5"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            Frontend Developer / Ux Designer
+          </h2>
+        </div>
+        <div className="p-3 absolute bottom-0 inset-x-0 flex justify-center">
+          <div className="xl:w-20">
+            <LottieIcon icon={scrollDown} loop autoplay />
+          </div>
+        </div>
+      </section>
+      <section className="pt-6 pb-6">
+        <div className="grid grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
+          <StatCard title="12+" unit="years" description="of coding" />
+          <StatCard
+            title="242k+"
+            unit="changes"
+            description="for my last customer"
+          />
+          <StatCard
+            title="266"
+            unit="stars"
+            description="for my best github project"
+          />
+        </div>
+      </section>
+    </div>
+
     <Section title="My Key Methods">
       <div className="grid grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
-        <Method title="Code craftmanship">
+        <Method title="Code craftmanship" data-aos="fade-up">
           <LottieIcon icon={multimediaCode2} />
         </Method>
-        <Method title="Agile methods">
+        <Method title="Agile methods" data-aos="fade-up" data-aos-delay="100">
           <LottieIcon icon={projectManagement} />
         </Method>
-        <Method title="User-Centered design">
+        <Method
+          title="User-Centered design"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <LottieIcon icon={engageUsers} />
         </Method>
       </div>
@@ -141,27 +167,28 @@ const IndexPage = () => (
     </section>
     <Section title="My Soft Skills">
       <div className="grid grid-cols-5 gap-12 max-w-screen-lg m-auto justify-center">
-        <Method title="Polyvalent">
+        <Method title="Polyvalent" data-aos="fade-up">
           <LottieIcon icon={omniChannel} />
         </Method>
-        <Method title="Empathic">
+        <Method title="Empathic" data-aos="fade-up" data-aos-delay="100">
           <LottieIcon icon={chatMessageHeart} />
         </Method>
-        <Method title="Efficient">
+        <Method title="Efficient" data-aos="fade-up" data-aos-delay="200">
           <LottieIcon icon={todoList} />
         </Method>
-        <Method title="Curious">
+        <Method title="Curious" data-aos="fade-up" data-aos-delay="300">
           <LottieIcon icon={glassesSearching} />
         </Method>
-        <Method title="Reliable">
+        <Method title="Reliable" data-aos="fade-up" data-aos-delay="400">
           <LottieIcon icon={avatarManApproved} />
         </Method>
       </div>
     </Section>
-    <Section title="About me">
+    <Section title="About me" className="p-6 min-h-half relative">
+      <div className="bg-world bg-contain bg-center opacity-20 absolute inset-0 bg-no-repeat" />
       <p className="text-white-500 font-light">
         I am a french <strong>Frontend Developer and Ux Designer</strong> living
-        in Montreal and working in remote as a freelance.
+        in Montreal and working in <strong>remote</strong> as a freelance.
       </p>
       <p className="text-white-500 font-light pt-6">
         My various experiences as <strong>startup CTO</strong>,{' '}

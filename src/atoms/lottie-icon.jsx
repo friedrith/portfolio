@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Lottie from 'react-lottie'
 
-const LottieIcon = ({ icon, className }) => {
+const LottieIcon = ({ icon, className, ...props }) => {
   const defaultOptions = {
     loop: false,
     autoplay: false,
@@ -10,6 +10,7 @@ const LottieIcon = ({ icon, className }) => {
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },
+    ...props,
   }
 
   return <Lottie options={defaultOptions} className={className} />

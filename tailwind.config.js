@@ -17,7 +17,7 @@ module.exports = {
       minHeight: {
         0: '0',
         '1/4': '25%',
-        '1/2': '50%',
+        half: '75vh',
         '3/4': '75%',
         full: '100%',
       },
@@ -63,6 +63,11 @@ module.exports = {
           600: '#37D637',
         },
       },
+      backgroundImage: (theme) => ({
+        montreal: "url('~assets/montreal.jpg')",
+        skyline: "url('~assets/skyline.png')",
+        world: "url('~assets/world.png')",
+      }),
     },
   },
   variants: {
