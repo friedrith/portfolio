@@ -1,25 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const StatCard = ({ title, unit, description }) => (
-  <div className="p-8 rounded">
-    <div className="text-6xl text-white-500 font-normal">{title}</div>
-    <div className="text-purple-500 text-xl pt-2">
-      {unit} {description}
+import { useSpring, animated } from 'react-spring'
+
+const StatCard = ({ number, description, isVisible, suffix }) => {
+  const style = useSpring({ number: isVisible ? number : 0 })
+
+  return (
+    <div className="p-8 rounded text-center md:text-left">
+      <animated.div className="text-4xl md:text-6xl text-white-500 font-normal">
+        {style.number.to(x =>
+          x < number || suffix ? `${x.toFixed(0)}${suffix}` : `${x}+`
+        )}
+      </animated.div>
+      <div className="text-purple-500 text-xl pt-2">{description}</div>
     </div>
-  </div>
-)
+  )
+}
 
 StatCard.propTypes = {
-  title: PropTypes.string,
-  unit: PropTypes.string,
+  number: PropTypes.number,
   description: PropTypes.string,
+  isVisible: PropTypes.bool,
+  suffix: PropTypes.string,
 }
 
 StatCard.defaultProps = {
-  title: '',
-  unit: '',
+  number: 0,
   description: '',
+  isVisible: false,
+  suffix: '',
 }
 
 export default StatCard

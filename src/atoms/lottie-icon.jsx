@@ -18,7 +18,8 @@ const LottieIcon = ({ icon, className, ...props }) => {
 
 LottieIcon.propTypes = {
   className: PropTypes.string,
-  icon: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  icon: PropTypes.object.isRequired,
 }
 
 LottieIcon.defaultProps = {

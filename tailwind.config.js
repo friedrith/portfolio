@@ -21,6 +21,9 @@ module.exports = {
         '3/4': '75%',
         full: '100%',
       },
+      minWidth: {
+        large: '1000px',
+      },
       flex: {
         2: '2 2 0%',
       },
@@ -63,11 +66,14 @@ module.exports = {
           600: '#37D637',
         },
       },
-      backgroundImage: (theme) => ({
+      backgroundImage: theme => ({
         montreal: "url('~assets/montreal.jpg')",
         skyline: "url('~assets/skyline.png')",
         world: "url('~assets/world.png')",
       }),
+      listStyleType: {
+        square: 'square',
+      },
     },
   },
   variants: {
