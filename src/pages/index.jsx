@@ -12,9 +12,19 @@ import TodoList from '~assets/svg/to-do-list-outline.svg'
 import MagnifierZoomSearch from '~assets/svg/magnifier-zoom-search-outline.svg'
 import AvatarManApproved from '~assets/svg/avatar-man-approved-outline.svg'
 
+import multimediaCode2 from '~assets/multimedia-code-2-outline-edited.json'
+import projectManagement from '~assets/project-management-outline-edited.json'
+import engageUsers from '~assets/engage-users-outline-edited.json'
+import avatarManApproved from '~assets/avatar-man-approved-outline-edited.json'
+import omniChannel from '~assets/omnichannel-outline-edited.json'
+import chatMessageHeart from '~assets/chat-message-heart-outline-edited.json'
+import glassesSearching from '~assets/glasses-searching-outline-edited.json'
+import todoList from '~assets/to-do-list-outline-edited.json'
+
 import StatCard from '~atoms/stat-card'
 import Section from '~organisms/section'
 import Footer from '~molecules/footer'
+import LottieIcon from '~atoms/lottie-icon'
 
 const Method = ({ title, children }) => (
   <div className="flex flex-col justify-center items-center">
@@ -28,7 +38,7 @@ const Method = ({ title, children }) => (
 const SkillCard = ({ title, children }) => (
   <div className="flex flex-col justify-center items-center">
     <div className="w-24 h-24">{children}</div>
-    <div className="text-2xl text-center text-cyan-500 pt-2">{title}</div>
+    <div className="text-2xl text-center text-blue-500 pt-2">{title}</div>
   </div>
 )
 
@@ -69,18 +79,15 @@ const IndexPage = () => (
       </div>
     </section>
     <Section title="My Key Methods">
-      <div className="grid grid-cols-4 gap-12 max-w-screen-lg m-auto justify-center">
+      <div className="grid grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
         <Method title="Code craftmanship">
-          <MultimediaCode2OutlineInline />
+          <LottieIcon icon={multimediaCode2} />
         </Method>
         <Method title="Agile methods">
-          <ProjectManagement />
-        </Method>
-        <Method title="Lean product">
-          <GoalTarget />
+          <LottieIcon icon={projectManagement} />
         </Method>
         <Method title="User-Centered design">
-          <EngageUsers />
+          <LottieIcon icon={engageUsers} />
         </Method>
       </div>
     </Section>
@@ -93,7 +100,7 @@ const IndexPage = () => (
           <li>Javascript (React/Gatsby, node.js)</li>
           <li>CSS (Sass, Less, Bootstrap, Tailwind)</li>
           <li>Php (Symfony 3+)</li>
-          <li>C# (Unity)</li>
+          <li>C# (Unity/VR)</li>
           <li>Python (OpenCV)</li>
           <li>C++ (Qt)</li>
           <li>Tests (jest, enzyme, QTest, selenium)</li>
@@ -102,7 +109,7 @@ const IndexPage = () => (
         </ul>
         <div className="text-blue-500 pt-6">
           <div className="text-3xl">Dev Tools</div>
-          <div>Vs Code, Postman, Git, Github, Jira, npm, ITerm, Notion</div>
+          <div>VS Code, Postman, Git, Github, Jira, npm, ITerm, Notion</div>
         </div>
       </div>
       <svg
@@ -134,65 +141,72 @@ const IndexPage = () => (
     </section>
     <Section title="My Soft Skills">
       <div className="grid grid-cols-5 gap-12 max-w-screen-lg m-auto justify-center">
-        <SkillCard title="Polyvalent">
-          <OmniChannel />
-        </SkillCard>
-        <SkillCard title="Empathic">
-          <ChatMessageHeart />
-        </SkillCard>
-        <SkillCard title="Efficient">
-          <TodoList />
-        </SkillCard>
-        <SkillCard title="Curious">
-          <MagnifierZoomSearch />
-        </SkillCard>
-        <SkillCard title="Reliable">
-          <AvatarManApproved />
-        </SkillCard>
+        <Method title="Polyvalent">
+          <LottieIcon icon={omniChannel} />
+        </Method>
+        <Method title="Empathic">
+          <LottieIcon icon={chatMessageHeart} />
+        </Method>
+        <Method title="Efficient">
+          <LottieIcon icon={todoList} />
+        </Method>
+        <Method title="Curious">
+          <LottieIcon icon={glassesSearching} />
+        </Method>
+        <Method title="Reliable">
+          <LottieIcon icon={avatarManApproved} />
+        </Method>
       </div>
     </Section>
     <Section title="About me">
       <p className="text-white-500 font-light">
-        I am a <strong>french</strong> frontend developer and ux designer living
-        in Montreal and working in remote as a freelance. I am able to work in
-        both french and english.
+        I am a french <strong>Frontend Developer and Ux Designer</strong> living
+        in Montreal and working in remote as a freelance.
       </p>
       <p className="text-white-500 font-light pt-6">
-        In the past I led a frontend team for <strong>2+ years</strong> with
-        both freelance and employee status. I also worked as a volunteer to
-        organize 2 Startup weekends in France and in particular in charge of
-        sponsors. I studied computer science and human-computer interaction in
-        the french Computer Science Engineer School <strong>ENSIMAG</strong>.
+        My various experiences as <strong>startup CTO</strong>,{' '}
+        <strong>frontend team leader</strong> and multiple time Startup weekend
+        organizer, gave me a <strong>deep</strong> knowledge of the frontend
+        stack and understanding of the <strong>user experience</strong>. I am
+        also able to work in both french and english.
       </p>
     </Section>
     <Section title="Contact me">
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-6">
         <a
           href="mailto:thibault.friedrich@gmail.com"
-          className="text-center text-purple-500 hover:text-purple-600 text-2xl"
+          className="text-center text-blue-500 hover:text-blue-300 text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <i className="las la-envelope text-5xl text-blue-500" />
+          <i className="las la-envelope text-5xl " />
           <div className="text-xl">Email</div>
         </a>
         <a
           href="https://www.linkedin.com/in/thibault-friedrich"
-          className="text-center text-purple-500 hover:text-purple-600 text-2xl"
+          className="text-center text-blue-500 hover:text-blue-300 text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <i className="lab la-linkedin-in text-5xl text-blue-500" />
+          <i className="lab la-linkedin-in text-5xl " />
           <div className="text-xl">Linkedin</div>
         </a>
         <a
           href="https://github.com/friedrith"
-          className="text-center text-purple-500 hover:text-purple-600 text-2xl"
+          className="text-center text-blue-500 hover:text-blue-300 text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <i className="lab la-github text-5xl text-blue-500" />
+          <i className="lab la-github text-5xl " />
           <div className="text-xl">Github</div>
         </a>
         <a
           href="https://thibault-friedrich.medium.com/"
-          className="text-center text-purple-500 hover:text-purple-600 text-2xl"
+          className="text-center text-blue-500 hover:text-blue-300 text-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <i className="lab la-medium text-5xl text-blue-500" />
+          <i className="lab la-medium text-5xl " />
           <div className="text-xl">Medium</div>
         </a>
       </div>
