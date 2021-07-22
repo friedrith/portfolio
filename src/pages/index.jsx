@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 
-import AOS from 'aos'
 import { Spring, animated } from 'react-spring'
 import VisibilitySensor from 'react-visibility-sensor'
-import 'aos/dist/aos.css' // You can also use <link> for styles
+import Reveal from 'react-reveal/Reveal'
 
 import StatCard from '~atoms/stat-card'
 import Section from '~organisms/section'
@@ -22,8 +21,6 @@ import omniChannel from '~assets/omnichannel-outline-edited.json'
 import chatMessageHeart from '~assets/chat-message-heart-outline-edited.json'
 import glassesSearching from '~assets/glasses-searching-outline-edited.json'
 import todoList from '~assets/to-do-list-outline-edited.json'
-
-AOS.init()
 
 const Method = ({ title, children, ...props }) => (
   <div className="flex flex-col justify-center items-center" {...props}>
@@ -54,19 +51,16 @@ const IndexPage = () => {
         <section className="min-h-screen flex flex-col relative">
           {/* <Ribbon /> */}
           <div className="flex-1 flex flex-col justify-center items-start px-4 md:px-32">
-            <h1
-              className="text-white-500 text-5xl md:text-8xl tracking-wide font-light"
-              data-aos="fade-left"
-            >
-              Thibault FRIEDRICH
-            </h1>
-            <h2
-              className="text-purple-500 font-normal text-3xl tracking-wide md:pl-4 pt-5"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
-              Frontend Developer / Ux Designer
-            </h2>
+            <Reveal effect="fadeInLeft" mountOnEnter>
+              <h1 className="text-white-500 text-5xl md:text-8xl tracking-wide font-light">
+                Thibault FRIEDRICH
+              </h1>
+            </Reveal>
+            <Reveal effect="fadeInLeft" mountOnEnter delay="200">
+              <h2 className="text-purple-500 font-normal text-3xl tracking-wide md:pl-4 pt-5">
+                Frontend Developer / Ux Designer
+              </h2>
+            </Reveal>
           </div>
           <div className="p-5 absolute bottom-0 inset-x-0 flex justify-center">
             <MouseIndicator />
@@ -108,19 +102,21 @@ const IndexPage = () => {
 
       <Section title="My Key Methods" id="stats" className="">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
-          <Method title="Code craftmanship" data-aos="fade-up">
-            <LottieIcon icon={multimediaCode2} />
-          </Method>
-          <Method title="Agile methods" data-aos="fade-up" data-aos-delay="100">
-            <LottieIcon icon={projectManagement} />
-          </Method>
-          <Method
-            title="User-Centered design"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <LottieIcon icon={engageUsers} />
-          </Method>
+          <Reveal effect="fadeInUp">
+            <Method title="Code craftmanship">
+              <LottieIcon icon={multimediaCode2} />
+            </Method>
+          </Reveal>
+          <Reveal effect="fadeInUp" duration="1100">
+            <Method title="Agile methods">
+              <LottieIcon icon={projectManagement} />
+            </Method>
+          </Reveal>
+          <Reveal effect="fadeInUp" duration="1200">
+            <Method title="User-Centered design">
+              <LottieIcon icon={engageUsers} />
+            </Method>
+          </Reveal>
         </div>
       </Section>
       <section className="flex items-stretch flex-col lg:flex-row">
@@ -182,21 +178,35 @@ const IndexPage = () => {
       </section>
       <Section title="My Soft Skills">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  gap-12 max-w-screen-lg m-auto justify-center">
-          <Method title="Polyvalent" data-aos="fade-up">
-            <LottieIcon icon={omniChannel} />
-          </Method>
-          <Method title="Empathic" data-aos="fade-up" data-aos-delay="100">
-            <LottieIcon icon={chatMessageHeart} />
-          </Method>
-          <Method title="Efficient" data-aos="fade-up" data-aos-delay="200">
-            <LottieIcon icon={todoList} />
-          </Method>
-          <Method title="Curious" data-aos="fade-up" data-aos-delay="300">
-            <LottieIcon icon={glassesSearching} />
-          </Method>
-          <Method title="Reliable" data-aos="fade-up" data-aos-delay="400">
-            <LottieIcon icon={avatarManApproved} />
-          </Method>
+          <Reveal effect="fadeInUp">
+            <Method title="Polyvalent">
+              <LottieIcon icon={omniChannel} />
+            </Method>
+          </Reveal>
+
+          <Reveal effect="fadeInUp" duration="1100">
+            <Method title="Empathic">
+              <LottieIcon icon={chatMessageHeart} />
+            </Method>
+          </Reveal>
+
+          <Reveal effect="fadeInUp" duration="1200">
+            <Method title="Efficient">
+              <LottieIcon icon={todoList} />
+            </Method>
+          </Reveal>
+
+          <Reveal effect="fadeInUp" duration="1300">
+            <Method title="Curious">
+              <LottieIcon icon={glassesSearching} />
+            </Method>
+          </Reveal>
+
+          <Reveal effect="fadeInUp" duration="1400">
+            <Method title="Reliable">
+              <LottieIcon icon={avatarManApproved} />
+            </Method>
+          </Reveal>
         </div>
       </Section>
       <Section title="About Me" className="p-6 min-h-half relative">
