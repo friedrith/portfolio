@@ -107,12 +107,12 @@ const IndexPage = () => {
               <LottieIcon icon={multimediaCode2} />
             </Method>
           </Reveal>
-          <Reveal effect="fadeInUp" duration="1100">
+          <Reveal effect="fadeInUp" duration="1400">
             <Method title="Agile methods">
               <LottieIcon icon={projectManagement} />
             </Method>
           </Reveal>
-          <Reveal effect="fadeInUp" duration="1200">
+          <Reveal effect="fadeInUp" duration="1800">
             <Method title="User-Centered design">
               <LottieIcon icon={engageUsers} />
             </Method>
