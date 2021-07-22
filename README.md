@@ -5,8 +5,8 @@
 <a href="https://www.gatsbyjs.org/">
   <img src="https://img.shields.io/badge/maintained%20with-gatsby-cc00ff.svg" alt="Build status" />
 </a>
-<a href="https://travis-ci.com/friedrith/portfolio">
-  <img src="https://travis-ci.com/friedrith/portfolio.svg?branch=master" alt="Build status" />
+<a href="https://github.com/friedrith/portfolio/actions/workflows/deploy.yml">
+  <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/friedrith/portfolio/Build%20and%20Deploy/master">
 </a>
 <a href="https://thibaultfriedrich.io">
   <img src="https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fthibaultfriedrich.io" alt="Online" />
@@ -35,8 +35,13 @@ yarn build
 
 Licensed under the [MIT License](./LICENSE).
 
-## Roadmap
+## Technologies
 
-- icons contact
-- favicon
-- background first page
+- [Gatsby](https://www.gatsbyjs.com/)
+- [React reveal](https://www.react-reveal.com/)
+- [React spring](https://react-spring.io/)
+- [React visibility sensor](https://github.com/joshwnj/react-visibility-sensor)
+- [Tailwind](https://tailwindcss.com/)
+- [Colors](https://coolors.co/031224-720045-83215d-af0069-949cdf-f5853f-0cce6b-3083dc-bce7fd-c492b1)
+- [Icons lordicons](https://lordicon.com/)
+- [Icons line awesome](https://icones8.fr/line-awesome)
