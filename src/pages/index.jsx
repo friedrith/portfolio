@@ -103,7 +103,7 @@ const IndexPage = () => {
       <Section title="My Key Methods" id="stats" className="">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
           <Reveal effect="fadeInUp">
-            <Method title="Code craftmanship">
+            <Method title="Code craftsmanship">
               <LottieIcon icon={multimediaCode2} />
             </Method>
           </Reveal>
