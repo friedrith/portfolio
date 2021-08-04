@@ -21,6 +21,7 @@ import omniChannel from '~assets/omnichannel-outline-edited.json'
 import chatMessageHeart from '~assets/chat-message-heart-outline-edited.json'
 import glassesSearching from '~assets/glasses-searching-outline-edited.json'
 import todoList from '~assets/to-do-list-outline-edited.json'
+import johann from '~assets/johann.png'
 
 const Method = ({ title, children, ...props }) => (
   <div className="flex flex-col justify-center items-center" {...props}>
@@ -207,6 +208,28 @@ const IndexPage = () => {
               <LottieIcon icon={avatarManApproved} />
             </Method>
           </Reveal>
+        </div>
+      </Section>
+      <Section title="Testimonial" className="py-24 relative">
+        <div className="flex flex-col items-center lg:flex-row lg:items-end ">
+          <img src={johann} alt="Johann Foucher" />
+          <div className="p-3 text-center lg:text-left">
+            <div className="text-purple-500 text-xl md:text-2xl">
+              Johann Foucher
+            </div>
+            <div className="text-purple-500 text-xl md:text-xl italic">
+              Founder & CEO at Pollen Metrology
+            </div>
+            <div className="pt-3 text-blue-500 italic lg:-mb-8">
+              <span className="text-5xl align-bottom">“</span>I am considering
+              Thibault as a reference in his field of expertise. He is a deep
+              passionate and whatever difficulty he has to face he will always
+              succeed to break the wall of difficulty. He is able to work either
+              on the technical program and on the project management that can
+              involve a team of experts and customers.
+              <span className="text-5xl align-top">“</span>
+            </div>
+          </div>
         </div>
       </Section>
       <Section title="About Me" className="p-6 min-h-half relative">
