@@ -212,24 +212,28 @@ const IndexPage = () => {
       </Section>
       <Section title="Testimonial" className="py-24 relative">
         <div className="flex flex-col items-center lg:flex-row lg:items-end ">
-          <img src={johann} alt="Johann Foucher" />
-          <div className="p-3 text-center lg:text-left">
-            <div className="text-purple-500 text-xl md:text-2xl">
-              Johann Foucher
+          <Reveal effect="fadeInRight" duration="1300">
+            <img src={johann} alt="Johann Foucher" />
+          </Reveal>
+          <Reveal effect="fadeInLeft" duration="1300">
+            <div className="p-3 text-center lg:text-left">
+              <div className="text-purple-500 text-xl md:text-2xl">
+                Johann Foucher
+              </div>
+              <div className="text-purple-500 text-xl md:text-xl italic">
+                Founder & CEO at Pollen Metrology
+              </div>
+              <div className="pt-3 text-blue-500 italic lg:-mb-8">
+                <span className="text-5xl align-bottom">“</span>I am considering
+                Thibault as a reference in his field of expertise. He is a deep
+                passionate and whatever difficulty he has to face he will always
+                succeed to break the wall of difficulty. He is able to work
+                either on the technical program and on the project management
+                that can involve a team of experts and customers.
+                <span className="text-5xl align-top">“</span>
+              </div>
             </div>
-            <div className="text-purple-500 text-xl md:text-xl italic">
-              Founder & CEO at Pollen Metrology
-            </div>
-            <div className="pt-3 text-blue-500 italic lg:-mb-8">
-              <span className="text-5xl align-bottom">“</span>I am considering
-              Thibault as a reference in his field of expertise. He is a deep
-              passionate and whatever difficulty he has to face he will always
-              succeed to break the wall of difficulty. He is able to work either
-              on the technical program and on the project management that can
-              involve a team of experts and customers.
-              <span className="text-5xl align-top">“</span>
-            </div>
-          </div>
+          </Reveal>
         </div>
       </Section>
       <Section title="About Me" className="p-6 min-h-half relative">
