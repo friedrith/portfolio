@@ -4,6 +4,7 @@
   "description": "My portfolio",
   "version": "3.0.0",
   "author": "Thibault Friedrich <thibault.friedrich@gmail.com>",
+  "license": "UNLICENSED",
   "scripts": {
     "setup": "node .scripts/setup.js",
     "build": "gatsby build",

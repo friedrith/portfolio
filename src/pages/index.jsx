@@ -213,7 +213,7 @@ const IndexPage = () => {
       <Section title="Testimonial" className="py-24 relative">
         <div className="flex flex-col items-center lg:flex-row lg:items-end ">
           <Reveal effect="fadeInRight" duration="1300">
-            <img src={johann} alt="Johann Foucher" />
+            <img src={johann} alt="Johann Foucher" className="max-h-64" />
           </Reveal>
           <Reveal effect="fadeInLeft" duration="1300">
             <div className="p-3 text-center lg:text-left">
