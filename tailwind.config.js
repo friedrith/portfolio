@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Jost', 'ui-sans-serif', 'system-ui'],
+        mono: ['Courier Prime', 'monospace'],
       },
       fontWeight: {
         light: 400,
@@ -73,6 +74,11 @@ module.exports = {
       }),
       listStyleType: {
         square: 'square',
+      },
+      boxShadow: {
+        dark: '20px 20px 60px #010811,  -20px -20px 60px #051c37',
+        blue: '6px 6px 30px #8289c4,-6px -6px 30px #a6affa',
+        purple: '6px 6px 30px #731d52, -6px -6px 30px #932568',
       },
     },
   },
