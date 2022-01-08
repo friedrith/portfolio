@@ -48,7 +48,6 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="relative">
-        <div className="bg-montreal bg-cover bg-center opacity-20 absolute inset-0 bg-no-repeat" />
         <section className="min-h-screen flex flex-col relative">
           {/* <Ribbon /> */}
           <div className="flex-1 flex flex-col md:flex-row justify-center items-center px-4 md:px-32">
@@ -80,26 +79,34 @@ const IndexPage = () => {
           </div>
         </section>
       </div>
-      <section className="min-h-half flex flex-col justify-center items-center px-24 pt-6 pb-6">
+      <section className="min-h-half flex flex-col justify-center items-center px-24 pt-6 pb-6 relative">
+        <div className="bg-montreal bg-cover bg-center opacity-20 absolute inset-0 bg-no-repeat" />
+
         <div className="flex flex-col md:flex-row max-w-screen-lg m-auto justify-center items-center">
           <div className="flex-1 text-white-500 font-light relative">
-            <p>
-              I am a french <strong>Frontend Developer and Ux Designer</strong>{' '}
+            <p className="font-base">
+              I am a french{' '}
+              <strong className="font-base">
+                Frontend Developer and Ux Designer
+              </strong>{' '}
               always curious about technologies, programming languages and
               design and it makes me very polyvalent. I am also considerated as
               passionate, full of energy and reliable.
             </p>
-            <p className="pt-6">
-              My various experiences as <strong>startup CTO</strong>,{' '}
-              <strong>frontend team leader</strong> and multiple time Startup
-              weekend organizer, gave me a <strong>deep</strong> knowledge of
-              the frontend stack and understanding of the{' '}
-              <strong>user experience</strong>.
+            <p className="pt-6 font-base">
+              My various experiences as{' '}
+              <strong className="font-base">startup CTO</strong>,{' '}
+              <strong className="font-base">frontend team leader</strong> and
+              multiple time Startup weekend organizer, gave me a{' '}
+              <strong className="font-base">deep</strong> knowledge of the
+              frontend stack and understanding of the{' '}
+              <strong className="font-base">user experience</strong>.
             </p>
-            <p className="pt-6">
-              I am living in Montreal and working in <strong>remote</strong> as
-              a freelance and I adapt myself to any timezone. I am also able to
-              work in both french and english.
+            <p className="pt-6 font-base">
+              I am living in Montreal and working in{' '}
+              <strong className="font-base">remote</strong> as a freelance and I
+              adapt myself to any timezone. I am also able to work in both
+              french and english.
             </p>
           </div>
           <div className="flex-0 pt-10 md:pt-0 md:pl-14">
@@ -140,7 +147,7 @@ const IndexPage = () => {
       </section>
       <section className="min-h-half max-w-screen-2xl m-auto px-12 flex flex-col justify-center">
         <div className="grid grid-cols-3 xl:grid-cols-7 gap-6 md:gap-12 justify-center ">
-          <div className="p-8 rounded-md col-span-3 xl:col-span-2 shadow-dark">
+          <div className="p-8 rounded-md col-span-3 xl:col-span-2 shadow-dark my-10">
             <h2 className="text-center pb-4 text-2xl text-white-500">
               Fullstack
             </h2>
@@ -171,7 +178,7 @@ const IndexPage = () => {
               </li>
             </ul>
           </div>
-          <div className=" p-8 rounded-md col-span-3 shadow-dark">
+          <div className=" p-8 rounded-md col-span-3 shadow-dark ">
             <h2 className="text-center pb-4 text-2xl text-white-500">
               Frontend
             </h2>
@@ -202,7 +209,7 @@ const IndexPage = () => {
               </li>
             </ul>
           </div>
-          <div className="p-8 rounded-md col-span-3 xl:col-span-2 shadow-dark">
+          <div className="p-8 rounded-md col-span-3 xl:col-span-2 shadow-dark my-10">
             <h2 className="text-center pb-4 text-2xl text-white-500">Design</h2>
             <ul className="leading-10 text-purple-600">
               <li>
