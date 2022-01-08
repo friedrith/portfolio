@@ -10,15 +10,23 @@ const determineDisplaySize = width => ({
 
 const useResponsive = () => {
   const [currentDisplaySize, setCurrentDisplaySize] = useState(
-    determineDisplaySize(window.innerWidth)
+    determineDisplaySize(typeof window !== 'undefined' ? window.innerWidth : 0)
   )
 
   useEffect(() => {
     const handler = () =>
-      setCurrentDisplaySize(determineDisplaySize(window.innerWidth))
+      setCurrentDisplaySize(
+        determineDisplaySize(
+          typeof window !== 'undefined' ? window.innerWidth : 0
+        )
+      )
     window.addEventListener('resize', handler)
 
-    setCurrentDisplaySize(determineDisplaySize(window.innerWidth))
+    setCurrentDisplaySize(
+      determineDisplaySize(
+        typeof window !== 'undefined' ? window.innerWidth : 0
+      )
+    )
     return () => window.removeEventListener('resize', handler)
   }, [])
 
