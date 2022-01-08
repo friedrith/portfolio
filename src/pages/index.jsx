@@ -82,7 +82,7 @@ const IndexPage = () => {
           <MouseIndicator />
         </div>
       </section>
-      <section className="min-h-half flex flex-col justify-center items-center px-24 pt-6 pb-6 relative">
+      <section className="min-h-half flex flex-col justify-center items-center px-6 md:px-24 pt-6 pb-6 relative">
         <div className="bg-montreal bg-cover bg-center opacity-20 absolute inset-0 bg-no-repeat" />
 
         <div className="flex flex-col md:flex-row max-w-screen-lg m-auto justify-center items-center">
@@ -148,7 +148,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="min-h-half max-w-screen-2xl m-auto px-12 flex flex-col justify-center ">
+      <section className="min-h-half max-w-screen-2xl m-auto px-4 md:px-12 flex flex-col justify-center ">
         <div className="grid grid-cols-3 xl:grid-cols-7 gap-6 md:gap-12 justify-center ">
           <div className="p-8 rounded-md col-span-3 xl:col-span-2 shadow-dark my-10">
             <h2 className="text-center pb-4 text-2xl text-white-500">
@@ -360,7 +360,11 @@ const IndexPage = () => {
       <Section title="Testimonial" className="py-24 relative background">
         <div className="flex flex-col items-center lg:flex-row lg:items-end ">
           <Reveal effect="fadeInRight" duration={1300}>
-            <img src={johann} alt="Johann Foucher" className="max-h-64" />
+            <img
+              src={johann}
+              alt="Johann Foucher"
+              className="max-h-44 md:max-h-64"
+            />
           </Reveal>
           <Reveal effect="fadeInLeft" duration={1300}>
             <div className="p-3 text-center lg:text-left">
