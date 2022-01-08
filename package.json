@@ -4,7 +4,7 @@
   "description": "My portfolio",
   "version": "3.0.0",
   "author": "Thibault Friedrich <thibault.friedrich@gmail.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "setup": "node .scripts/setup.js",
     "build": "gatsby build",
@@ -19,6 +19,10 @@
     "commitlint": "commitlint --from 957563f598da1f62efb76fa3a310349854099fb5"
   },
   "dependencies": {
+    "@react-spring/core": "^9.4.1",
+    "@react-spring/three": "^9.4.1",
+    "@react-three/drei": "^8.3.1",
+    "@react-three/fiber": "^7.0.24",
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.3.1",
     "classnames": "^2.2.6",
@@ -46,7 +50,8 @@
     "react-reveal": "^1.2.2",
     "react-spring": "^9.2.4",
     "react-visibility-sensor": "^5.1.1",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.4",
+    "three": "^0.136.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
@@ -84,7 +89,6 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "license": "MIT",
   "repository": "https://github.com/friedrith/portfolio.git",
   "main": "index.js"
 }

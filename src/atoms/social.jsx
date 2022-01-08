@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import style from './social.style'
+import style from './social.style.scss'
 
 const Social = ({ icon: Icon, title, url, className }) => (
   <a

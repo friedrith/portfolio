@@ -20,7 +20,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-filename-extension': 'off',
-    /*semi: [2, 'never'],
+    /* semi: [2, 'never'],
     'arrow-body-style': 0,
     'no-const-assign': 'error',
     eqeqeq: 'error',
@@ -52,6 +52,7 @@ module.exports = {
         map: [
           ['~assets', './src/assets'],
           ['~atoms', './src/atoms'],
+          ['~data', './src/data'],
           ['~molecules', './src/molecules'],
           ['~organisms', './src/organisms'],
           ['~pages', './src/pages'],

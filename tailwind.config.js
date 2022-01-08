@@ -80,6 +80,9 @@ module.exports = {
         blue: '6px 6px 30px #8289c4,-6px -6px 30px #a6affa',
         purple: '6px 6px 30px #731d52, -6px -6px 30px #932568',
       },
+      height: {
+        128: '32rem',
+      },
     },
   },
   variants: {

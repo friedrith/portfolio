@@ -12,6 +12,7 @@ import Layout from '~organisms/layout'
 import SEO from '~atoms/seo'
 import MouseIndicator from '~atoms/mouse-indicator'
 import Ribbon from '~atoms/ribbon'
+import Laptop from '~atoms/Laptop'
 
 import multimediaCode2 from '~assets/multimedia-code-2-outline-edited.json'
 import projectManagement from '~assets/project-management-outline-edited.json'
@@ -47,38 +48,40 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="relative">
-        <section className="min-h-screen flex flex-col relative">
-          {/* <Ribbon /> */}
-          <div className="flex-1 flex flex-col md:flex-row justify-center items-center px-4 md:px-32">
-            <div className="md:flex-1">
-              <Reveal effect="fadeInLeft" mountOnEnter>
-                <h1 className="text-white-500 text-3xl md:text-5xl 2xl:text-8xl tracking-wide font-light">
-                  Thibault FRIEDRICH
-                </h1>
-              </Reveal>
-              <Reveal effect="fadeInLeft" mountOnEnter delay={200}>
-                <h2 className="text-purple-500 font-normal text-2xl 2xl:text-3xl tracking-wide md:pl-4 pt-5">
-                  Frontend Developer / Ux Designer
-                </h2>
-              </Reveal>
-            </div>
-            <div className="md:flex-1 flex items-center justify-center py-10">
-              <div>
+      <section className="min-h-screen flex flex-col relative">
+        <div className="absolute h-full w-full z-40">
+          <Laptop />
+        </div>
+
+        {/* <Ribbon /> */}
+        <div className="flex-1 flex flex-col-reverse md:flex-row justify-center items-center px-4 md:px-32 relative z-30">
+          <div className="md:flex-1">
+            <Reveal effect="fadeInLeft" mountOnEnter>
+              <h1 className="text-white-500 text-center md:text-left text-3xl md:text-5xl 2xl:text-8xl tracking-wide font-light">
+                Thibault FRIEDRICH
+              </h1>
+            </Reveal>
+            <Reveal effect="fadeInLeft" mountOnEnter delay={200}>
+              <h2 className="text-purple-500 text-center md:text-left font-normal text-2xl 2xl:text-3xl tracking-wide md:pl-4 pt-5">
+                Frontend Developer / Ux Designer
+              </h2>
+            </Reveal>
+          </div>
+          <div className="md:flex-1 flex items-center justify-center py-10 h-60">
+            {/* <div>
                 <div className="font-mono text-2xl md:text-3xl xl:text-5xl 2xl:text-7xl text-blue-500 text-center	">
                   &lt;Born
                   <br />
                   to
                   <br /> Code/&gt;
                 </div>
-              </div>
-            </div>
+              </div> */}
           </div>
-          <div className="p-5 absolute bottom-0 inset-x-0 flex justify-center">
-            <MouseIndicator />
-          </div>
-        </section>
-      </div>
+        </div>
+        <div className="p-5 absolute bottom-0 inset-x-0 flex justify-center">
+          <MouseIndicator />
+        </div>
+      </section>
       <section className="min-h-half flex flex-col justify-center items-center px-24 pt-6 pb-6 relative">
         <div className="bg-montreal bg-cover bg-center opacity-20 absolute inset-0 bg-no-repeat" />
 
@@ -95,10 +98,10 @@ const IndexPage = () => {
             </p>
             <p className="pt-6 font-base">
               My various experiences as{' '}
-              <strong className="font-base">startup CTO</strong>,{' '}
-              <strong className="font-base">frontend team leader</strong> and
-              multiple time Startup weekend organizer, gave me a{' '}
-              <strong className="font-base">deep</strong> knowledge of the
+              <strong className="font-base">freelance</strong>,{' '}
+              <strong className="font-base">startup CTO</strong>, and{' '}
+              <strong className="font-base">frontend team leader</strong>, gave
+              me a <strong className="font-base">deep</strong> knowledge of the
               frontend stack and understanding of the{' '}
               <strong className="font-base">user experience</strong>.
             </p>
@@ -145,7 +148,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="min-h-half max-w-screen-2xl m-auto px-12 flex flex-col justify-center">
+      <section className="min-h-half max-w-screen-2xl m-auto px-12 flex flex-col justify-center ">
         <div className="grid grid-cols-3 xl:grid-cols-7 gap-6 md:gap-12 justify-center ">
           <div className="p-8 rounded-md col-span-3 xl:col-span-2 shadow-dark my-10">
             <h2 className="text-center pb-4 text-2xl text-white-500">
@@ -154,7 +157,7 @@ const IndexPage = () => {
             <ul className="leading-10 text-purple-600">
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
-                Php
+                Php (Symfony)
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
@@ -162,7 +165,7 @@ const IndexPage = () => {
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
-                C++, C
+                C++, C (Qt)
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
@@ -170,11 +173,11 @@ const IndexPage = () => {
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
-                OS (Linux, etc)
+                Linux (Debian, ...)
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
-                Java
+                Java (SWT)
               </li>
             </ul>
           </div>
@@ -193,6 +196,10 @@ const IndexPage = () => {
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
+                Animations: React-spring, animate.js
+              </li>
+              <li>
+                <i className="lar la-check-circle font-bold text-xl mr-1" />
                 Draw: WebGL, Canvas, SVG
               </li>
               <li>
@@ -206,6 +213,10 @@ const IndexPage = () => {
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
                 Tests: Jest, Enzyme, Selenium
+              </li>
+              <li>
+                <i className="lar la-check-circle font-bold text-xl mr-1" />
+                CI: Jenkins, Github Actions
               </li>
             </ul>
           </div>
@@ -237,7 +248,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <Section title="My Key Methods" id="stats" className="">
+      <Section title="My Key Methods" id="stats">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
           <Reveal effect="fadeInUp">
             <Method title="Code craftsmanship">
@@ -346,7 +357,7 @@ const IndexPage = () => {
           </Reveal>
         </div>
       </Section> */}
-      <Section title="Testimonial" className="py-24 relative">
+      <Section title="Testimonial" className="py-24 relative background">
         <div className="flex flex-col items-center lg:flex-row lg:items-end ">
           <Reveal effect="fadeInRight" duration={1300}>
             <img src={johann} alt="Johann Foucher" className="max-h-64" />
