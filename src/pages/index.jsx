@@ -303,9 +303,9 @@ const IndexPage = () => {
               Discover some of my open-source projects. I often focus on making
               the user interfaces{' '}
               <strong className="font-base">easy-to-use</strong> using the best
-              technologies. I am always ready to try new technologies to improve
-              my skills. Most of these projects are still used on a daily
-              frequency.
+              technologies. I am also always ready to try new technologies to
+              improve my skills. Most of these projects are still used on a
+              daily frequency.
             </p>
             <d className="text-blue-500">
               Click on the preview of a project to go to the github page.
