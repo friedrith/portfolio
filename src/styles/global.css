@@ -47,7 +47,7 @@ html {
   }
 
   strong {
-    font-weight: 425;
+    /* font-weight: 425; */
     color: #af0069;
   }
 }
@@ -98,4 +98,112 @@ html {
 .fadeInUp {
   opacity: 0;
   animation: fadeInUp 0.3s ease-in-out;
+}
+
+.container {
+  /* column-gap: 30px;
+  row-gap: 30px;
+
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px; */
+
+  /* transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg); */
+}
+
+.card {
+  width: 100px;
+  flex: 0 0 100px;
+  margin: 10px;
+  height: 140px;
+}
+
+.isometric-card {
+  position: relative;
+  z-index: 10;
+  /* margin: 0 auto; */
+  transform-style: preserve-3d;
+  /* background-color: red; */
+  will-change: transform;
+
+  flex: 1 1 45%;
+  padding: 10px;
+  margin: 10px;
+
+  height: 140px;
+
+  border-radius: 0.7rem;
+  /* box-shadow: -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    -28px 28px 28px 0 rgba(34, 33, 81, 0.25); */
+
+  box-shadow: -1px 0 28px 0 black, -28px 28px 28px 0 black;
+  transition: 0.1s ease-in-out transform, 0.2s ease-in-out box-shadow;
+
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .isometric-card,
+  .card {
+    width: 250px;
+    flex: 0 0 250px;
+    height: 350px;
+
+    /* width: 100px;
+    flex: 0 0 100px;
+    height: 140px; */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .isometric-card,
+  .card {
+    width: 250px;
+    flex: 0 0 250px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .isometric-card,
+  .card {
+    width: 500px;
+    flex: 0 0 500px;
+    height: 700px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .isometric-card:hover {
+    z-index: 20;
+    transform: translate3d(30px, -30px, 0);
+    /* box-shadow: -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+      -54px 54px 28px 10px rgba(34, 33, 81, 0.15); */
+
+    box-shadow: -1px 0 28px 0 black, -54px 54px 28px 10px black;
+  }
+}
+
+.overlay {
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  transition: 0.1s ease-in-out opacity;
+}
+
+.isometric-card:hover .overlay {
+  opacity: 0;
 }

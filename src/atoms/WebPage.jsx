@@ -16,7 +16,7 @@ const WebPage = () => {
 
   return (
     <button
-      className={`cursor-pointer relative h-full w-full flex items-center text-center text-3xl ${backgrounds[index]} text-white-500 margin: 0 font-mono`}
+      className={`cursor-pointer relative h-full w-full flex items-center text-center text-3xl ${backgrounds[index]} text-white-500 font-mono`}
       onClick={nextBg}
       type="button"
     >

@@ -13,6 +13,7 @@ import SEO from '~atoms/seo'
 import MouseIndicator from '~atoms/mouse-indicator'
 import Ribbon from '~atoms/ribbon'
 import Laptop from '~atoms/Laptop'
+import ProjectCard from '~atoms/project-card'
 
 import multimediaCode2 from '~assets/multimedia-code-2-outline-edited.json'
 import projectManagement from '~assets/project-management-outline-edited.json'
@@ -85,8 +86,8 @@ const IndexPage = () => {
       <section className="min-h-half flex flex-col justify-center items-center px-6 md:px-24 pt-6 pb-6 relative">
         <div className="bg-montreal bg-cover bg-center opacity-20 absolute inset-0 bg-no-repeat" />
 
-        <div className="flex flex-col md:flex-row max-w-screen-lg m-auto justify-center items-center">
-          <div className="flex-1 text-white-500 font-light relative">
+        <div className="flex flex-col md:flex-row max-w-screen-lg m-auto justify-center items-center relative">
+          <div className="flex-1 text-white-500 font-light">
             <p className="font-base">
               I am a french{' '}
               <strong className="font-base">
@@ -148,6 +149,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+
       <section className="min-h-half max-w-screen-2xl m-auto px-4 md:px-12 flex flex-col justify-center ">
         <div className="grid grid-cols-3 xl:grid-cols-7 gap-6 md:gap-12 justify-center ">
           <div className="p-8 rounded-md col-span-3 xl:col-span-2 shadow-dark my-10">
@@ -267,6 +269,54 @@ const IndexPage = () => {
           </Reveal>
         </div>
       </Section>
+      <section className="min-h-half flex flex-col lg:flex-row items-center w-full md:overflow-hidden">
+        <div className="container flex-1 flex-col justify-center lg:justify-end">
+          <div className="flex flex-row-reverse justify-center lg:justify-start  items-center">
+            <ProjectCard
+              className="bg-generate-password"
+              href="https://github.com/generate-password/generate-password.github.io"
+            />
+            <ProjectCard
+              className="bg-nodeWifi"
+              href="https://github.com/friedrith/node-wifi"
+            />
+          </div>
+          <div className="flex flex-row-reverse justify-center lg:justify-start items-center">
+            <div className="card hidden md:block" />
+
+            <ProjectCard
+              className="bg-vault"
+              href="https://github.com/getvault/getvault.github.io"
+            />
+            <ProjectCard
+              className="bg-vaxicode"
+              href="https://github.com/friedrith/vaxicode-redesign"
+            />
+          </div>
+        </div>
+        <div className="flex-1 flex flex-col items-start px-4 md:px-10 xl:px-36 py-10">
+          <h2 className="text-purple-500 text-3xl md:text-5xl text-center pb-12 pt-0 font-normal relative z-50">
+            My Projects
+          </h2>
+          <div className="flex-1 text-white-500 font-light relative">
+            <p className="font-base">
+              Discover some of my open-source projects. I often focus on making
+              the user interfaces{' '}
+              <strong className="font-base">easy-to-use</strong> using the best
+              technologies. I am always ready to try new technologies to improve
+              my skills. Most of these projects are still used on a daily
+              frequency.
+            </p>
+            <d className="text-blue-500">
+              Click on the preview of a project to go to the github page.
+            </d>
+
+            <div className="font-base text-purple-500 pt-2">
+              #react #nodejs #user-interface
+            </div>
+          </div>
+        </div>
+      </section>
       {/* <section className="flex items-stretch flex-col lg:flex-row">
         <div className="bg-purple-500 p-8 flex-1 flex flex-col ">
           <h2 className="text-3xl pb-8 text-white-500 lg:text-right font-light">

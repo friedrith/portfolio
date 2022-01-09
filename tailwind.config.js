@@ -71,6 +71,10 @@ module.exports = {
         montreal: "url('~assets/montreal.jpg')",
         skyline: "url('~assets/skyline.png')",
         world: "url('~assets/world.png')",
+        vault: "url('~assets/vault.png')",
+        vaxicode: "url('~assets/vaxicode.png')",
+        nodeWifi: "url('~assets/node-wifi.png')",
+        'generate-password': "url('~assets/generate-password.png')",
       }),
       listStyleType: {
         square: 'square',
