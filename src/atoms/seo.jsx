@@ -3,55 +3,92 @@
  *  Gatsby's useStaticQuery React hook
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
+ * See: https://www.gatsbyjs.com/docs/add-seo-component/
  */
 
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { useLocation } from '@reach/router'
+
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
+            defaultTitle
+            titleTemplate
+            defaultDescription
             author
+            siteUrl
+            defaultImage
+            keywords
           }
         }
       }
     `
   )
 
-  //       titleTemplate={`%s | ${site.siteMetadata.title}`}
+  const { pathname } = useLocation()
+  const {
+    defaultTitle,
+    titleTemplate,
+    defaultDescription,
+    siteUrl,
+    defaultImage,
+    keywords,
+  } = site.siteMetadata
 
-  const metaDescription = description || site.siteMetadata.description
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname}`,
+    keywords,
+  }
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={site.siteMetadata.title}
+      title={seo.title}
+      titleTemplate={titleTemplate}
       meta={[
         {
+          name: 'keywords',
+          content: seo.keywords,
+        },
+        {
           name: 'description',
-          content: metaDescription,
+          content: seo.description,
+        },
+        {
+          property: 'og:url',
+          content: seo.url,
         },
         {
           property: 'og:title',
-          content: title,
+          content: seo.title,
         },
         {
           property: 'og:description',
-          content: metaDescription,
+          content: seo.description,
         },
         {
           property: 'og:type',
           content: 'website',
+        },
+        {
+          property: 'og:image',
+          content: seo.image,
+        },
+        {
+          name: 'twitter:url',
+          content: seo.url,
         },
         {
           name: 'twitter:card',
@@ -63,28 +100,33 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:title',
-          content: title,
+          content: seo.title,
+        },
+        {
+          name: 'twitter:image',
+          content: seo.image,
         },
         {
           name: 'twitter:description',
-          content: metaDescription,
+          content: seo.description,
         },
-      ].concat(meta)}
+      ]}
     />
   )
 }
 
 SEO.defaultProps = {
   lang: 'en',
-  meta: [],
   description: '',
+  title: '',
+  image: '',
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  image: PropTypes.string,
 }
 
 export default SEO

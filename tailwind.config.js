@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 // https://coolors.co/031224-720045-83215d-af0069-949cdf-f5853f-0cce6b-3083dc-bce7fd-c492b1
 
 module.exports = {

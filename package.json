@@ -19,6 +19,7 @@
     "commitlint": "commitlint --from 957563f598da1f62efb76fa3a310349854099fb5"
   },
   "dependencies": {
+    "@reach/router": "^1.3.4",
     "@react-spring/core": "^9.4.1",
     "@react-spring/three": "^9.4.1",
     "@react-three/drei": "^8.3.1",

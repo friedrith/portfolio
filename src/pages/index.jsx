@@ -48,7 +48,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Thibault Friedrich - Frontend Freelance" />
       <section className="min-h-screen flex flex-col relative">
         <div className="absolute h-full w-full z-40">
           <Laptop />
@@ -89,12 +89,12 @@ const IndexPage = () => {
         <div className="flex flex-col md:flex-row max-w-screen-lg m-auto justify-center items-center relative">
           <div className="flex-1 text-white-500 font-light">
             <p className="font-base">
-              I am a french{' '}
+              I am a French{' '}
               <strong className="font-base">
                 Frontend Developer and Ux Designer
               </strong>{' '}
               always curious about technologies, programming languages and
-              design and it makes me very polyvalent. I am also considerated as
+              design and it makes me very versatile. I am also considerated as
               passionate, full of energy and reliable.
             </p>
             <p className="pt-6 font-base">
@@ -110,7 +110,7 @@ const IndexPage = () => {
               I am living in Montreal and working in{' '}
               <strong className="font-base">remote</strong> as a freelance and I
               adapt myself to any timezone. I am also able to work in both
-              french and english.
+              French and English.
             </p>
           </div>
           <div className="flex-0 pt-10 md:pt-0 md:pl-14">
@@ -140,9 +140,8 @@ const IndexPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    github project
+                    github project*
                   </a>
-                  *
                 </StatCard>
               )}
             </VisibilitySensor>
@@ -437,22 +436,6 @@ const IndexPage = () => {
           </Reveal>
         </div>
       </Section>
-      {/* <Section title="More About Me" className="p-6 min-h-half relative">
-        <div className="bg-world bg-contain bg-center opacity-20 absolute inset-0 bg-no-repeat" />
-        <p className="text-white-500 font-light relative">
-          I am a french <strong>Frontend Developer and Ux Designer</strong>{' '}
-          living in Montreal and working in <strong>remote</strong> as a
-          freelance.
-        </p>
-        <p className="text-white-500 font-light pt-6 relative">
-          My various experiences as <strong>startup CTO</strong>,{' '}
-          <strong>frontend team leader</strong> and multiple time Startup
-          weekend organizer, gave me a <strong>deep</strong> knowledge of the
-          frontend stack and understanding of the{' '}
-          <strong>user experience</strong>. I am also able to work in both
-          french and english.
-        </p>
-      </Section> */}
       <Section title="Contact Me">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <a

@@ -1,10 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'Thibault Friedrich',
-    description:
+    defaultTitle: 'Thibault Friedrich',
+    titleTemplate: '%s - Frontend Freelance',
+    defaultDescription:
       '🚀 Ux Designer and Frontend developer specialized in clean and smooth user experiences 👌. I am also very interested 🔎 in futuristic technologies and sociology.',
     author: 'Thibault Friedrich <thibault.friedrich@gmail.com>',
+    defaultImage: '/preview.png',
     siteUrl: `https://thibaultfriedrich.io`,
+    keywords: ['frontend', 'react', 'design', 'freelance'],
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -23,8 +26,8 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#031224',
+        theme_color: '#031224',
         display: 'minimal-ui',
         icon: 'src/assets/icon.png', // This path is relative to the root of the site.
       },
