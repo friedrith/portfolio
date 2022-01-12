@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-import { Spring, animated } from 'react-spring'
 import VisibilitySensor from 'react-visibility-sensor'
 import Reveal from 'react-reveal/Reveal'
 
@@ -18,11 +17,6 @@ import ProjectCard from '~atoms/project-card'
 import multimediaCode2 from '~assets/multimedia-code-2-outline-edited.json'
 import projectManagement from '~assets/project-management-outline-edited.json'
 import engageUsers from '~assets/engage-users-outline-edited.json'
-import avatarManApproved from '~assets/avatar-man-approved-outline-edited.json'
-import omniChannel from '~assets/omnichannel-outline-edited.json'
-import chatMessageHeart from '~assets/chat-message-heart-outline-edited.json'
-import glassesSearching from '~assets/glasses-searching-outline-edited.json'
-import todoList from '~assets/to-do-list-outline-edited.json'
 import johann from '~assets/johann.png'
 
 const Method = ({ title, children, ...props }) => (
@@ -53,8 +47,6 @@ const IndexPage = () => {
         <div className="absolute h-full w-full z-40">
           <Laptop />
         </div>
-
-        {/* <Ribbon /> */}
         <div className="flex-1 flex flex-col-reverse md:flex-row justify-center items-center px-4 md:px-32 relative z-30">
           <div className="md:flex-1">
             <Reveal effect="fadeInLeft" mountOnEnter>
@@ -67,16 +59,6 @@ const IndexPage = () => {
                 Frontend Developer / Ux Designer
               </h2>
             </Reveal>
-          </div>
-          <div className="md:flex-1 flex items-center justify-center py-10 h-60">
-            {/* <div>
-                <div className="font-mono text-2xl md:text-3xl xl:text-5xl 2xl:text-7xl text-blue-500 text-center	">
-                  &lt;Born
-                  <br />
-                  to
-                  <br /> Code/&gt;
-                </div>
-              </div> */}
           </div>
         </div>
         <div className="p-5 absolute bottom-0 inset-x-0 flex justify-center">
@@ -103,8 +85,10 @@ const IndexPage = () => {
               <strong className="font-base">startup CTO</strong>, and{' '}
               <strong className="font-base">frontend team leader</strong>, gave
               me a <strong className="font-base">deep</strong> knowledge of the
-              frontend stack and understanding of the{' '}
-              <strong className="font-base">user experience</strong>.
+              frontend stack, understanding of the{' '}
+              <strong className="font-base">user experience</strong> and also
+              business contraints. So I am capable of deliver fast, smooth and
+              clean.
             </p>
             <p className="pt-6 font-base">
               I am living in Montreal and working in{' '}
@@ -316,102 +300,12 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      {/* <section className="flex items-stretch flex-col lg:flex-row">
-        <div className="bg-purple-500 p-8 flex-1 flex flex-col ">
-          <h2 className="text-3xl pb-8 text-white-500 lg:text-right font-light">
-            Frontend Developer
-          </h2>
-          <ul className="text-blue-500 text-xl flex-1 font-light list-square list-inside">
-            <Skill
-              title="JavaScript"
-              description="React/Gatsby, node.js, WebGL"
-            />
-            <Skill title="CSS" description="Sass, Less, Bootstrap, Tailwind" />
-            <Skill title="Php" description="Symfony 3+" />
-            <Skill title="C#" description="Unity/VR" />
-            <Skill title="Python" description="OpenCV" />
-            <Skill title="C++" description="Qt" />
-            <Skill title="Tests" description="jest, enzyme, QTest, selenium" />
-            <Skill
-              title="CI"
-              description="Travis, Jenkins, gitlab runners, gitlab actions"
-            />
-            <Skill title="OS" description="Windows, MacOS, Linux" />
-          </ul>
-          <div className="text-white-500 pt-6">
-            <div className="text-3xl">Dev Tools</div>
-            <div>VS Code, Postman, Git, Github, Jira, npm, ITerm, Notion</div>
-          </div>
-        </div>
-        <svg
-          preserveAspectRatio="none"
-          viewBox="0 0 100 100"
-          className="bg-purple-500 h-16 lg:h-auto lg:w-16"
-        >
-          <polygon points="100,0 0,100 100,100" style={{ fill: '#720045' }} />
-        </svg>
-        <div className="bg-purple-700 p-8 flex-1 flex flex-col">
-          <h2 className="text-3xl pb-8 text-white-500 text-left font-light">
-            Ux Designer
-          </h2>
-          <ul className="text-blue-500 text-xl flex-1 font-light list-square list-inside">
-            <Skill title="User interviews" />
-            <Skill title="Interface testing" />
-            <Skill title="Persona" />
-            <Skill title="Userflows" />
-            <Skill title="Brainstorming" description="6-to-1" />
-            <Skill title="Mockups" description="Wireframes, high-fidelity" />
-            <Skill title="User journey map" />
-            <Skill title="User story map" />
-          </ul>
-          <div className="text-white-500 pt-6">
-            <div className="text-3xl">Design Tools</div>
-            <div>
-              Adobe XD, Balsamiq, Miro, Procreate, Notion, One Note, Google
-              sheet
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* <Section title="My Soft Skills">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  gap-12 max-w-screen-lg m-auto justify-center">
-          <Reveal effect="fadeInUp">
-            <Method title="Polyvalent">
-              <LottieIcon icon={omniChannel} />
-            </Method>
-          </Reveal>
-
-          <Reveal effect="fadeInUp" duration="1100">
-            <Method title="Empathic">
-              <LottieIcon icon={chatMessageHeart} />
-            </Method>
-          </Reveal>
-
-          <Reveal effect="fadeInUp" duration="1200">
-            <Method title="Efficient">
-              <LottieIcon icon={todoList} />
-            </Method>
-          </Reveal>
-
-          <Reveal effect="fadeInUp" duration="1300">
-            <Method title="Curious">
-              <LottieIcon icon={glassesSearching} />
-            </Method>
-          </Reveal>
-
-          <Reveal effect="fadeInUp" duration="1400">
-            <Method title="Reliable">
-              <LottieIcon icon={avatarManApproved} />
-            </Method>
-          </Reveal>
-        </div>
-      </Section> */}
       <Section title="Testimonial" className="py-24 relative background">
         <div className="flex flex-col items-center lg:flex-row lg:items-end ">
           <Reveal effect="fadeInRight" duration={1300}>
             <img
               src={johann}
-              alt="Johann Foucher"
+              alt="Johann Foucher, CEO de Pollen Metrology"
               className="max-h-44 md:max-h-64"
             />
           </Reveal>
