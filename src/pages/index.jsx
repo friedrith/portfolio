@@ -40,13 +40,17 @@ const IndexPage = () => {
   const [isActive2, setActive2] = useState(true)
   const [isActive3, setActive3] = useState(true)
 
+  const [projectHovered, setProjectHovered] = useState(null)
+
+  const blur = () => setProjectHovered(null)
+
   return (
     <Layout>
       <SEO title="Thibault Friedrich - Frontend Freelance" />
       <section className="min-h-screen flex flex-col relative">
-        <div className="absolute h-full w-full z-40">
+        {/* <div className="absolute h-full w-full z-40">
           <Laptop />
-        </div>
+        </div> */}
         <div className="flex-1 flex flex-col-reverse md:flex-row justify-center items-center px-4 md:px-32 relative z-30">
           <div className="md:flex-1">
             <Reveal effect="fadeInLeft" mountOnEnter>
@@ -91,7 +95,7 @@ const IndexPage = () => {
               clean.
             </p>
             <p className="pt-6 font-base">
-              I am living in Montreal and working in{' '}
+              I live in Montreal and working in{' '}
               <strong className="font-base">remote</strong> as a freelance and I
               adapt myself to any timezone. I am also able to work in both
               French and English.
@@ -252,16 +256,22 @@ const IndexPage = () => {
           </Reveal>
         </div>
       </Section>
-      <section className="min-h-half flex flex-col lg:flex-row items-center w-full md:overflow-hidden">
+      <section className="min-h-half flex flex-col xl:flex-row items-center w-full md:overflow-hidden">
         <div className="container flex-1 flex-col justify-center lg:justify-end">
           <div className="flex flex-row-reverse justify-center lg:justify-start  items-center">
             <ProjectCard
               className="bg-generate-password"
               href="https://github.com/generate-password/generate-password.github.io"
+              onMouseLeave={blur}
+              onMouseEnter={() => setProjectHovered('generate-password')}
+              hovered={projectHovered === 'generate-password'}
             />
             <ProjectCard
               className="bg-nodeWifi"
               href="https://github.com/friedrith/node-wifi"
+              onMouseLeave={blur}
+              onMouseEnter={() => setProjectHovered('node-wifi')}
+              hovered={projectHovered === 'node-wifi'}
             />
           </div>
           <div className="flex flex-row-reverse justify-center lg:justify-start items-center">
@@ -270,33 +280,99 @@ const IndexPage = () => {
             <ProjectCard
               className="bg-vault"
               href="https://github.com/getvault/getvault.github.io"
+              onMouseLeave={blur}
+              onMouseEnter={() => setProjectHovered('vault')}
+              hovered={projectHovered === 'vault'}
             />
             <ProjectCard
               className="bg-vaxicode"
               href="https://github.com/friedrith/vaxicode-redesign"
+              onMouseLeave={blur}
+              onMouseEnter={() => setProjectHovered('vaxicode')}
+              hovered={projectHovered === 'vaxicode'}
             />
           </div>
         </div>
-        <div className="flex-1 flex flex-col items-start px-4 md:px-10 xl:px-36 py-10">
+        <div className="flex-1 flex flex-col items-start px-6 2xl:px-36 py-10">
           <h2 className="text-purple-500 text-3xl md:text-5xl text-center pb-12 pt-0 font-normal relative z-50">
             My Projects
           </h2>
           <div className="flex-1 text-white-500 font-light relative">
             <p className="font-base">
-              Discover some of my open-source projects. I often focus on making
-              the user interfaces{' '}
-              <strong className="font-base">easy-to-use</strong> using the best
-              technologies. I am also always ready to try new technologies to
-              improve my skills. Most of these projects are still used on a
-              daily frequency.
+              Discover some of my open-source projects:
             </p>
-            <d className="text-blue-500">
-              Click on the preview of a project to go to the github page.
-            </d>
-
-            <div className="font-base text-purple-500 pt-2">
-              #react #nodejs #user-interface
-            </div>
+            <ul className="py-2 list-disc ml-6">
+              <li className="text-blue-500 text-base ">
+                <a
+                  href="https://github.com/friedrith/node-wifi"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`block py-2 px-2 hover:text-purple-500 rounded ${
+                    projectHovered === 'node-wifi' ? 'text-purple-500' : ''
+                  }`}
+                  onMouseLeave={blur}
+                  onMouseEnter={() => setProjectHovered('node-wifi')}
+                >
+                  Node-wifi: a library to manage wifi connections on node.js{' '}
+                  <span className="text-purple-500 text0-xs">
+                    #node #open-source #hardware
+                  </span>
+                </a>
+              </li>
+              <li className="text-blue-500 text-base">
+                <a
+                  href="https://github.com/generate-password/generate-password.github.io"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`block py-2 px-2 hover:text-purple-500 rounded ${
+                    projectHovered === 'generate-password'
+                      ? 'text-purple-500'
+                      : ''
+                  }`}
+                  onMouseLeave={blur}
+                  onMouseEnter={() => setProjectHovered('generate-password')}
+                >
+                  Generate Password: a website to generate passwords{` `}
+                  <span className="text-purple-500 text0-xs">
+                    #security #ux
+                  </span>
+                </a>
+              </li>
+              <li className="text-blue-500 text-base">
+                <a
+                  href="https://github.com/friedrith/vaxicode-redesign"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`block py-2 px-2 hover:text-purple-500 rounded ${
+                    projectHovered === 'vaxicode' ? 'text-purple-500' : ''
+                  }`}
+                  onMouseLeave={blur}
+                  onMouseEnter={() => setProjectHovered('vaxicode')}
+                >
+                  Vaxicode redesign: a app to store immunization passport{` `}
+                  <span className="text-purple-500 text0-xs">
+                    #react-native #qr-code
+                  </span>
+                </a>
+              </li>
+              <li className="text-blue-500 text-base">
+                <a
+                  href="https://github.com/getvault/getvault.github.io"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`block py-2 px-2 hover:text-purple-500 rounded ${
+                    projectHovered === 'vault' ? 'text-purple-500' : ''
+                  }`}
+                  onMouseLeave={blur}
+                  onMouseEnter={() => setProjectHovered('vault')}
+                >
+                  Vault: A Web app to store the passwords{' '}
+                  <span className="text-purple-500 text0-xs">
+                    #react #google-drive
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

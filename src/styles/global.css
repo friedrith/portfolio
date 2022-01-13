@@ -173,7 +173,7 @@ html {
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2300px) {
   .isometric-card,
   .card {
     width: 500px;
@@ -183,7 +183,8 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  .isometric-card:hover {
+  .isometric-card:hover,
+  .isometric-card.active {
     z-index: 20;
     transform: translate3d(30px, -30px, 0);
     /* box-shadow: -1px 0 28px 0 rgba(34, 33, 81, 0.01),
