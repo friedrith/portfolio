@@ -313,7 +313,7 @@ const IndexPage = () => {
                   onMouseLeave={blur}
                   onMouseEnter={() => setProjectHovered('node-wifi')}
                 >
-                  Node-wifi: a library to manage wifi connections on node.js{' '}
+                  Node-wifi: a library to manage wifi connections in node.js{' '}
                   <span className="text-purple-500 text0-xs">
                     #node #open-source #hardware
                   </span>
