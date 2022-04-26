@@ -72,7 +72,7 @@ module.exports = {
         vault: "url('~assets/vault.png')",
         vaxicode: "url('~assets/vaxicode.png')",
         nodeWifi: "url('~assets/node-wifi.png')",
-        'generate-password': "url('~assets/generate-password.png')",
+        squidGame: "url('~assets/squid-game.png')",
       }),
       listStyleType: {
         square: 'square',

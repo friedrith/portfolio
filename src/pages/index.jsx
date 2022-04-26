@@ -260,11 +260,11 @@ const IndexPage = () => {
         <div className="container flex-1 flex-col justify-center lg:justify-end">
           <div className="flex flex-row-reverse justify-center lg:justify-start  items-center">
             <ProjectCard
-              className="bg-generate-password"
-              href="https://github.com/generate-password/generate-password.github.io"
+              className="bg-squidGame"
+              href="https://github.com/interaction-dynamics/squid-game"
               onMouseLeave={blur}
-              onMouseEnter={() => setProjectHovered('generate-password')}
-              hovered={projectHovered === 'generate-password'}
+              onMouseEnter={() => setProjectHovered('squid-game')}
+              hovered={projectHovered === 'squid-game'}
             />
             <ProjectCard
               className="bg-nodeWifi"
@@ -321,20 +321,18 @@ const IndexPage = () => {
               </li>
               <li className="text-blue-500 text-base">
                 <a
-                  href="https://github.com/generate-password/generate-password.github.io"
+                  href="https://github.com/interaction-dynamics/squid-game"
                   target="_blank"
                   rel="noreferrer"
                   className={`block py-2 px-2 hover:text-purple-500 rounded ${
-                    projectHovered === 'generate-password'
-                      ? 'text-purple-500'
-                      : ''
+                    projectHovered === 'squid-game' ? 'text-purple-500' : ''
                   }`}
                   onMouseLeave={blur}
-                  onMouseEnter={() => setProjectHovered('generate-password')}
+                  onMouseEnter={() => setProjectHovered('squid-game')}
                 >
-                  Generate Password: a website to generate passwords{` `}
+                  Squid-Game: a boilerplate for a react project in 2022{' '}
                   <span className="text-purple-500 text0-xs">
-                    #security #ux
+                    #react #tests #localization
                   </span>
                 </a>
               </li>
