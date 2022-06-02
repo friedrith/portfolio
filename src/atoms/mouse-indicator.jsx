@@ -1,11 +1,13 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 
 import LottieIcon from '~atoms/lottie-icon'
 
 import scrollDown from '~assets/scroll-down-6-auto-edited.json'
 
-const MouseIndicator = () => {
+function MouseIndicator() {
   // https://www.react-spring.io/docs/hooks/basics
+
+  const [{ opacity }, set] = useState({ opacity: 1 })
 
   const hide = () => set({ opacity: 0 })
 
@@ -28,19 +30,16 @@ const MouseIndicator = () => {
   }
 
   return (
-    <animated.div
+    <button
       className="hidden md:block w-16"
       style={{
         opacity,
-        transform: opacity.interpolate(
-          o => `translateY(${(1 - o) * 500}px) scale(1.5)`
-        ),
-        display: opacity.interpolate(o => (o === 0 ? 'none' : 'display')),
       }}
+      type="button"
       onClick={onClick}
     >
       <LottieIcon icon={scrollDown} loop autoplay />
-    </animated.div>
+    </button>
   )
 }
 
