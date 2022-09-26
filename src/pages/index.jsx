@@ -197,7 +197,7 @@ const IndexPage = () => {
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
-                Apps: Gatsby, PWA
+                Apps: Electron, Gatsby, PWA
               </li>
               <li>
                 <i className="lar la-check-circle font-bold text-xl mr-1" />
