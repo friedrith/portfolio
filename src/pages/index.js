@@ -10,8 +10,8 @@ import LottieIcon from '~atoms/lottie-icon'
 import Layout from '~organisms/layout'
 import SEO from '~atoms/seo'
 import MouseIndicator from '~atoms/mouse-indicator'
-import Ribbon from '~atoms/ribbon'
-import Laptop from '~atoms/Laptop'
+// import Ribbon from '~atoms/ribbon'
+// import Laptop from '~atoms/Laptop'
 import ProjectCard from '~atoms/project-card'
 
 import multimediaCode2 from '~assets/multimedia-code-2-outline-edited.json'
@@ -65,11 +65,14 @@ const IndexPage = () => {
             </Reveal>
           </div>
         </div>
-        <div className="p-5 absolute bottom-0 inset-x-0 flex justify-center">
+        <div className="p-5 absolute z-50 bottom-0 inset-x-0 flex justify-center">
           <MouseIndicator />
         </div>
       </section>
-      <section className="min-h-half flex flex-col justify-center items-center px-6 md:px-24 pt-6 pb-6 relative">
+      <section
+        className="min-h-half flex flex-col justify-center items-center px-6 md:px-24 pt-6 pb-6 relative"
+        id="stats"
+      >
         <div className="bg-montreal bg-cover bg-center opacity-20 absolute inset-0 bg-no-repeat" />
 
         <div className="flex flex-col md:flex-row max-w-screen-lg m-auto justify-center items-center relative">
@@ -237,7 +240,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <Section title="My Key Methods" id="stats">
+      <Section title="My Key Methods">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-lg m-auto justify-center">
           <Reveal effect="fadeInUp">
             <Method title="Code craftsmanship">

@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, ContactShadows, OrbitControls } from '@react-three/drei'
-import { useSpring } from '@react-spring/core'
+import { useSpring } from '@react-spring/web'
 import { a as three } from '@react-spring/three'
 import useResponsive from '~utils/hooks/useResponsive'
 

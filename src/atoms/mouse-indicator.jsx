@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from 'react'
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from '@react-spring/web'
 
 import LottieIcon from '~atoms/lottie-icon'
 
@@ -7,9 +7,9 @@ import scrollDown from '~assets/scroll-down-6-auto-edited.json'
 
 const MouseIndicator = () => {
   // https://www.react-spring.io/docs/hooks/basics
-  const [{ opacity }, set] = useSpring(() => ({ opacity: 1 }))
+  const [{ opacity }, api] = useSpring(() => ({ opacity: 1 }))
 
-  const hide = () => set({ opacity: 0 })
+  const hide = () => api.start({ opacity: 0 })
 
   useLayoutEffect(() => {
     window.addEventListener('scroll', hide, { capture: true })
@@ -34,10 +34,8 @@ const MouseIndicator = () => {
       className="hidden md:block w-16"
       style={{
         opacity,
-        transform: opacity.interpolate(
-          o => `translateY(${(1 - o) * 500}px) scale(1.5)`
-        ),
-        display: opacity.interpolate(o => (o === 0 ? 'none' : 'display')),
+        transform: opacity.to(o => `translateY(${(1 - o) * 500}px) scale(1.5)`),
+        display: opacity.to(o => (o === 0 ? 'none' : 'display')),
       }}
       onClick={onClick}
     >

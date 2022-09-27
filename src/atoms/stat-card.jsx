@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from '@react-spring/web'
 
 const StatCard = ({ number, isVisible, suffix, children }) => {
-  const style = useSpring({ number: isVisible ? number : 0 })
+  const props = useSpring({ number: isVisible ? number : 0 })
 
   return (
     <div className="py-8 rounded text-center md:text-left">
       <animated.div className="text-4xl md:text-5xl text-white-500 font-normal">
-        {style.number.to(x =>
+        {props.number.to(x =>
           x < number || suffix ? `${x.toFixed(0)}${suffix}` : `${x}+`
         )}
       </animated.div>
