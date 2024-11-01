@@ -8,6 +8,7 @@ import { ReadyForMission } from './components/ReadyForMission'
 import { Projects } from './components/Projects'
 import { News } from './components/News'
 import { Services } from './components/Services'
+import Link from 'next/link'
 
 function Column({
   children,
@@ -46,7 +47,7 @@ export default function Home() {
               src='/portrait.png'
               className='select-none z-20'
               fill
-              style={{ objectFit: 'contain' }}
+              objectFit='contain'
               alt='Thibault Friedrich'
             />
           </div>
@@ -67,16 +68,16 @@ export default function Home() {
                 with 10+ years of experience in various business areas. Expert
                 in Frontend development, UX and Code Craftsmanship, I help
                 companies delivering high-value products in agile environments.{' '}
-                {/* <Link
-                  href='/'
-                  className='ml-2 inline-flex items-center group text-inherit hover:text-foreground'
-                >
-                  Check my history{' '}
-                  <span className='ml-2 mb-[-0.25rem] group-hover:ml-3 transition-all ease-in-out	'>
-                    →
-                  </span>
-                </Link> */}
               </p>
+              {/* <Link
+                href='/'
+                className='font-sans mt-2 text-sm font-normal inline-flex items-center group text-inherit hover:text-foreground'
+              >
+                Check my history{' '}
+                <span className='ml-2 mb-[-0.25rem] group-hover:ml-3 transition-all ease-in-out	'>
+                  →
+                </span>
+              </Link> */}
               <div className='flex gap-2 flex-wrap mt-5'>
                 <Tag>{age} yo</Tag>
                 {tags.map((tag, index) => (
@@ -112,7 +113,9 @@ export default function Home() {
         </Card>
       </Column>
       <Column className='col-span-5'>
-        <Card className='bg-background flex-1'>dfd{/* <News /> */}</Card>
+        <Card className='bg-background flex-1 relative'>
+          <News />
+        </Card>
       </Column>
       <Column className='col-span-2'>
         <Card className='bg-background'>

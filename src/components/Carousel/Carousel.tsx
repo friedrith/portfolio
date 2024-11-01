@@ -1,6 +1,6 @@
 'use client'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { motion, AnimatePresence, useMotionValue } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 interface Props {
   components: React.ReactNode[]
@@ -27,6 +27,17 @@ const variants = {
   },
 }
 
+const ONE_SECOND = 1000
+const AUTO_DELAY = ONE_SECOND * 10
+const DRAG_BUFFER = 50
+
+const SPRING_OPTIONS = {
+  type: 'spring',
+  mass: 3,
+  stiffness: 400,
+  damping: 50,
+}
+
 /**
  * Experimenting with distilling swipe offset and velocity into a single variable, so the
  * less distance a user has swiped, the more velocity they need to register as a swipe.
@@ -45,41 +56,101 @@ export function Carousel({ components }: Props) {
     setPage([page + newDirection, newDirection])
   }
 
+  const dragX = useMotionValue(0)
+
+  const [imgIndex, setImgIndex] = useState(0)
+
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      const x = dragX.get()
+
+      if (x === 0) {
+        setImgIndex(pv => {
+          if (pv === components.length - 1) {
+            return 0
+          }
+          return pv + 1
+        })
+      }
+    }, AUTO_DELAY)
+
+    return () => clearInterval(intervalRef)
+  }, [])
+
+  const onDragEnd = () => {
+    const x = dragX.get()
+
+    if (x <= -DRAG_BUFFER && imgIndex < components.length - 1) {
+      setImgIndex(pv => pv + 1)
+    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
+      setImgIndex(pv => pv - 1)
+    }
+  }
+
+  return (
+    <div className='relative overflow-hidden w-full h-full'>
+      <motion.div
+        drag='x'
+        dragConstraints={{
+          left: 0,
+          right: 0,
+        }}
+        style={{
+          x: dragX,
+          width: `${components.length * 100}%`,
+        }}
+        animate={{
+          translateX: `-${(imgIndex * 100) / components.length}%`,
+        }}
+        transition={SPRING_OPTIONS}
+        onDragEnd={onDragEnd}
+        className='flex h-full items-stretch relative cursor-grab active:cursor-grabbing'
+      >
+        <Images imgIndex={imgIndex} components={components} />
+      </motion.div>
+
+      <Dots
+        imgIndex={imgIndex}
+        setImgIndex={setImgIndex}
+        components={components}
+      />
+      <GradientEdges />
+    </div>
+  )
+
   return (
     <div className='relative w-full h-full'>
       <div className='relative h-full w-full overflow-hidden'>
         <AnimatePresence initial={false} custom={direction}>
-          {components.map((node, index) => (
-            <motion.div
-              custom={direction}
-              // initial={{ opacity: 0 }}
-              // animate={{ opacity: 1 }}
-              // exit={{ opacity: 0 }}
-              key={index}
-              className='flex items-center justify-center'
-              initial='enter'
-              animate='center'
-              exit='exit'
-              transition={{
-                x: { type: 'spring', stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 },
-              }}
-              drag='x'
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x)
+          <motion.div
+            key={page}
+            custom={direction}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0 }}
+            className='h-full w-full'
+            initial='enter'
+            animate='center'
+            exit='exit'
+            transition={{
+              x: { type: 'spring', stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
+            drag='x'
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x)
 
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1)
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1)
-                }
-              }}
-            >
-              {node}
-            </motion.div>
-          ))}
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(1)
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1)
+              }
+            }}
+          >
+            <div className='h-full w-full'>{components[page]}</div>
+          </motion.div>
         </AnimatePresence>
       </div>
       {/* <div className='absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse'>
@@ -167,7 +238,7 @@ export function Carousel({ components }: Props) {
           <span className='sr-only'>Next</span>
         </span>
       </button> */}
-      <div className='absolute inset-x-0 bottom-5 flex items-center justify-center gap-2'>
+      {/* <div className='absolute inset-x-0 bottom-5 flex items-center justify-center gap-2'>
         {components.map((_, index) => (
           <button
             key={index}
@@ -180,7 +251,65 @@ export function Carousel({ components }: Props) {
             onClick={() => setPage([index, index - page])}
           ></button>
         ))}
-      </div>
+      </div> */}
     </div>
+  )
+}
+
+const Dots = ({
+  imgIndex,
+  setImgIndex,
+  components,
+}: {
+  imgIndex: number
+  setImgIndex: React.Dispatch<React.SetStateAction<number>>
+  components: React.ReactNode[]
+}) => {
+  return (
+    <div className='absolute bottom-4 flex w-full justify-center gap-2'>
+      {components.map((_, idx) => {
+        return (
+          <button
+            key={idx}
+            onClick={() => setImgIndex(idx)}
+            className={`h-3 w-3 rounded-full transition-colors ${
+              idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
+            }`}
+          />
+        )
+      })}
+    </div>
+  )
+}
+
+const GradientEdges = () => {
+  return (
+    <>
+      <div className='pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0' />
+      <div className='pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0' />
+    </>
+  )
+}
+
+const Images = ({
+  components,
+}: {
+  imgIndex: number
+  components: React.ReactNode[]
+}) => {
+  return (
+    <>
+      {components.map((node, idx) => {
+        return (
+          <motion.div
+            key={idx}
+            transition={SPRING_OPTIONS}
+            className='flex-1 flex items-center justify-center'
+          >
+            {node}
+          </motion.div>
+        )
+      })}
+    </>
   )
 }

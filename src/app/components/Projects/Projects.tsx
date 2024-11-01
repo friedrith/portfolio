@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { projectsList } from './projectsList'
 
 export function Projects() {
@@ -10,8 +11,15 @@ export function Projects() {
           href={project.url}
           target='_blank'
         >
-          <div className='h-14 aspect-square rounded-md bg-white'></div>
-          <div>
+          <div className='relative w-14 aspect-square rounded-md overflow-hidden bg-white'>
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              objectFit='cover'
+            />
+          </div>
+          <div className='flex-1'>
             <h4 className='text-lg font-bold text-foreground'>
               {project.name}
             </h4>
