@@ -49,7 +49,7 @@ export function LatestTestimonial() {
               </div>
             </div>
           </div>
-          <div className='font-extralight text-base md:text-2xl text-foreground/80 py-4'>
+          <div className='font-sans font-normal text-base md:text-2xl text-foreground/80 py-4'>
             {testimonial.content}
           </div>
           <a
