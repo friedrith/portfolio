@@ -108,7 +108,7 @@ export default function Home() {
         </Card>
         <Card className='bg-background flex-0'>
           <Card.Content className='flex'>
-            <Button className='flex-1'>Contact me</Button>
+            <Button className='flex-1 font-sans'>Contact me</Button>
           </Card.Content>
         </Card>
       </Column>

@@ -17,7 +17,7 @@ export function Confoo() {
           }}
         >
           <div>
-            <h1 className='bg-gradient-to-br from-slate-300 to-slate-500 py-4 pt-10 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl'>
+            <h1 className='bg-gradient-to-br from-slate-300 to-slate-500 py-4 pt-10 bg-clip-text text-transparent font-sans text-3xl md:text-4xl font-bold text-center mb-9'>
               Speaker at the Confoo
               <br /> Conference 2025
             </h1>

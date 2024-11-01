@@ -18,15 +18,9 @@ const SPRING_OPTIONS = {
 }
 
 export function Carousel({ components }: Props) {
-  const [[page, direction], setPage] = useState([0, 0])
-
-  const paginate = (newDirection: number) => {
-    setPage([page + newDirection, newDirection])
-  }
-
   const dragX = useMotionValue(0)
 
-  const [imgIndex, setImgIndex] = useState(0)
+  const [imgIndex, setImgIndex] = useState(1)
 
   // useEffect(() => {
   //   const intervalRef = setInterval(() => {
