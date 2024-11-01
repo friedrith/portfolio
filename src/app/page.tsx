@@ -9,6 +9,7 @@ import { Projects } from './components/Projects'
 import { News } from './components/News'
 import { Services } from './components/Services'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
 function Column({
   children,
@@ -17,7 +18,9 @@ function Column({
   children: React.ReactNode
   className?: string
 }) {
-  return <div className={`flex flex-col gap-5 ${className}`}>{children}</div>
+  return (
+    <div className={cn(`flex flex-col gap-5 ${className}`)}>{children}</div>
+  )
 }
 
 const tags = [
@@ -39,8 +42,8 @@ export default function Home() {
   const age = getAge('1990-12-01')
 
   return (
-    <div className='absolute inset-0 bg-black h-screen grid gap-5 grid-cols-9 p-4 2xl:p-7'>
-      <Column className='col-span-2'>
+    <div className='md:absolute inset-0 bg-black md:h-screen grid gap-5 grid-cols-2 md:grid-cols-4 xl:grid-cols-9 p-4 2xl:p-5'>
+      <Column className='col-span-2 h-[90vh] md:h-auto'>
         <Card className='bg-background flex-1 flex flex-col justify-end relative'>
           <div className='absolute top-7 left-6 right-6 bottom-40 flex flex-col items-center justify-end overflow-hidden'>
             <Image
@@ -112,8 +115,8 @@ export default function Home() {
           </Card.Content>
         </Card>
       </Column>
-      <Column className='col-span-5'>
-        <Card className='bg-background flex-1 relative'>
+      <Column className='col-span-5 hidden xl:flex'>
+        <Card className='bg-background flex-1 relative overflow-hidden'>
           <News />
         </Card>
       </Column>
@@ -126,8 +129,8 @@ export default function Home() {
             <Services />
           </Card.Content>
         </Card>
-        <Card className='bg-background flex-1 relative'>
-          <Card.Content className='absolute h-full w-full overflow-auto'>
+        <Card className='bg-background  md:flex-1 relative'>
+          <Card.Content className='md:absolute md:h-full md:w-full md:overflow-auto'>
             <h3 className='font-sans text-xl text-foreground/80 font-semibold mb-6'>
               Latest projects
             </h3>

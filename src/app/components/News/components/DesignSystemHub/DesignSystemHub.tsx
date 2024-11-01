@@ -10,7 +10,7 @@ export function DesignSystemHub() {
       <div className='absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none' />
 
       <Boxes />
-      <div className='relative z-20'>
+      <div className='relative z-20 p-10'>
         <div className='flex flex-col items-center'>
           <h1
             className={cn(
