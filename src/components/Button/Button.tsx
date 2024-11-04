@@ -11,6 +11,8 @@ const styles = {
   primary: 'bg-primary text-background',
   secondary: 'bg-gray-500 text-white',
   lg: 'py-3 px-6 text-lg',
+  md: '',
+  sm: '',
 }
 
 export function Button({
