@@ -1,8 +1,8 @@
 export function Tag({
   children,
   className,
-  variant = 'primary',
-}: {
+}: // variant = 'primary',
+{
   children: React.ReactNode
   className?: string
   variant?: 'primary' | 'secondary'

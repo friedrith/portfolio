@@ -2,14 +2,13 @@ import { Carousel } from '@/components/Carousel'
 
 import { Confoo } from './components/Confoo'
 import { DesignSystemHub } from './components/DesignSystemHub'
-import { LatestArticle } from './components/LatestArticle'
 import { LatestTestimonial } from './components/LatestTestimonial'
 
 const components = [
-  <Confoo />,
-  <DesignSystemHub />,
+  { key: 'confoo', component: <Confoo /> },
+  { key: 'design-system-hub', component: <DesignSystemHub /> },
   // <LatestArticle />,
-  <LatestTestimonial />,
+  { key: 'latest-testimonial', component: <LatestTestimonial /> },
 ]
 
 export function News() {

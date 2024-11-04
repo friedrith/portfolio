@@ -8,7 +8,6 @@ import { ReadyForMission } from './components/ReadyForMission'
 import { Projects } from './components/Projects'
 import { News } from './components/News'
 import { Services } from './components/Services'
-import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 function Column({

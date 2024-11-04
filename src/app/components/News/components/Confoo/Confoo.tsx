@@ -1,6 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
-import { LampContainer } from '@/components/ui/lamp'
 import Image from 'next/image'
 
 export function Confoo() {
@@ -16,8 +14,8 @@ export function Confoo() {
           <br /> Conference 2025
         </h1> */}
         <p className='text-center font-sans text-foreground/80 mt-2 mb-3 font-normal text-base md:text-2xl max-w-xl m-auto'>
-          I will be speaker at the Confoo conference in 2025 with the topic "How
-          to not be scared of Abstract Syntax Trees (AST)?"
+          I will be speaker at the Confoo conference in 2025 with the topic
+          &quot;How to not be scared of Abstract Syntax Trees (AST)?&quot;
         </p>
         <div className='relative h-60 '>
           <Image

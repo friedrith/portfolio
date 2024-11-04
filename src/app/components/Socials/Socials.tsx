@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { socialsList } from './socialsList'
 
 export interface SocialsProps {
@@ -6,7 +7,7 @@ export interface SocialsProps {
 
 export function Socials({ className }: SocialsProps) {
   return (
-    <div className='flex items-center justify-center gap-8'>
+    <div className={cn('flex items-center justify-center gap-8', className)}>
       {socialsList.map(social => (
         <a
           key={social.name}

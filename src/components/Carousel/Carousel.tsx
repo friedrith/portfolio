@@ -3,7 +3,7 @@ import { motion, useMotionValue } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 interface Props {
-  components: React.ReactNode[]
+  components: Array<{ key: string; component: React.ReactNode }>
 }
 
 const ONE_SECOND = 1000
@@ -22,22 +22,22 @@ export function Carousel({ components }: Props) {
 
   const [imgIndex, setImgIndex] = useState(0)
 
-  // useEffect(() => {
-  //   const intervalRef = setInterval(() => {
-  //     const x = dragX.get()
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      const x = dragX.get()
 
-  //     if (x === 0) {
-  //       setImgIndex(pv => {
-  //         if (pv === components.length - 1) {
-  //           return 0
-  //         }
-  //         return pv + 1
-  //       })
-  //     }
-  //   }, AUTO_DELAY)
+      if (x === 0) {
+        setImgIndex(pv => {
+          if (pv === components.length - 1) {
+            return 0
+          }
+          return pv + 1
+        })
+      }
+    }, AUTO_DELAY)
 
-  //   return () => clearInterval(intervalRef)
-  // }, [])
+    return () => clearInterval(intervalRef)
+  }, [components.length, dragX])
 
   const onDragEnd = () => {
     const x = dragX.get()
@@ -83,26 +83,26 @@ export function Carousel({ components }: Props) {
 interface ExtensionProps {
   imgIndex: number
   setImgIndex: React.Dispatch<React.SetStateAction<number>>
-  components: React.ReactNode[]
+  components: Array<{ key: string; component: React.ReactNode }>
 }
 
-const Dots = ({ imgIndex, setImgIndex, components }: ExtensionProps) => {
-  return (
-    <div className='absolute bottom-4 flex w-full justify-center gap-2'>
-      {components.map((_, idx) => {
-        return (
-          <button
-            key={idx}
-            onClick={() => setImgIndex(idx)}
-            className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
-            }`}
-          />
-        )
-      })}
-    </div>
-  )
-}
+// const Dots = ({ imgIndex, setImgIndex, components }: ExtensionProps) => {
+//   return (
+//     <div className='absolute bottom-4 flex w-full justify-center gap-2'>
+//       {components.map((_, idx) => {
+//         return (
+//           <button
+//             key={idx}
+//             onClick={() => setImgIndex(idx)}
+//             className={`h-3 w-3 rounded-full transition-colors ${
+//               idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
+//             }`}
+//           />
+//         )
+//       })}
+//     </div>
+//   )
+// }
 
 const GradientEdges = () => {
   return (
@@ -117,18 +117,18 @@ const Images = ({
   components,
 }: {
   imgIndex: number
-  components: React.ReactNode[]
+  components: Array<{ key: string; component: React.ReactNode }>
 }) => {
   return (
     <>
-      {components.map((node, idx) => {
+      {components.map(node => {
         return (
           <motion.div
-            key={idx}
+            key={node.key}
             transition={SPRING_OPTIONS}
             className='flex-1 flex items-center justify-center'
           >
-            {node}
+            {node.component}
           </motion.div>
         )
       })}
