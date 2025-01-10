@@ -20,7 +20,7 @@ export function Confoo() {
         <div className='relative h-60 '>
           <Image
             src='/confoo.jpeg'
-            objectFit='contain'
+            style={{ objectFit: 'contain' }}
             fill
             alt='Confoo 2025'
             priority

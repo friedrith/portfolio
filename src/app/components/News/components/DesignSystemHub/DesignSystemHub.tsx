@@ -36,8 +36,7 @@ export function DesignSystemHub() {
         <div className='relative h-[35rem] max-w-5xl m-auto mt-10 rounded-lg overflow-hidden border shadow-[0_-10px_60px_-15px_rgba(0,0,0,0.6)] dark:shadow-[0_-10px_60px_-15px_rgba(255,255,255,0.3)]'>
           <Image
             fill
-            objectFit='cover'
-            objectPosition='top'
+            style={{ objectFit: 'cover', objectPosition: 'top' }}
             className='w-full'
             src='/images/screenshot.png'
             alt="Design System Hub's screenshot"

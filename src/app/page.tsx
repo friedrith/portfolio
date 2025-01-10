@@ -9,6 +9,8 @@ import { Projects } from './components/Projects'
 import { News } from './components/News'
 import { Services } from './components/Services'
 import { cn } from '@/lib/utils'
+import { AgeTag } from './components/AgeTag'
+import { MainCallToAction } from './components/MainCallToAction'
 
 function Column({
   children,
@@ -32,14 +34,7 @@ const tags = [
   'Indie Hacker',
 ]
 
-const getAge = (birthDate: string) =>
-  Math.floor(
-    (new Date().getTime() - new Date(birthDate).getTime()) / 3.15576e10
-  )
-
 export default function Home() {
-  const age = getAge('1990-12-01')
-
   return (
     <div className='md:absolute inset-0 bg-black md:h-screen grid gap-5 grid-cols-2 md:grid-cols-4 xl:grid-cols-9 p-4 2xl:p-5'>
       <Column className='col-span-2 h-[90vh] md:h-auto'>
@@ -49,7 +44,7 @@ export default function Home() {
               src='/portrait.png'
               className='select-none z-20'
               fill
-              objectFit='contain'
+              style={{ objectFit: 'contain' }}
               alt='Thibault Friedrich'
             />
           </div>
@@ -60,7 +55,7 @@ export default function Home() {
             </div>
             <div className='relative z-50 pt-5'>
               <ReadyForMission />
-              <h1 className='text-foreground font-bold text-7xl font-sans mt-3 leading-tight'>
+              <h1 className='text-foreground font-bold text-5xl 2xl:text-7xl font-sans mt-3 leading-tight'>
                 Thibault
               </h1>
               <p className='text-muted-foreground font-sans mt-3 text-md font-normal'>
@@ -81,7 +76,7 @@ export default function Home() {
                 </span>
               </Link> */}
               <div className='flex gap-2 flex-wrap mt-5'>
-                <Tag>{age} yo</Tag>
+                <AgeTag />
                 {tags.map((tag, index) => (
                   <Tag
                     key={tag}
@@ -110,7 +105,7 @@ export default function Home() {
         </Card>
         <Card className='bg-background flex-0'>
           <Card.Content className='flex'>
-            <Button className='flex-1 font-sans'>Contact me</Button>
+            <MainCallToAction />
           </Card.Content>
         </Card>
       </Column>

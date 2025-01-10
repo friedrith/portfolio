@@ -16,7 +16,7 @@ export function Projects() {
               src={project.image}
               alt={project.name}
               fill
-              objectFit='cover'
+              style={{ objectFit: 'cover' }}
             />
           </div>
           <div className='flex-1'>
