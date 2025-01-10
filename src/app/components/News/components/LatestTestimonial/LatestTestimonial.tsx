@@ -16,7 +16,7 @@ const testimonial = {
 
 export function LatestTestimonial() {
   return (
-    <AuroraBackground className='h-full w-full'>
+    <AuroraBackground className="h-full w-full">
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,37 +25,37 @@ export function LatestTestimonial() {
           duration: 0.8,
           ease: 'easeInOut',
         }}
-        className='relative flex flex-col gap-4 items-center justify-center px-4'
+        className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className='text-left p-10 max-w-3xl'>
-          <div className='font-sans text-3xl md:text-4xl font-bold text-foreground text-center mb-9'>
+        <div className="text-left p-10 max-w-3xl">
+          <div className="font-sans text-3xl md:text-4xl font-bold text-foreground text-center mb-9">
             Latest testimonial
           </div>
 
-          <div className='flex flex-row gap-4'>
+          <div className="flex flex-row gap-4">
             <Image
               src={testimonial.avatar}
-              alt='Aurora'
+              alt="Aurora"
               width={60}
               height={60}
-              className='rounded-full'
+              className="rounded-full"
             />
             <div>
-              <div className='font-sans font-bold text-xl text-foreground'>
+              <div className="font-sans font-bold text-xl text-foreground">
                 {testimonial.name}
               </div>
-              <div className='font-sans font-light text-muted-foreground text-center'>
+              <div className="font-sans font-light text-muted-foreground text-center">
                 {testimonial.title}
               </div>
             </div>
           </div>
-          <div className='font-sans font-normal text-base md:text-2xl text-foreground/80 py-4'>
+          <div className="font-sans font-normal text-base md:text-2xl text-foreground/80 py-4">
             {testimonial.content}
           </div>
           <a
             href={testimonial.url}
-            target='_blank'
-            className='font-sans bg-white rounded-full flex items-center w-fit mt-2 text-black font-semibold px-4 py-2'
+            target="_blank"
+            className="font-sans bg-white rounded-full flex items-center w-fit mt-2 text-black font-semibold px-4 py-2"
           >
             See all testimonials
           </a>

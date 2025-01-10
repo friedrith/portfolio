@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 
 export function ReadyForMission() {
   return (
-    <AnimatedGradientText className='inline-flex gap-2'>
+    <AnimatedGradientText className="inline-flex gap-2">
       ✨
       <span
         className={cn(
