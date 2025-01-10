@@ -6,7 +6,7 @@ export function Services() {
       {servicesList.map((service) => (
         <div
           key={service.label}
-          className="flex flex-col text-center items-center justify-center aspect-[4/3] p-3 rounded-lg bg-muted"
+          className="flex flex-col text-center items-center justify-center aspect-[4/3] p-3 rounded-lg bg-muted font-semibold text-white"
         >
           {service.label}
         </div>

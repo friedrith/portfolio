@@ -8,11 +8,11 @@ export const servicesList = [
     icon: 'code',
   },
   {
-    label: 'Team Training',
-    icon: 'code',
+    label: 'Freelancing',
+    icon: 'freelance',
   },
   {
-    label: 'Coaching',
+    label: 'Team Training',
     icon: 'code',
   },
 ]
