@@ -6,7 +6,7 @@ export function Projects() {
     <div className="flex flex-col gap-2 overflow-auto">
       {projectsList.map((project) => (
         <a
-          className="flex flex-row items-start gap-5 font-sans bg-transparent hover:bg-muted p-4 rounded-lg transition-colors duration-500	"
+          className="flex flex-row items-start gap-5 font-sans bg-transparent hover:bg-muted p-4 rounded-lg transition-colors duration-500"
           key={project.name}
           href={project.url}
           target="_blank"
