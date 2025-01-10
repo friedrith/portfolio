@@ -27,7 +27,7 @@ export function Carousel({ components }: Props) {
       const x = dragX.get()
 
       if (x === 0) {
-        setImgIndex(pv => {
+        setImgIndex((pv) => {
           if (pv === components.length - 1) {
             return 0
           }
@@ -43,25 +43,27 @@ export function Carousel({ components }: Props) {
     const x = dragX.get()
 
     if (x <= -DRAG_BUFFER && imgIndex < components.length - 1) {
-      setImgIndex(pv => pv + 1)
+      setImgIndex((pv) => pv + 1)
     } else if (x >= DRAG_BUFFER && imgIndex > 0) {
-      setImgIndex(pv => pv - 1)
+      setImgIndex((pv) => pv - 1)
     }
   }
 
   return (
-    <div className='relative overflow-hidden w-full h-full'>
+    <div className="relative overflow-hidden w-full h-full">
       <motion.div
-        drag='x'
+        drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         style={{
           x: dragX,
           width: `${components.length * 100}%`,
         }}
-        animate={{ translateX: `-${(imgIndex * 100) / components.length}%` }}
+        animate={{
+          translateX: `-${(imgIndex * 100) / components.length}%`,
+        }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className='flex h-full items-stretch relative cursor-grab active:cursor-grabbing'
+        className="flex h-full items-stretch relative cursor-grab active:cursor-grabbing"
       >
         <Images imgIndex={imgIndex} components={components} />
       </motion.div>
@@ -107,8 +109,8 @@ interface ExtensionProps {
 const GradientEdges = () => {
   return (
     <>
-      <div className='pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0' />
-      <div className='pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0' />
+      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
+      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
     </>
   )
 }
@@ -121,12 +123,12 @@ const Images = ({
 }) => {
   return (
     <>
-      {components.map(node => {
+      {components.map((node) => {
         return (
           <motion.div
             key={node.key}
             transition={SPRING_OPTIONS}
-            className='flex-1 flex items-center justify-center'
+            className="flex-1 flex items-center justify-center"
           >
             {node.component}
           </motion.div>
@@ -138,44 +140,44 @@ const Images = ({
 
 function Arrows({ imgIndex, setImgIndex, components }: ExtensionProps) {
   return (
-    <div className='flex items-center absolute right-10 bottom-10 gap-5'>
+    <div className="flex items-center absolute right-10 bottom-10 gap-5">
       <button
         disabled={imgIndex === 0}
-        className='w-10 h-10 border-2 rounded-full border-muted-foreground text-muted-foreground flex items-center justify-center hover:border-foreground transition-all duration-300 hover:text-foreground disabled:opacity-20 disabled:pointer-events-none'
-        onClick={() => setImgIndex(pv => pv - 1)}
+        className="w-10 h-10 border-2 rounded-full border-muted-foreground text-muted-foreground flex items-center justify-center hover:border-foreground transition-all duration-300 hover:text-foreground disabled:opacity-20 disabled:pointer-events-none"
+        onClick={() => setImgIndex((pv) => pv - 1)}
       >
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          strokeWidth='1.5'
-          stroke='currentColor'
-          className='size-5'
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="size-5"
         >
           <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18'
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
           />
         </svg>
       </button>
       <button
         disabled={imgIndex === components.length - 1}
-        className='w-10 h-10 border-2 rounded-full border-muted-foreground text-muted-foreground flex items-center justify-center hover:border-foreground transition-all duration-300 hover:text-foreground disabled:opacity-20 disabled:pointer-events-none'
-        onClick={() => setImgIndex(pv => pv + 1)}
+        className="w-10 h-10 border-2 rounded-full border-muted-foreground text-muted-foreground flex items-center justify-center hover:border-foreground transition-all duration-300 hover:text-foreground disabled:opacity-20 disabled:pointer-events-none"
+        onClick={() => setImgIndex((pv) => pv + 1)}
       >
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          strokeWidth='1.5'
-          stroke='currentColor'
-          className='size-6'
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="size-6"
         >
           <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
           />
         </svg>
       </button>
