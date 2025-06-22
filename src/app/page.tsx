@@ -35,8 +35,9 @@ const tags = [
 export default function Home() {
   return (
     <div className="md:absolute inset-0 bg-black md:h-screen grid gap-5 grid-cols-2 md:grid-cols-4 xl:grid-cols-9 p-4 2xl:p-5">
-      <Column className="col-span-2 h-[90vh] md:h-auto">
+      <Column className="col-span-2 md:h-auto">
         <Card className="bg-background flex-1 flex flex-col justify-end relative">
+          <div className="h-32 md:h-0" />
           <div className="absolute top-7 left-6 right-6 bottom-40 flex flex-col items-center justify-end overflow-hidden">
             <Image
               src="/portrait.png"
