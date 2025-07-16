@@ -1,32 +1,20 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import React from 'react'
-import { AuroraBackground } from '@/components/ui/aurora-background'
+import { LatestMediumArticle } from '@/components/LatestMediumArticle'
+import { LatestArticleAnimation } from './LatestArticleAnimation'
+import { cn } from '@/lib/utils'
 
 export function LatestArticle() {
   return (
-    <AuroraBackground className="h-full">
-      <motion.div
-        initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: 'easeInOut',
-        }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+    <div>
+      <h1
+        className={cn(
+          'font-sans text-3xl md:text-4xl font-bold text-foreground text-center mb-9'
+        )}
       >
-        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Background lights are cool you know.
-        </div>
-        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-          And this, is chemical burn.
-        </div>
-        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
-          Debug now
-        </button>
-      </motion.div>
-    </AuroraBackground>
+        Latest Article
+      </h1>
+      <LatestArticleAnimation>
+        <LatestMediumArticle />
+      </LatestArticleAnimation>
+    </div>
   )
 }

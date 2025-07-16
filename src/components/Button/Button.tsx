@@ -1,11 +1,18 @@
-export interface ButtonProps {
+export type ButtonProps = {
   children: React.ReactNode
   onClick?: () => void
   disabled?: boolean
   className?: string
   variant?: 'primary' | 'secondary'
   size?: 'sm' | 'md' | 'lg'
-}
+  as: 'button' | 'a'
+} & (
+  | {}
+  | {
+      as?: 'a'
+      href: string
+    }
+)
 
 const styles = {
   primary: 'bg-primary text-background',
@@ -20,14 +27,15 @@ export function Button({
   variant = 'primary',
   className,
   size = 'lg',
+  as: Component = 'button',
   ...props
 }: ButtonProps) {
   return (
-    <button
+    <Component
       {...props}
       className={`rounded-full font-semibold ${styles[variant]} ${styles[size]} ${className}`}
     >
       {children}
-    </button>
+    </Component>
   )
 }

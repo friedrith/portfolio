@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "label": "Web Development",
+      "href": "web-development",
+      "icon": "code"
+    },
+    {
+      "label": "Fractional CTO",
+      "href": "fractional-cto",
+      "icon": "code"
+    },
+    {
+      "label": "Ux Design",
+      "icon": "freelance",
+      "href": "ux-design"
+    },
+    {
+      "label": "Coaching",
+      "icon": "code",
+      "href": "coaching"
+    }
+  ]
+}

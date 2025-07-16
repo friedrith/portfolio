@@ -9,6 +9,8 @@ import { Services } from './components/Services'
 import { cn } from '@/lib/utils'
 import { AgeTag } from './components/AgeTag'
 import { MainCallToAction } from './components/MainCallToAction'
+import { tags } from '@/config/tags.json'
+import { LatestMediumArticle } from '@/components/LatestMediumArticle'
 
 function Column({
   children,
@@ -21,16 +23,6 @@ function Column({
     <div className={cn(`flex flex-col gap-5 ${className}`)}>{children}</div>
   )
 }
-
-const tags = [
-  'Web',
-  'React',
-  'UX',
-  'Craftsmanship',
-  'Agility',
-  'Speaker',
-  'Indie Hacker',
-]
 
 export default function Home() {
   return (
@@ -77,10 +69,7 @@ export default function Home() {
               <div className="flex gap-2 flex-wrap mt-5">
                 <AgeTag />
                 {tags.map((tag, index) => (
-                  <Tag
-                    key={tag}
-                    className={index > 5 ? 'hidden 3xl:block' : ''}
-                  >
+                  <Tag key={tag} className={index > 5 ? 'hidden xl:block' : ''}>
                     {tag}
                   </Tag>
                 ))}
@@ -128,6 +117,13 @@ export default function Home() {
               Latest projects
             </h3>
             <Projects />
+          </Card.Content>
+        </Card>
+      </Column>
+      <Column className="block md:hidden col-span-2">
+        <Card className="bg-background">
+          <Card.Content className="md:absolute md:h-full md:w-full md:overflow-auto">
+            <LatestMediumArticle />
           </Card.Content>
         </Card>
       </Column>
