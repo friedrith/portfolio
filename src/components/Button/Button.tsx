@@ -5,9 +5,9 @@ export type ButtonProps = {
   className?: string
   variant?: 'primary' | 'secondary'
   size?: 'sm' | 'md' | 'lg'
-  as: 'button' | 'a'
+  as?: 'button' | 'a'
 } & (
-  | {}
+  | { as?: 'button' }
   | {
       as?: 'a'
       href: string

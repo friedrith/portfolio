@@ -1,4 +1,3 @@
-import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
