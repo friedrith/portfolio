@@ -2,23 +2,23 @@
   "services": [
     {
       "label": "Web Development",
-      "href": "web-development",
+      "href": "/services#web-development",
       "icon": "code"
     },
     {
       "label": "Fractional CTO",
-      "href": "fractional-cto",
+      "href": "/servicesfractional-cto",
       "icon": "code"
     },
     {
       "label": "Ux Design",
-      "icon": "freelance",
+      "icon": "/servicesfreelance",
       "href": "ux-design"
     },
     {
       "label": "Coaching",
       "icon": "code",
-      "href": "coaching"
+      "href": "/services/coaching"
     }
   ]
 }

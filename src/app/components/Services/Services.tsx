@@ -8,7 +8,7 @@ export function Services() {
         <Link
           key={service.label}
           className="flex flex-col text-center items-center justify-center aspect-[4/3] p-3 rounded-lg bg-muted transition-colors duration-500 hover:bg-background font-semibold text-foreground text-md 2xl:text-lg"
-          href={`/services/#${service.href ?? ''}`}
+          href={service.href ?? ''}
         >
           {service.label}
         </Link>
