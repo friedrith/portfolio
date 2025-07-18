@@ -7,13 +7,13 @@
     },
     {
       "label": "Fractional CTO",
-      "href": "/servicesfractional-cto",
-      "icon": "code"
+      "href": "fractional-cto",
+      "icon": "/services#code"
     },
     {
       "label": "Ux Design",
-      "icon": "/servicesfreelance",
-      "href": "ux-design"
+      "icon": "freelance",
+      "href": "/services#ux-design"
     },
     {
       "label": "Coaching",
