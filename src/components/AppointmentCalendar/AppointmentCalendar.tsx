@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
-import { Clock, MapPin, DollarSign, BadgeInfo } from 'lucide-react'
-import { useState } from 'react'
+
+import React, { useMemo, useState } from 'react'
 import { StepStart, StepStartOptions } from './components/StepStart'
 import {
   StepSelectDateTime,
@@ -13,33 +13,21 @@ import {
   StepSelectServiceOptions,
 } from './components/StepSelectService'
 import { StepSuccess, StepSuccessOptions } from './components/StepSuccess'
-import { StepIdentify, StepIdentifyOptions } from './components/StepIdentify'
-
-type Items = {
-  location?: string
-  duration?: string
-  extra?: string
-  price?: string
-}
-
-const allSteps = [
-  'start',
-  'select-service',
-  'select-date',
-  'identify',
-  'confirm',
-  'success',
-] as const
-
-type Step = (typeof allSteps)[number]
+import {
+  SignProviders,
+  StepIdentify,
+  StepIdentifyOptions,
+} from './components/StepIdentify'
+import { Appointment } from './entities/appointment'
+import { convertService, Service } from './entities/service'
+import { allSteps, Step } from './entities/step'
+import { StepContext } from './components/StepContext'
 
 type AppointmentCalendarProps = {
   logo?: string
   preTitle?: string
   title?: string
-  description?: string
-  items?: Items
-  initialStep?: Step
+  description?: string | React.ReactNode
   stepOptions?: {
     start?: StepStartOptions
     'select-service'?: StepSelectServiceOptions
@@ -49,14 +37,9 @@ type AppointmentCalendarProps = {
     success?: StepSuccessOptions
   }
   steps?: Array<Step>
+  services: Array<Service> | Array<string>
+  signProviders?: SignProviders
 }
-
-const itemIcons: Record<keyof Items, typeof Clock> = {
-  duration: Clock,
-  location: MapPin,
-  price: DollarSign,
-  extra: BadgeInfo,
-} as const
 
 const stepComponents = {
   start: StepStart,
@@ -72,78 +55,114 @@ export function AppointmentCalendar({
   preTitle,
   title = 'Title',
   description = 'Description',
-  items = {},
-  initialStep = 'start',
-  steps = [
-    'start',
-    'select-service',
-    'select-date',
-    'identify',
-    'confirm',
-    'success',
-  ],
+  steps = [...allSteps],
   stepOptions = {},
+  services = ['appointment'],
+  signProviders = ['google', 'facebook', 'apple', 'email-without-password'],
 }: AppointmentCalendarProps) {
-  const [currentStep, setCurrentStep] = useState<Step>(initialStep)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const StepComponent = stepComponents[currentStep]
+  const onlyOneService = services.length === 1
 
-  const stepOption = stepOptions[currentStep] || {}
+  const [appointment, setAppointment] = useState<Appointment>({
+    id: 'random',
+    service: onlyOneService ? convertService(services[0]) : undefined,
+  })
 
-  const onNext = () => {
-    const currentIndex = steps.indexOf(currentStep)
-    if (currentIndex < steps.length - 1) {
-      setCurrentStep(steps[currentIndex + 1])
-    }
+  const actualSteps = useMemo(
+    () =>
+      onlyOneService ? steps.filter((s) => s !== 'select-service') : steps,
+    [steps, onlyOneService]
+  )
+
+  const actualServices = useMemo(() => services.map(convertService), [services])
+
+  const onNext = (newAppointment: Partial<Appointment> = {}) => {
+    setCurrentIndex((prev) => {
+      const nextIndex = prev + 1
+      if (nextIndex >= steps.length) {
+        return prev // Prevent going out of bounds
+      }
+      return nextIndex
+    })
+    setAppointment((prev) => ({
+      ...prev,
+      ...newAppointment,
+    }))
+  }
+
+  const onBack = () => {
+    setCurrentIndex((prev) => {
+      const prevIndex = prev - 1
+      if (prevIndex < 0) {
+        return prev // Prevent going out of bounds
+      }
+      return prevIndex
+    })
   }
 
   return (
-    <div>
-      <div className="max-w-md m-auto flex flex-col items-center px-5 py-20 gap-6">
-        {logo && (
-          <Image
-            src={logo}
-            alt="logo"
-            width={150}
-            height={150}
-            className="rounded-full bg-background shadow"
-          />
-        )}
-        <div className="flex flex-col gap-2">
-          {preTitle && (
-            <div className="scroll-m-20 text-center text-xl font-semibold tracking-tight text-balance text-muted-foreground">
-              {preTitle}
-            </div>
+    <StepContext.Provider
+      value={{
+        services: actualServices,
+        appointment,
+        signProviders,
+      }}
+    >
+      <div>
+        <div className="max-w-md m-auto flex flex-col items-center px-5 py-10 gap-6">
+          {logo && (
+            <Image
+              src={logo}
+              alt="logo"
+              width={150}
+              height={150}
+              className="rounded-full bg-background shadow"
+            />
           )}
-          <h1 className="scroll-m-20 text-center text-3xl font-extrabold tracking-tight text-balance text-foreground">
-            {title}
-          </h1>
-          <p className="leading-5 text-muted-foreground text-center">
-            {description}
-          </p>
-          <div className="flex flex-col items-center mt-4">
-            <ul className="flex flex-col list-none gap-1">
-              {Object.entries(items).map(([key, value]) => {
-                const Icon = itemIcons[key as keyof Items]
-                return (
-                  <li
-                    key={key}
-                    className="flex items-center gap-2 text-md text-muted-foreground"
-                  >
-                    <Icon className="h-4 w-4" />
-                    <span>{value}</span>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-          <div className="mt-3">
-            {StepComponent && (
-              <StepComponent options={stepOption} onNext={onNext} />
+          <div className="flex flex-col gap-2">
+            {preTitle && (
+              <div className="scroll-m-20 text-center text-xl font-semibold tracking-tight text-balance text-muted-foreground">
+                {preTitle}
+              </div>
             )}
+            <h1 className="scroll-m-20 text-center text-3xl font-extrabold tracking-tight text-balance text-foreground">
+              {title}
+            </h1>
+            <p className="leading-5 text-muted-foreground text-center">
+              {description}
+            </p>
+            {/* <div className="flex flex-col items-center mt-4">
+              <AppointmentDetails appointment={appointment} />
+            </div> */}
+            <div className="mt-3">
+              <div>
+                {actualSteps.map((step, index) => {
+                  const StepComponent = stepComponents[step]
+                  const stepOption = (stepOptions[step] ||
+                    {}) as React.ComponentProps<typeof StepComponent>['options']
+                  return (
+                    <div
+                      key={index}
+                      className="overflow-hidden"
+                      style={{
+                        height: currentIndex === index ? 'auto' : '0',
+                      }}
+                    >
+                      <StepComponent
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        options={stepOption as unknown as any}
+                        onNext={onNext}
+                        onBack={onBack}
+                      />
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </StepContext.Provider>
   )
 }
