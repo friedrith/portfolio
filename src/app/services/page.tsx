@@ -69,7 +69,7 @@ export default function ServicesPage() {
                 efficiently and effectively.
               </p>
             </Page.Section>
-            <Page.Section title="Fractional CTO" id="co-founder">
+            <Page.Section title="Co-founder" id="co-founder">
               <p>
                 You have a great idea, but you need a technical co-founder to
                 help you build it. I can help you turn your idea into a reality,
