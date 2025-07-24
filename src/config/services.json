@@ -1,19 +1,19 @@
 {
   "services": [
     {
-      "label": "Web Development",
-      "href": "/services#web-development",
-      "icon": "code"
+      "label": "Freelance",
+      "icon": "code",
+      "href": "/services#freelance"
     },
     {
       "label": "Fractional CTO",
-      "href": "fractional-cto",
-      "icon": "/services#code"
+      "icon": "/services#code",
+      "href": "/services#fraction-cto"
     },
     {
-      "label": "Ux Design",
+      "label": "Co-founder",
       "icon": "freelance",
-      "href": "/services#ux-design"
+      "href": "/services#co-founder"
     },
     {
       "label": "Coaching",

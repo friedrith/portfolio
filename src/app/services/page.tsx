@@ -17,10 +17,12 @@ export default function ServicesPage() {
             </Link>
           </div>
           <Page title="Services">
-            <Page.Section title="Web Development" id="web-development">
+            <Page.Section title="Freelance" id="freelance">
               <p>
                 With over 12 years of experience in web development, I build web
                 products from early prototypes to production-ready applications.
+                It iincludes UX design, frontend and backend development, and
+                deployment.
               </p>
 
               <p>
@@ -38,49 +40,47 @@ export default function ServicesPage() {
               </p>
 
               <p>
-                I can also set up projects with support for feature flags,
-                accessibility testing, A/B testing, and localization—ensuring
-                your product is ready to grow and adapt.
+                The first week of work is{' '}
+                <strong className="text-foreground">
+                  satisfied or 100% refunded
+                </strong>{' '}
+                for the non-technical teams.
               </p>
             </Page.Section>
             <Page.Section title="Fractional CTO" id="fraction-cto">
               <p>
-                With over 12 years of experience in web development, I help
-                individual developers and agile teams deliver greater value—both
-                immediately and sustainably.
+                I spent a decade as a full-time developer, and I now work as a
+                fractional CTO for startups and scale-ups. I managed teams of 7+
+                developers in the past and I’m comfortable working with both
+                technical and non-technical teams.
               </p>
 
               <p>
-                I’ve worked across a variety of environments, from B2B products
-                with complex client requirements to the long-term maintenance of
-                scalable design systems.
+                I help you build a solid technical foundation for your product,
+                from architecture to deployment. I can also help you with
+                hiring, mentoring, and training your team to ensure they have
+                the skills and knowledge needed to succeed.
               </p>
 
               <p>
-                I offer career guidance for developers looking to specialize in
-                frontend development, and I run hands-on coding workshops
-                tailored for agile teams—designed to boost technical practices
-                and maintain strong velocity over time.
+                I work with you to define your product’s technical strategy,
+                ensuring it aligns with your business goals. I can also help you
+                with project management, ensuring that your team is working
+                efficiently and effectively.
               </p>
             </Page.Section>
-            <Page.Section title="UX Design" id="ux-design">
+            <Page.Section title="Fractional CTO" id="co-founder">
               <p>
-                With over 12 years of experience in web development, I help
-                individual developers and agile teams deliver greater value—both
-                immediately and sustainably.
+                You have a great idea, but you need a technical co-founder to
+                help you build it. I can help you turn your idea into a reality,
+                from early prototypes to production-ready applications.
               </p>
 
               <p>
-                I’ve worked across a variety of environments, from B2B products
-                with complex client requirements to the long-term maintenance of
-                scalable design systems.
-              </p>
-
-              <p>
-                I offer career guidance for developers looking to specialize in
-                frontend development, and I run hands-on coding workshops
-                tailored for agile teams—designed to boost technical practices
-                and maintain strong velocity over time.
+                I know the challenges of building a startup, and I can help you
+                navigate them. I can help you with product strategy, technical
+                architecture, and team management. My skills include UX design,
+                frontend and backend development, and deployment.
               </p>
             </Page.Section>
             <Page.Section title="Coaching" id="coaching">
