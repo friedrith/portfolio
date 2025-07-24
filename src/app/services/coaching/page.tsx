@@ -1,5 +1,8 @@
 import { Socials } from '@/app/components/Socials'
 import { AppointmentCalendar } from '@/components/AppointmentCalendar/AppointmentCalendar'
+import { Button } from '@/components/ui/button'
+import { ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function CoachingPage() {
   return (
@@ -8,7 +11,7 @@ export default function CoachingPage() {
         logo="/head.png"
         preTitle="Thibault Friedrich"
         title="1-on-1 Coaching Session"
-        description="Book a coaching session with Thibault Friedrich to enhance your skills and achieve your goals."
+        description="Wondering if software engineering is the right career for you? Looking to level up in frontend architecture? You are a founder with technical questions? Book a free 1-on-1 coaching session with me. We'll discuss your goals, interests, and how to get started in tech."
         // items={{
         //   location: 'Online',
         //   duration: '60 minutes',
@@ -42,6 +45,15 @@ export default function CoachingPage() {
         }}
       />
       <Socials />
+
+      <div className="text-center pt-10">
+        <Button variant="link" className="text-muted-foreground group" asChild>
+          <Link href="/">
+            Go back to portfolio
+            <ChevronRight className="inline transition-all ml-0 group-hover:ml-1" />
+          </Link>
+        </Button>
+      </div>
     </div>
   )
 }
