@@ -15,7 +15,7 @@ export function Socials({ className }: SocialsProps) {
           target="_blank"
           className={cn(
             'flex p-1 items-center text-foreground/70 hover:text-foreground transition-colors',
-            index >= 4 ? 'hidden 2xl:flex' : ''
+            index >= 4 ? 'flex md:hidden 2xl:flex' : ''
           )}
         >
           <span className="sr-only">{social.name}</span>
