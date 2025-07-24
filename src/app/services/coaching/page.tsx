@@ -46,14 +46,14 @@ export default function CoachingPage() {
       />
       <Socials />
 
-      <div className="text-center pt-10">
+      <section className="text-center pt-10 pb-10">
         <Button variant="link" className="text-muted-foreground group" asChild>
           <Link href="/">
             Go back to portfolio
             <ChevronRight className="inline transition-all ml-0 group-hover:ml-1" />
           </Link>
         </Button>
-      </div>
+      </section>
     </div>
   )
 }
