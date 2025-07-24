@@ -219,9 +219,10 @@ export default function FreelancePage() {
                       </strong>
                     </p>
                     <p className="text-muted-foreground">
-                      I'm confident in the quality of my work. If you're not
-                      completely satisfied with the progress in the first week,
-                      I'll provide a full refund. Your success is my priority.
+                      I&apos;m confident in the quality of my work. If
+                      you&apos;re not completely satisfied with the progress in
+                      the first week, I&apos;ll provide a full refund. Your
+                      success is my priority.
                     </p>
                   </div>
                 </div>
@@ -239,8 +240,8 @@ export default function FreelancePage() {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's discuss your requirements and see how I can help bring your
-              vision to life. Book a free 30-minute consultation call.
+              Let&apos;s discuss your requirements and see how I can help bring
+              your vision to life. Book a free 30-minute consultation call.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-8 mb-8 border">
@@ -255,7 +256,7 @@ export default function FreelancePage() {
                       Project Discussion
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      We'll talk about your goals and requirements
+                      We&apos;ll talk about your goals and requirements
                     </p>
                   </div>
                 </div>
@@ -266,7 +267,7 @@ export default function FreelancePage() {
                       Technical Planning
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      I'll outline the best approach for your project
+                      I&apos;ll outline the best approach for your project
                     </p>
                   </div>
                 </div>
