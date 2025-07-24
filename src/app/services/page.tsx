@@ -21,7 +21,7 @@ export default function ServicesPage() {
               <p>
                 With over 12 years of experience in web development, I build web
                 products from early prototypes to production-ready applications.
-                It iincludes UX design, frontend and backend development, and
+                It includes UX design, frontend and backend development, and
                 deployment.
               </p>
 
