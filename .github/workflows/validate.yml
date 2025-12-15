@@ -13,8 +13,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 jobs:
-  documentation-portal:
-    runs-on: ubuntu-latest
+  validation:
+    runs-on: ubuntu-slim
     steps:
       - uses: actions/checkout@v4
         with:
