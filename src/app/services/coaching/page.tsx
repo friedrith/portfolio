@@ -16,7 +16,7 @@ export default function CoachingPage() {
             Wondering if software engineering is the right career for you?
             Looking to level up in frontend architecture? You are a founder with
             technical questions? Book a free 1-on-1 coaching session with me.
-            We'll discuss your goals, interests, and how to improve in your
+            We&apos;ll discuss your goals, interests, and how to improve in your
             position.
           </>
         }
