@@ -55,7 +55,8 @@ export default function Home() {
                 </strong>{' '}
                 with 10+ years of experience in various business areas. Expert
                 in Frontend development, UX and Code Craftsmanship, I help
-                companies delivering high-value products in agile environments.{' '}
+                companies delivering high-value products in agile
+                environments.{' '}
               </p>
               {/* <Link
                 href='/'
