@@ -6,12 +6,6 @@ export const projectsList = [
     image: '/feature-icon.svg',
   },
   {
-    name: 'Ship-it',
-    description: 'A next.js boilerplate to kickstart your project faster',
-    url: 'https://github.com/interaction-dynamics/ship-it',
-    image: '/node-wifi.webp',
-  },
-  {
     name: 'Design System Hub',
     description: 'An alternative to Storybook',
     url: 'https://design-system-hub.com/',
