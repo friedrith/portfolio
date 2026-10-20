@@ -1,0 +1,265 @@
+import { projectHref } from "./projects";
+import type { Skill, SkillGroup } from "./types";
+
+const MEDIUM = "https://medium.com/@thibault-friedrich";
+const GITHUB = "https://github.com/friedrith";
+const DSH = projectHref("design-system-hub");
+const LOUPE = projectHref("la-loupe-de-correction");
+const PLUSGRADE = projectHref("plusgrade");
+const FEATURES = projectHref("features");
+const LEARN = projectHref("learn-frontend");
+// TODO: point talk proofs at the video or slides once they are online.
+const TALKS = "/blog#talks";
+const repo = (name: string) => `${GITHUB}/${name}`;
+
+export const SKILL_GROUPS: SkillGroup[] = ["Frontend", "Craft", "Product", "Community"];
+
+// TODO: confirm each `stack` list matches the tools you want to be hired for.
+export const skills: Skill[] = [
+  {
+    id: "react",
+    name: "React",
+    group: "Frontend",
+    level: 3,
+    x: 22,
+    y: 30,
+    links: ["ts", "next", "ds"],
+    stack: ["Composition patterns", "React Native & Expo", "MUI", "Storybook", "Gatsby"],
+    proofs: [
+      { label: "Plusgrade design system", href: PLUSGRADE },
+      { label: "ConFoo 2025: SOLID patterns for React", href: TALKS },
+      { label: "GitHub: react-composition", href: repo("react-composition") },
+    ],
+  },
+  {
+    id: "ts",
+    name: "TypeScript",
+    group: "Frontend",
+    level: 3,
+    x: 36,
+    y: 18,
+    links: ["eslint", "next", "node"],
+    stack: ["Strict mode", "Type-safe patterns", "Compiler API", "Bun", "Parcel"],
+    proofs: [
+      { label: "CodeCraftsmanship #8: 5 typesafe patterns", href: MEDIUM },
+      { label: "Design System Hub", href: DSH },
+      { label: "GitHub: discover-typescript", href: repo("discover-typescript") },
+    ],
+  },
+  {
+    id: "next",
+    name: "Next.js",
+    group: "Frontend",
+    level: 3,
+    x: 48,
+    y: 34,
+    links: ["perf"],
+    stack: ["App Router", "Server Components", "Static generation", "Tailwind CSS", "Vercel"],
+    proofs: [
+      { label: "This site", href: "/" },
+      { label: "La Loupe de correction", href: LOUPE },
+    ],
+  },
+  {
+    id: "three",
+    name: "WebGL / Three.js",
+    group: "Frontend",
+    level: 2,
+    x: 62,
+    y: 16,
+    links: ["next"],
+    stack: ["React Three Fiber", "drei", "Rapier physics", "GSAP ScrollTrigger", "Lenis"],
+    proofs: [
+      { label: "This site's 3D world", href: "/" },
+      { label: "GitHub: animated-light-effect", href: repo("animated-light-effect") },
+    ],
+  },
+  {
+    id: "node",
+    name: "Node.js & CLIs",
+    group: "Frontend",
+    level: 3,
+    x: 8,
+    y: 46,
+    links: ["react"],
+    stack: ["npm packages", "Command-line tools", "Shell scripting", "Hardware APIs"],
+    proofs: [
+      { label: "GitHub: node-wifi (400+ stars)", href: repo("node-wifi") },
+      { label: "GitHub: node-wifi-cli", href: repo("node-wifi-cli") },
+      { label: "GitHub: contributing-generator", href: repo("contributing-generator") },
+    ],
+  },
+  {
+    id: "ds",
+    name: "Design systems",
+    group: "Product",
+    level: 3,
+    x: 28,
+    y: 58,
+    links: ["ux", "tokens"],
+    stack: ["Multi-theming", "Accessible components", "Storybook", "MUI", "Figma API"],
+    proofs: [
+      { label: "100+ components, 90+ themes", href: PLUSGRADE },
+      { label: "Design System Hub", href: DSH },
+      { label: "GitHub: pragmatic-design-system", href: repo("pragmatic-design-system") },
+    ],
+  },
+  {
+    id: "tokens",
+    name: "Design tokens",
+    group: "Product",
+    level: 3,
+    x: 16,
+    y: 76,
+    links: [],
+    stack: ["Figma variables", "CSS custom properties", "Tailwind @theme", "Theme pipelines"],
+    proofs: [{ label: "Token migration with the UX team", href: PLUSGRADE }],
+  },
+  {
+    id: "ux",
+    name: "UX",
+    group: "Product",
+    level: 3,
+    x: 44,
+    y: 70,
+    links: ["ab"],
+    stack: ["User research", "Prototyping", "Design workshops", "Figma"],
+    proofs: [
+      { label: "La Loupe de correction", href: LOUPE },
+      { label: "UX article series", href: MEDIUM },
+      { label: "GitHub: awesome-ux-designer", href: repo("awesome-ux-designer") },
+    ],
+  },
+  {
+    id: "ab",
+    name: "Experimentation",
+    group: "Product",
+    level: 3,
+    x: 60,
+    y: 58,
+    links: ["perf"],
+    stack: ["A/B testing", "Optimizely", "Feature flags", "Hypothesis design", "Product analytics"],
+    proofs: [
+      { label: "$1.3M in Q1 2026", href: PLUSGRADE },
+      { label: "25+ experiments per quarter", href: PLUSGRADE },
+    ],
+  },
+  {
+    id: "perf",
+    name: "Performance",
+    group: "Craft",
+    level: 3,
+    x: 74,
+    y: 40,
+    links: ["mfe"],
+    stack: ["Core Web Vitals", "Code splitting", "Bundle analysis", "Biome", "Rolldown"],
+    proofs: [
+      { label: "15s → 3s load time", href: PLUSGRADE },
+      { label: "GitHub: discover-rust-stack", href: repo("discover-rust-stack") },
+      { label: "GitHub: benchmark-react-components", href: repo("benchmark-react-components") },
+    ],
+  },
+  {
+    id: "mfe",
+    name: "Micro-frontends",
+    group: "Craft",
+    level: 3,
+    x: 86,
+    y: 24,
+    links: [],
+    stack: ["Module Federation", "Independent deploys", "Shared design system", "Monorepos"],
+    proofs: [{ label: "Plusgrade travel platform rebuild", href: PLUSGRADE }],
+  },
+  {
+    id: "eslint",
+    name: "Code quality",
+    group: "Craft",
+    level: 2,
+    x: 54,
+    y: 6,
+    links: [],
+    stack: [
+      "Custom ESLint rules",
+      "Custom Oxlint rules",
+      "ASTs",
+      "TypeScript Compiler API",
+      "Rust",
+      "Clean code",
+    ],
+    proofs: [
+      { label: "ConFoo 2025: custom ESLint rules with ASTs", href: TALKS },
+      { label: "Features: feature ownership CLI in Rust", href: FEATURES },
+      { label: "GitHub: abstract-syntax-tree", href: repo("abstract-syntax-tree") },
+    ],
+  },
+  {
+    id: "testing",
+    name: "Testing",
+    group: "Craft",
+    level: 3,
+    x: 78,
+    y: 70,
+    links: ["perf"],
+    stack: ["TDD", "Testing Library", "Code katas", "Quality gates in CI"],
+    proofs: [
+      { label: "CodeCraftsmanship #6: maintainable React tests", href: MEDIUM },
+      { label: "GitHub: frontend-code-katas", href: repo("frontend-code-katas") },
+    ],
+  },
+  {
+    id: "ai",
+    name: "AI-boosted dev",
+    group: "Craft",
+    level: 2,
+    x: 90,
+    y: 56,
+    links: ["testing"],
+    stack: ["Cursor", "Claude", "Agent workflows", "JSON-render"],
+    // TODO: link to an article or project once published.
+    proofs: [{ label: "AI-led page customization via JSON-render" }],
+  },
+  {
+    id: "speaking",
+    name: "Speaking",
+    group: "Community",
+    level: 2,
+    x: 66,
+    y: 86,
+    links: ["writing"],
+    stack: ["Conference talks", "Meetups", "Slidev"],
+    proofs: [
+      { label: "ConFoo 2025 & 2026", href: TALKS },
+      { label: "/dev/mtl", href: TALKS },
+      { label: "GitHub: talk-template (Slidev)", href: repo("talk-template") },
+    ],
+  },
+  {
+    id: "writing",
+    name: "Writing",
+    group: "Community",
+    level: 3,
+    x: 50,
+    y: 92,
+    links: ["ux"],
+    stack: ["Medium", "Dev.to", "Article series"],
+    proofs: [{ label: "~30 articles on Medium & Dev.to", href: "/blog" }],
+  },
+  {
+    id: "mentoring",
+    name: "Hiring & mentoring",
+    group: "Community",
+    level: 3,
+    x: 32,
+    y: 88,
+    links: ["writing"],
+    stack: ["Technical interviews", "Code reviews", "Onboarding", "Workshops"],
+    proofs: [
+      { label: "10+ developers recruited, 100+ trained" },
+      { label: "Learn Frontend: free best-practices platform", href: LEARN },
+      {
+        label: "GitHub: awesome-frontend-interviews",
+        href: repo("awesome-frontend-interviews"),
+      },
+    ],
+  },
+];

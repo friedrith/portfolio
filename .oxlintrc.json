@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "react", "nextjs", "jsx-a11y", "import"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "nextjs/no-html-link-for-pages": "error",
+    "nextjs/no-sync-scripts": "error",
+    "typescript/no-explicit-any": "error",
+    // The command palette (combobox + aria-activedescendant), the process tabs (roving tabindex)
+    // and the native <dialog> backdrop are deliberate ARIA widgets these rules misread.
+    "jsx-a11y/prefer-tag-over-role": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off"
+  },
+  "overrides": [
+    {
+      // React Three Fiber mutates Three.js objects inside useFrame by design;
+      // the React Compiler immutability rule does not apply to the 3D layer.
+      "files": ["src/features/three/**/*.tsx"],
+      "rules": { "react/immutability": "off" }
+    }
+  ],
+  "ignorePatterns": [".next/**", "out/**", "build/**", "next-env.d.ts"]
+}
