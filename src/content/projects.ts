@@ -71,7 +71,7 @@ export const projects: Project[] = [
       { value: "npm · crates", label: "published as features-cli" },
       { value: "CODEOWNERS", label: "generated from features" },
     ],
-    stack: ["Rust", "TypeScript", "React", "Git", "CLI"],
+    stack: ["Rust", "TypeScript", "React", "Tailwind CSS", "Git", "CLI"],
   },
   {
     slug: "design-system-hub",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
       // TODO: GitHub stars / users.
       { value: "OSS", label: "MIT, built in public" },
     ],
-    stack: ["TypeScript", "React", "Figma API", "Bun"],
+    stack: ["TypeScript", "React", "Tailwind CSS", "Figma API", "Bun"],
   },
   {
     slug: "la-loupe-de-correction",
@@ -145,7 +145,7 @@ export const projects: Project[] = [
     tagline: "Students find and fix their own mistakes.",
     summary:
       "A French writing tool that flags errors without correcting them, so students understand and fix their mistakes themselves, and earn a star when they're done.",
-    // TODO: confirm role, stack and numbers.
+    // TODO: confirm role.
     role: "Product & engineering",
     year: "2025 —",
     url: "https://loupedecorrection.com",
@@ -200,11 +200,11 @@ export const projects: Project[] = [
       },
     ],
     results: [
-      { value: "★", label: "earned when every error is fixed" },
+      { value: "200", label: "students using it" },
+      { value: "60%", label: "of flagged errors fixed by students" },
       { value: "0", label: "answers given away" },
-      { value: "TODO", label: "students / classes" },
     ],
-    stack: ["Next.js", "TypeScript", "AI", "UX research"],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Azure Vision", "Gemini"],
   },
   {
     slug: "plusgrade",
@@ -272,7 +272,7 @@ export const projects: Project[] = [
       { value: "15s → 3s", label: "load time after the micro-frontend rebuild" },
       { value: "25+", label: "experiments per quarter" },
     ],
-    stack: ["React", "TypeScript", "Micro-frontends", "MUI", "Storybook"],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Micro-frontends", "MUI", "Storybook"],
   },
   {
     slug: "learn-frontend",
@@ -337,7 +337,7 @@ export const projects: Project[] = [
       { value: "Free", label: "open to everyone" },
       { value: "Open", label: "feedback through GitHub issues" },
     ],
-    stack: ["Next.js", "TypeScript", "Technical writing"],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Technical writing"],
   },
 ];
 
