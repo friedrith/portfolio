@@ -38,6 +38,8 @@ export type Project = {
   url?: string;
   /** Public source code, for open-source projects. */
   repo?: string;
+  /** Screenshot of the product, under /public/assets/projects/{slug}/. */
+  cover?: { src: string; alt: string };
   /** 3D object built on the landing page. Projects without one only appear on /projects. */
   object?: ProjectObject;
   /** One-line hint under the project window, describing what the 3D object does. */

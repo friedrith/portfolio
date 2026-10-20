@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { projectHref, projects } from "@/content/projects";
 import { SectionHeading } from "@/ui/SectionHeading";
@@ -27,14 +28,23 @@ export default function ProjectsPage() {
               href={projectHref(p.slug)}
               className="rc-window group flex h-full flex-col overflow-hidden transition-colors hover:border-white/20"
             >
-              {/* TODO: replace with a screenshot from /public/assets/projects/{slug}/. */}
               <div
-                aria-hidden
-                className="grid-bg relative grid aspect-[16/10] place-items-center border-b border-line"
+                aria-hidden={!p.cover}
+                className={`relative grid aspect-[16/10] place-items-center overflow-hidden border-b border-line ${p.cover ? "bg-surface" : "grid-bg"}`}
               >
-                <span className="px-6 text-center text-3xl font-semibold tracking-[-0.04em] text-balance text-white/15 transition-colors group-hover:text-white/30 sm:text-4xl">
-                  {p.name}
-                </span>
+                {p.cover ? (
+                  <Image
+                    src={p.cover.src}
+                    alt={p.cover.alt}
+                    fill
+                    sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                  />
+                ) : (
+                  <span className="px-6 text-center text-3xl font-semibold tracking-[-0.04em] text-balance text-white/15 transition-colors group-hover:text-white/30 sm:text-4xl">
+                    {p.name}
+                  </span>
+                )}
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <p className="font-mono text-[11px] tracking-[var(--tracking-label)] text-accent uppercase">
