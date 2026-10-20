@@ -254,7 +254,7 @@ export const skills: Skill[] = [
     links: ["writing"],
     stack: ["Technical interviews", "Code reviews", "Onboarding", "Workshops"],
     proofs: [
-      { label: "10+ developers recruited, 100+ trained" },
+      { label: "15+ developers recruited, 130+ trained" },
       { label: "Learn Frontend: free best-practices platform", href: LEARN },
       {
         label: "GitHub: awesome-frontend-interviews",
