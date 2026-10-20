@@ -29,10 +29,10 @@ export const stats: Stat[] = [
     label: "accessible components in a design system with 90+ themes across 10+ products",
   },
   {
-    value: 100,
+    value: 130,
     prefix: "",
     suffix: "+",
     decimals: 0,
-    label: "developers trained, and 10+ recruited",
+    label: "developers trained, and 15+ recruited",
   },
 ];
