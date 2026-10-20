@@ -2,6 +2,7 @@ import { projectHref } from "./projects";
 import type { Skill, SkillGroup } from "./types";
 
 const MEDIUM = "https://medium.com/@thibault-friedrich";
+const MEDIUM_UX = "https://thibault-friedrich.medium.com/list/user-experience-8ee7809e1816";
 const GITHUB = "https://github.com/friedrith";
 const DSH = projectHref("design-system-hub");
 const LOUPE = projectHref("la-loupe-de-correction");
@@ -126,7 +127,7 @@ export const skills: Skill[] = [
     stack: ["User research", "Prototyping", "Design workshops", "Figma"],
     proofs: [
       { label: "La Loupe de correction", href: LOUPE },
-      { label: "UX article series", href: MEDIUM },
+      { label: "UX article series", href: MEDIUM_UX },
       { label: "GitHub: awesome-ux-designer", href: repo("awesome-ux-designer") },
     ],
   },
