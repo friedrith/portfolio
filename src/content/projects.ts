@@ -14,6 +14,10 @@ export const projects: Project[] = [
     repo: "https://github.com/interaction-dynamics/features",
     object: "tiles",
     hint: "Click the stack to switch view",
+    cover: {
+      src: "/assets/projects/features/cover.webp",
+      alt: "Features dashboard listing a project's features by folder, with the owner, path and metadata of the selected feature.",
+    },
     problem:
       "Codebases are organized by files and folders, but teams think in features. Nobody can say who owns a feature, how well it is tested or how much debt it carries.",
     // TODO: confirm the research methods and principles.
@@ -79,6 +83,10 @@ export const projects: Project[] = [
     year: "2024 —",
     url: "https://design-system-hub.com",
     repo: "https://github.com/interaction-dynamics/design-system-hub",
+    cover: {
+      src: "/assets/projects/design-system-hub/cover.webp",
+      alt: "Design System Hub landing page above an example design system showing a Button component with links to Figma and GitHub.",
+    },
     problem:
       "Storybook upgrades break, it loads slowly, needs heavy configuration and barely talks to Figma. Teams spend more time maintaining the tool than the design system.",
     // TODO: confirm the research methods and principles.
@@ -143,6 +151,10 @@ export const projects: Project[] = [
     url: "https://loupedecorrection.com",
     object: "loupe",
     hint: "Mistakes turn green under the lens",
+    cover: {
+      src: "/assets/projects/la-loupe-de-correction/cover.webp",
+      alt: "La Loupe de correction home page: a student's text with mistakes underlined by category, a magnifying glass and the owl mascot.",
+    },
     problem:
       "Correction tools fix the text for the student. The mistake disappears, and so does the lesson. Teachers spend hours on the same errors.",
     // TODO: confirm the research methods, numbers and principles.
@@ -204,6 +216,10 @@ export const projects: Project[] = [
     year: "2023 —",
     object: "pass",
     hint: "Variant A wins the test",
+    cover: {
+      src: "/assets/projects/plusgrade/cover.webp",
+      alt: "Plusgrade upgrade offer page for an Aeromexico flight, with offers per cabin and a slider to set the bid. Booking details are fictional.",
+    },
     problem:
       "One platform serves many travel brands. It had to earn more per visit, load fast on any connection and stay consistent across dozens of themes and languages.",
     ux: {
@@ -268,6 +284,10 @@ export const projects: Project[] = [
     // TODO: confirm the start year, stack and numbers.
     year: "2024 —",
     url: "https://learn.interaction-dynamics.io",
+    cover: {
+      src: "/assets/projects/learn-frontend/cover.webp",
+      alt: "Learn Frontend home page with the Getting started chapter and the course navigation.",
+    },
     problem:
       "Courses teach the basics, then stop. Developers who already ship code have few places to learn the practices that make code last.",
     // TODO: confirm the research methods and principles.

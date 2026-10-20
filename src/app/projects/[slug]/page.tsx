@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projectHref, projects } from "@/content/projects";
@@ -127,13 +128,22 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
         </div>
       )}
 
-      {/* TODO: hero video / screenshots (Screen Studio, Rotato). */}
-      <div
-        data-reveal
-        className="grid-bg mt-16 grid aspect-video place-items-center rounded-3xl border border-line bg-surface font-mono text-xs text-faint"
-      >
-        Case study media · /public/assets/projects/{project.slug}/
-      </div>
+      {/* TODO: hero video (Screen Studio, Rotato). */}
+      {project.cover && (
+        <div
+          data-reveal
+          className="relative mt-16 aspect-[16/10] overflow-hidden rounded-3xl border border-line bg-surface"
+        >
+          <Image
+            src={project.cover.src}
+            alt={project.cover.alt}
+            fill
+            priority
+            sizes="(min-width: 1100px) 1036px, 100vw"
+            className="object-cover object-top"
+          />
+        </div>
+      )}
 
       <div className="mt-24 grid gap-16">
         {chapters.map((c, i) => (
