@@ -1,18 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { profile } from "@/content/profile";
-import { liveSocials } from "@/content/socials";
+import { liveSocials, socials } from "@/content/socials";
 import { CONTACT_EVENT } from "@/lib/runtime";
 import { Keycap } from "@/ui/Keycap";
 import { SocialIcon } from "@/ui/SocialIcon";
-import { ContactDialog } from "./ContactDialog";
+
+const linkedin = socials.find((s) => s.id === "linkedin")!.href;
 
 export function Contact() {
-  const [open, setOpen] = useState(false);
-
   useEffect(() => {
-    const onOpen = () => setOpen(true);
+    // The 3D Enter key dispatches this from its click handler, so the popup is user-initiated.
+    const onOpen = () => window.open(linkedin, "_blank", "noopener,noreferrer");
     window.addEventListener(CONTACT_EVENT, onOpen);
     return () => window.removeEventListener(CONTACT_EVENT, onOpen);
   }, []);
@@ -39,16 +39,12 @@ export function Contact() {
             A role, a mission or a collaboration. Press the key, or write to me directly.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-            <button
-              type="button"
-              onClick={() => setOpen(true)}
-              className="rc-button cursor-pointer"
-            >
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="rc-button">
               Start a conversation
               <Keycap size="sm" aria-hidden className="!text-fg">
                 ↵
               </Keycap>
-            </button>
+            </a>
             <a href={`mailto:${profile.email}`} className="rc-button-ghost">
               {profile.email}
             </a>
@@ -76,8 +72,6 @@ export function Contact() {
           Built with Next.js, React Three Fiber, Rapier &amp; GSAP. Every key is real code.
         </span>
       </p>
-
-      <ContactDialog open={open} onClose={() => setOpen(false)} />
     </section>
   );
 }
