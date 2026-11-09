@@ -34,7 +34,7 @@ export const projects: Project[] = [
         {
           phase: "Design",
           name: "Storyboards and an animation lab",
-          body: "Each animation is storyboarded, specified and reviewed on its own before it reaches a page.",
+          body: "Each animation is storyboarded, specified to the beat and reviewed on its own in an animation lab before it reaches a page.",
         },
         {
           phase: "Validate",
@@ -62,14 +62,18 @@ export const projects: Project[] = [
         body: "Couples now ask ChatGPT, Perplexity or Claude for a wedding website, so the site serves an llms.txt summary and robots.txt explicitly welcomes AI answer crawlers.",
       },
       {
-        title: "Animation first",
-        body: "Painted scenes of real places, ink-drawn names and envelopes that open like paper, with a calm still version for reduced motion.",
+        title: "Animation down to the last detail",
+        body: "Wax seals that crack, envelopes and gatefold cards that open like paper, names written in ink stroke by stroke and venues painted in front of the guest. Each animation is storyboarded and specified on its own, frame-checked against regressions, and has a calm still version for reduced motion.",
+      },
+      {
+        title: "AI-crafted art and sound",
+        body: "Scenes of real places are painted with Midjourney and fal.ai, then retouched with inpainting and erasing models on fal.ai. Opening sound effects, from the seal breaking to the paper unfolding, are generated with ElevenLabs and played with Web Audio.",
       },
     ],
     // TODO: replace with usage numbers (couples, guests, replies, search traffic).
     results: [
-      { value: "3", label: "locales: EN, FR-CA, FR-FR" },
-      { value: "RTL", label: "Persian and right-to-left scripts" },
+      { value: "60+", label: "animations specified one by one" },
+      { value: "3", label: "locales, right-to-left scripts included" },
       { value: "llms.txt", label: "and JSON-LD for AI answer engines" },
     ],
     stack: [
@@ -81,6 +85,9 @@ export const projects: Project[] = [
       "Three.js",
       "Neon",
       "Drizzle",
+      "Midjourney",
+      "fal.ai",
+      "ElevenLabs",
     ],
   },
   {
