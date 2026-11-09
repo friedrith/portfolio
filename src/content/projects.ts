@@ -6,7 +6,7 @@ export const projects: Project[] = [
     name: "Zendegi.Studio",
     tagline: "A wedding website your guests will talk about.",
     summary:
-      "Animated wedding websites: the seal breaks, the venue paints itself in, and guests reply in under a minute, with RSVP, registry and seating behind it.",
+      "Zendegi means “life” in Persian. Animated wedding websites that speak each guest's language: the seal breaks, the venue paints itself in, and guests reply in under a minute.",
     role: "Co-founder · Product & engineering",
     year: "2026 —",
     url: "https://zendegi.io",
@@ -15,7 +15,7 @@ export const projects: Project[] = [
       alt: "Zendegi.Studio home page next to a phone showing the Montreal save the date: the couple's names in ink above a painted bay window with the couple dancing.",
     },
     problem:
-      "Couples choose paper invitations with care, then send guests to a wedding website that looks like a form, in one language. Replies arrive by text, email and phone and end up in a stale spreadsheet.",
+      "Wedding builders are English-first and US-centric: other languages are machine-translated or missing, and dates and prices are formatted for the US. Multicultural families get a site that looks like a form, in a language half of them don't read, and couples searching for a better one rarely find it.",
     // TODO: confirm the research methods and principles.
     ux: {
       users:
@@ -43,30 +43,34 @@ export const projects: Project[] = [
         },
       ],
       principles: [
-        "The wow is the product, not decoration",
-        "Every guest replies in their own language, right to left included",
-        "No app, no account: one link per household",
+        "Every guest reads the site in their own language, right to left included",
+        "Localized, not translated: dates, times and prices follow each locale",
+        "Easy to find, for search engines and AI answer engines alike",
       ],
     },
     approach: [
       {
+        title: "Localization at the core",
+        body: "English, Canadian French and French from France, with each household in its own language. Persian and other right-to-left scripts read right to left, down to the handwritten names, dates follow each locale through Intl.DateTimeFormat, and prices are in Canadian dollars.",
+      },
+      {
+        title: "SEO",
+        body: "A canonical URL, hreflang alternates for every locale, a sitemap, localized meta descriptions and Schema.org JSON-LD for the organization, the pricing offer and each demo.",
+      },
+      {
+        title: "GEO",
+        body: "Couples now ask ChatGPT, Perplexity or Claude for a wedding website, so the site serves an llms.txt summary and robots.txt explicitly welcomes AI answer crawlers.",
+      },
+      {
         title: "Animation first",
         body: "Painted scenes of real places, ink-drawn names and envelopes that open like paper, with a calm still version for reduced motion.",
       },
-      {
-        title: "A full wedding website",
-        body: "Save the date, RSVP with meal choices, registry, shared photo gallery and drag-and-drop table management.",
-      },
-      {
-        title: "Multilingual by design",
-        body: "Each household sees the site in its own language, with dates, times and addresses formatted for its locale.",
-      },
     ],
-    // TODO: replace with usage numbers (couples, guests, replies).
+    // TODO: replace with usage numbers (couples, guests, replies, search traffic).
     results: [
-      { value: "< 1 min", label: "for a guest to reply from a phone" },
-      { value: "0", label: "app or account for guests" },
-      { value: "EN · FR", label: "and right-to-left languages" },
+      { value: "3", label: "locales: EN, FR-CA, FR-FR" },
+      { value: "RTL", label: "Persian and right-to-left scripts" },
+      { value: "llms.txt", label: "and JSON-LD for AI answer engines" },
     ],
     stack: [
       "Next.js",
