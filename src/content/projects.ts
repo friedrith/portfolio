@@ -2,6 +2,84 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    slug: "zendegi-studio",
+    name: "Zendegi.Studio",
+    tagline: "A wedding website your guests will talk about.",
+    summary:
+      "Animated wedding websites: the seal breaks, the venue paints itself in, and guests reply in under a minute, with RSVP, registry and seating behind it.",
+    role: "Co-founder · Product & engineering",
+    year: "2026 —",
+    url: "https://zendegi.io",
+    cover: {
+      src: "/assets/projects/zendegi-studio/cover.webp",
+      alt: "Zendegi.Studio home page next to a phone showing the Montreal save the date: the couple's names in ink above a painted bay window with the couple dancing.",
+    },
+    problem:
+      "Couples choose paper invitations with care, then send guests to a wedding website that looks like a form, in one language. Replies arrive by text, email and phone and end up in a stale spreadsheet.",
+    // TODO: confirm the research methods and principles.
+    ux: {
+      users:
+        "Couples planning a wedding, often bilingual or multicultural, and guests of every age and language who open the link from a text message.",
+      methods: [
+        {
+          phase: "Discover",
+          name: "Our own wedding and competitive analysis",
+          body: "Started from the sites we could not find for our own wedding, then audited the leading builders on templates, languages and RSVP.",
+        },
+        {
+          phase: "Define",
+          name: "Product concept",
+          body: "Ranked the value in one order: the wow first, then a real wedding website, then an RSVP that runs itself.",
+        },
+        {
+          phase: "Design",
+          name: "Storyboards and an animation lab",
+          body: "Each animation is storyboarded, specified and reviewed on its own before it reaches a page.",
+        },
+        {
+          phase: "Validate",
+          name: "Automated accessibility, visual and performance checks",
+          body: "Playwright accessibility and visual regression tests, animation frame checks and Lighthouse on a mid-range phone.",
+        },
+      ],
+      principles: [
+        "The wow is the product, not decoration",
+        "Every guest replies in their own language, right to left included",
+        "No app, no account: one link per household",
+      ],
+    },
+    approach: [
+      {
+        title: "Animation first",
+        body: "Painted scenes of real places, ink-drawn names and envelopes that open like paper, with a calm still version for reduced motion.",
+      },
+      {
+        title: "A full wedding website",
+        body: "Save the date, RSVP with meal choices, registry, shared photo gallery and drag-and-drop table management.",
+      },
+      {
+        title: "Multilingual by design",
+        body: "Each household sees the site in its own language, with dates, times and addresses formatted for its locale.",
+      },
+    ],
+    // TODO: replace with usage numbers (couples, guests, replies).
+    results: [
+      { value: "< 1 min", label: "for a guest to reply from a phone" },
+      { value: "0", label: "app or account for guests" },
+      { value: "EN · FR", label: "and right-to-left languages" },
+    ],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "GSAP",
+      "Three.js",
+      "Neon",
+      "Drizzle",
+    ],
+  },
+  {
     slug: "features",
     name: "Features",
     tagline: "See your codebase as features, not files.",
