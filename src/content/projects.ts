@@ -2,6 +2,98 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    slug: "zendegi-studio",
+    name: "Zendegi.Studio",
+    tagline: "A wedding website your guests will talk about.",
+    summary:
+      "Zendegi means “life” in Persian. Animated wedding websites that speak each guest's language: the seal breaks, the venue paints itself in, and guests reply in under a minute.",
+    role: "Co-founder · Product & engineering",
+    year: "2026 —",
+    url: "https://zendegi.io",
+    cover: {
+      src: "/assets/projects/zendegi-studio/cover.webp",
+      alt: "Zendegi.Studio home page next to a phone showing the Montreal save the date: the couple's names in ink above a painted bay window with the couple dancing.",
+    },
+    problem:
+      "Wedding builders are English-first and US-centric: other languages are machine-translated or missing, and dates and prices are formatted for the US. Multicultural families get a site that looks like a form, in a language half of them don't read, and couples searching for a better one rarely find it.",
+    // TODO: confirm the research methods and principles.
+    ux: {
+      users:
+        "Couples planning a wedding, often bilingual or multicultural, and guests of every age and language who open the link from a text message.",
+      methods: [
+        {
+          phase: "Discover",
+          name: "Our own wedding and competitive analysis",
+          body: "Started from the sites we could not find for our own wedding, then audited the leading builders on templates, languages and RSVP.",
+        },
+        {
+          phase: "Define",
+          name: "Product concept",
+          body: "Ranked the value in one order: the wow first, then a real wedding website, then an RSVP that runs itself.",
+        },
+        {
+          phase: "Design",
+          name: "Storyboards and an animation lab",
+          body: "Each animation is storyboarded, specified to the beat and reviewed on its own in an animation lab before it reaches a page.",
+        },
+        {
+          phase: "Validate",
+          name: "Automated accessibility, visual and performance checks",
+          body: "Playwright accessibility and visual regression tests, animation frame checks and Lighthouse on a mid-range phone.",
+        },
+      ],
+      principles: [
+        "Every guest reads the site in their own language, right to left included",
+        "Localized, not translated: dates, times and prices follow each locale",
+        "Easy to find, for search engines and AI answer engines alike",
+      ],
+    },
+    approach: [
+      {
+        title: "Localization at the core",
+        body: "English, Canadian French and French from France, with each household in its own language. Persian and other right-to-left scripts read right to left, down to the handwritten names, dates follow each locale through Intl.DateTimeFormat, and prices are in Canadian dollars.",
+      },
+      {
+        title: "SEO",
+        body: "A canonical URL, hreflang alternates for every locale, a sitemap, localized meta descriptions and Schema.org JSON-LD for the organization, the pricing offer and each demo.",
+      },
+      {
+        title: "GEO",
+        body: "Couples now ask ChatGPT, Perplexity or Claude for a wedding website, so the site serves an llms.txt summary and robots.txt explicitly welcomes AI answer crawlers.",
+      },
+      {
+        title: "Animation down to the last detail",
+        body: "Wax seals that crack, envelopes and gatefold cards that open like paper, names written in ink stroke by stroke and venues painted in front of the guest. Each animation is storyboarded and specified on its own, frame-checked against regressions, and has a calm still version for reduced motion.",
+      },
+      {
+        title: "AI-crafted art and sound",
+        body: "Scenes of real places are painted with Midjourney and fal.ai, then retouched with inpainting and erasing models on fal.ai. Opening sound effects, from the seal breaking to the paper unfolding, are generated with ElevenLabs and played with Web Audio.",
+      },
+    ],
+    // TODO: replace with usage numbers (couples, guests, replies, search traffic).
+    results: [
+      { value: "60+", label: "animations specified one by one" },
+      { value: "3", label: "locales, right-to-left scripts included" },
+      { value: "llms.txt", label: "and JSON-LD for AI answer engines" },
+    ],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "GSAP",
+      "Three.js",
+      "Vercel",
+      "Neon",
+      "Drizzle",
+      "Resend",
+      "PostHog",
+      "Midjourney",
+      "fal.ai",
+      "ElevenLabs",
+    ],
+  },
+  {
     slug: "features",
     name: "Features",
     tagline: "See your codebase as features, not files.",
