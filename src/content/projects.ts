@@ -98,11 +98,11 @@ export const projects: Project[] = [
     name: "Features",
     tagline: "See your codebase as features, not files.",
     summary:
-      "A Rust CLI and web dashboard that lists the features in any project, with their owners, history, test coverage and technical debt.",
+      "A Rust CLI and web dashboard that maps the features of any codebase, with their owners, history, test coverage, technical debt, specs and decisions.",
     role: "Creator · Open source",
     // TODO: confirm the start year.
     year: "2025 —",
-    url: "https://interaction-dynamics.io/features/",
+    url: "https://features.interaction-dynamics.io",
     repo: "https://github.com/interaction-dynamics/features",
     object: "tiles",
     hint: "Click the stack to switch view",
@@ -147,21 +147,25 @@ export const projects: Project[] = [
     approach: [
       {
         title: "Technology agnostic",
-        body: "Features are found from the folder structure or a README frontmatter flag, so it works with any language or framework.",
+        body: "Features are found from the folder structure, READMEs, git history and code comments, so it works with any language or framework, with annotations recognized in 20 languages.",
       },
       {
         title: "CLI and dashboard",
-        body: "One Rust binary prints JSON reports for CI, serves a web dashboard, or builds a static version of it.",
+        body: "One Rust binary prints JSON reports for CI, serves a live dashboard refreshed on every file change, or builds a static version of it. The dashboard filters features with queries like owner:john AND lines:>1000 and draws the dependency graph between them, circular imports flagged.",
       },
       {
         title: "Ownership built in",
-        body: "Owners, git history, coverage and commit stats per feature, and a generated CODEOWNERS file.",
+        body: "Owners, git history, coverage and commit stats per feature, and a generated CODEOWNERS file. features diff maps a pull request to the features and teams it touches, posts it as a comment and requests reviews from the owning teams.",
+      },
+      {
+        title: "Specs and decisions",
+        body: "Specs and decision records (ADR) are read from the repository, linked both ways and shown on each feature's page, so people and AI agents read the intent before they change the code. GitHub Spec Kit and Kiro specs are attached too, and features check keeps the links honest in CI.",
       },
     ],
     results: [
       { value: "Rust", label: "single fast binary" },
       { value: "npm · crates", label: "published as features-cli" },
-      { value: "CODEOWNERS", label: "generated from features" },
+      { value: "20", label: "languages recognized for annotations" },
     ],
     stack: ["Rust", "TypeScript", "React", "Tailwind CSS", "Git", "CLI"],
   },
