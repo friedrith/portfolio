@@ -154,6 +154,10 @@ export const projects: Project[] = [
         body: "One Rust binary prints JSON reports for CI, serves a live dashboard refreshed on every file change, or builds a static version of it. The dashboard filters features with queries like owner:john AND lines:>1000 and draws the dependency graph between them, circular imports flagged.",
       },
       {
+        title: "Built for very large repositories",
+        body: "Performance was a priority from the first line of Rust, so scanning folders, git history and coverage reports stays fast and the CLI runs even on very large repositories.",
+      },
+      {
         title: "Ownership built in",
         body: "Owners, git history, coverage and commit stats per feature, and a generated CODEOWNERS file. features diff maps a pull request to the features and teams it touches, posts it as a comment and requests reviews from the owning teams.",
       },
