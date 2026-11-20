@@ -435,6 +435,45 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Technical writing"],
   },
+  {
+    slug: "clement-friedrich",
+    name: "Clément Friedrich",
+    tagline: "A filmography that lets the films speak.",
+    summary:
+      "Portfolio of film director Clément Friedrich: every short film from 2016 to today, from drama to experimental documentary, playable in one click.",
+    // TODO: confirm the role.
+    role: "Design & engineering",
+    // TODO: confirm the year.
+    year: "2025",
+    url: "https://clementfriedrich.com",
+    cover: {
+      src: "/assets/projects/clement-friedrich/cover.webp",
+      alt: "Clément Friedrich filmography: a grid of short films, each with a still, title, year, co-directors, genres and a one-line pitch.",
+    },
+    problem:
+      "A director's films are scattered across Vimeo, IMDb and Instagram. Festival programmers and producers need one place to see the body of work, watch a film and get in touch.",
+    approach: [
+      {
+        title: "The films first",
+        body: "The home page is the filmography: a still, the year, co-directors, genres and a one-line pitch per film, so the work is visible before the biography.",
+      },
+      {
+        title: "Watch without leaving",
+        body: "Each film opens full screen in an accessible dialog with the Vimeo player, so a visitor goes from a still to the film in one click.",
+      },
+      {
+        title: "Edited by the director",
+        body: "Films, stills and texts live in Sanity, so a new film goes online without a developer, and Next.js serves the stills resized for each screen.",
+      },
+    ],
+    // TODO: replace with visit or contact numbers.
+    results: [
+      { value: "7", label: "short films, 2016 to 2025" },
+      { value: "1 click", label: "from a still to the film" },
+      { value: "CMS", label: "edited by the director, no developer needed" },
+    ],
+    stack: ["Next.js", "React", "Tailwind CSS", "shadcn/ui", "Sanity", "Vimeo", "Vercel"],
+  },
 ];
 
 /** Projects with a 3D object, shown on the landing page. */
